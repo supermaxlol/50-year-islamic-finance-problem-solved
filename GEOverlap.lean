@@ -1115,6 +1115,58 @@ theorem positive_time_value_from_impatience (β : ℝ) (hβ0 : 0 < β) (hβ1 : �
   nlinarith [Real.log_le_sub_one_of_pos hx,
     mul_le_mul_of_nonneg_left (Real.log_le_sub_one_of_pos hy) hβ0.le, hbud]
 
+/-! ## Same-engine extensions: sequential (Radner) trading and production -/
+
+/-- **Sequential (Radner) trading implements the Arrow–Debreu equilibrium
+(complete markets).**  Two dates, states `S` at date 1, Arrow securities paying one
+unit in state `s` at price `q s ≥ 0`.  A consumption `(c₀, c)` is attainable by
+*sequential* asset trading — a date-0 budget `c₀ + ∑ q s · θ s ≤ ω₀` and date-1
+state budgets `c s ≤ ω s + θ s` for some portfolio `θ` — **iff** it satisfies the
+single Arrow–Debreu date-event budget `c₀ + ∑ q s · c s ≤ ω₀ + ∑ q s · ω s`.  The
+two budget sets coincide, so the Arrow–Debreu equilibrium (`intertemporal_equilibrium_exists`)
+is implementable as a Radner sequential equilibrium: no date-0 complete-contingent
+market is needed, only one-period assets that span.  (Incomplete spans are the
+separate GEI case.) -/
+theorem radner_implements_arrow_debreu {S : Type*} [Fintype S]
+    (q : S → ℝ) (hq : ∀ s, 0 ≤ q s) (ω₀ : ℝ) (ω : S → ℝ) (c₀ : ℝ) (c : S → ℝ) :
+    (∃ θ : S → ℝ, c₀ + ∑ s, q s * θ s ≤ ω₀ ∧ ∀ s, c s ≤ ω s + θ s)
+      ↔ c₀ + ∑ s, q s * c s ≤ ω₀ + ∑ s, q s * ω s := by
+  constructor
+  · rintro ⟨θ, hd0, hd1⟩
+    have hmono : ∑ s, q s * c s ≤ ∑ s, q s * (ω s + θ s) :=
+      Finset.sum_le_sum (fun s _ => mul_le_mul_of_nonneg_left (hd1 s) (hq s))
+    have hsplit : ∑ s, q s * (ω s + θ s) = ∑ s, q s * ω s + ∑ s, q s * θ s := by
+      rw [← Finset.sum_add_distrib]; exact Finset.sum_congr rfl (fun s _ => by ring)
+    rw [hsplit] at hmono
+    linarith
+  · intro h
+    refine ⟨fun s => c s - ω s, ?_, fun s => by linarith⟩
+    have hsub : ∑ s, q s * (c s - ω s) = ∑ s, q s * c s - ∑ s, q s * ω s := by
+      rw [← Finset.sum_sub_distrib]; exact Finset.sum_congr rfl (fun s _ => by ring)
+    rw [hsub]; linarith
+
+/-- **Competitive equilibrium with (constant-returns) production.**  On top of any
+continuous consumer excess demand `z` obeying Walras' law, add firms whose aggregate
+net supply `η` is continuous and earns zero profit at every price
+(`∑ p s · η(p) s = 0` — constant returns / activity analysis).  Then there is a price
+at which consumer excess demand is met by production, `z(p) ≤ η(p)` in every market.
+Proof: `z − η` is continuous and still satisfies Walras (`p·z − p·η = 0`), so
+Gale–Nikaido–Debreu delivers a clearing price.  (Decreasing returns with profit
+shares distributed to households is the further general case.) -/
+theorem production_equilibrium_exists {S : Type*} [Fintype S] [Nonempty S]
+    (z η : priceSimplex S → (S → ℝ)) (hz : Continuous z) (hη : Continuous η)
+    (walras : ∀ p : priceSimplex S, ∑ s, (p : S → ℝ) s * z p s = 0)
+    (zeroProfit : ∀ p : priceSimplex S, ∑ s, (p : S → ℝ) s * η p s = 0) :
+    ∃ p : priceSimplex S, ∀ s, z p s ≤ η p s := by
+  obtain ⟨p, hp⟩ := gale_nikaido_debreu (fun p => z p - η p) (hz.sub hη)
+    (fun p => by
+      have h : ∑ s, (p : S → ℝ) s * (z p - η p) s
+             = ∑ s, (p : S → ℝ) s * z p s - ∑ s, (p : S → ℝ) s * η p s := by
+        rw [← Finset.sum_sub_distrib]
+        exact Finset.sum_congr rfl (fun s _ => by rw [Pi.sub_apply]; ring)
+      rw [h, walras p, zeroProfit p]; ring)
+  exact ⟨p, fun s => by have hps := hp s; simp only [Pi.sub_apply] at hps; linarith⟩
+
 end GEOverlap
 
 #print axioms GEOverlap.strictConcaveOn_blissQuadratic
@@ -1128,6 +1180,8 @@ end GEOverlap
 #print axioms GEOverlap.incomplete_markets_equilibrium_exists
 #print axioms GEOverlap.intertemporal_equilibrium_exists
 #print axioms GEOverlap.positive_time_value_from_impatience
+#print axioms GEOverlap.production_equilibrium_exists
+#print axioms GEOverlap.radner_implements_arrow_debreu
 #print axioms GEOverlap.equilibrium_not_unique
 
 #print axioms GEOverlap.unique_max_of_strictConcaveOn

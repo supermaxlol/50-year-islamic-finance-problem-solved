@@ -1,9 +1,9 @@
 {
   "artifact": "GE-existence :: GND + Walrasian equilibrium existence via sealed Kakutani",
-  "sealed_utc": "2026-10-31T13:55:26Z",
+  "sealed_utc": "2026-10-31T14:11:48Z",
   "toolchain": "leanprover/lean4:v4.35.0 + Mathlib v4.35.0",
   "module": "harfe/GEOverlap.lean",
-  "module_sha256": "34c8cedecc05e61499821c054e52ed2c9bd218953ab24488e73e9ff8b32076ce",
+  "module_sha256": "9f6f63630d4a961518f8bfd4493388b7093b49035adb55e64725db16150542cb",
   "dependency_fixedpoint": "harfe/fixed-point-theorems-lean4 (THIRD-PARTY, not Mathlib-reviewed)",
   "dependency_brouwer_sha256": "8b2f9924d63ae256cbead189a668486cee28811320e590b32ebc15fa1f8f266c",
   "dependency_kakutani_sha256": "e2be54dafc4fc23ade447432b262d7dcff4eac33d42d909ae671a71f6607597c",
@@ -30,7 +30,9 @@
     "incomplete_markets_equilibrium_exists (Radner/incomplete-markets equilibrium witnessed: 1 asset, 2 states; strictly incomplete span; via the asset-market theorem which needs full column rank, not spanning)",
     "intertemporal_equilibrium_exists (multi-period Arrow-Debreu date-event equilibrium: consumption indexed by (date,event), equilibrium date-event prices ARE the discount factors; no interest rate, no bond, no risk-free asset --- discounting is an endogenous shadow price)",
     "equilibrium_not_unique (non-uniqueness / SMD upshot: explicit continuous cubic excess demand on the 2-good simplex, Walras-exact, clearing at TWO distinct interior prices p0=1/4 and p0=1/2; non-degenerate, not autarky z=0)",
-    "positive_time_value_from_impatience (1-agent 2-date log-utility economy ln c0 + b ln c1, 0<b<1: price (1,b) supports autarky (1,1) as competitive equilibrium; discount factor = b in (0,1), strictly positive, no interest rate; optimality via log t <= t-1)"
+    "positive_time_value_from_impatience (1-agent 2-date log-utility economy ln c0 + b ln c1, 0<b<1: price (1,b) supports autarky (1,1) as competitive equilibrium; discount factor = b in (0,1), strictly positive, no interest rate; optimality via log t <= t-1)",
+    "radner_implements_arrow_debreu (sequential/Radner trading, complete markets: the Arrow-security sequential budget set EQUALS the Arrow-Debreu date-event budget set; so the AD equilibrium is implementable as a Radner sequential equilibrium -- no complete date-0 contingent market needed)",
+    "production_equilibrium_exists (constant-returns production: consumer excess demand z + zero-profit net supply eta both continuous+Walras => clearing price with z(p) <= eta(p); production folded into GND)"
   ],
   "axiom_audit": "every #print-axioms theorem depends only on [propext, Classical.choice, Quot.sound]; no sorryAx",
   "build": "lake env lean GEOverlap.lean -> exit 0, 0 errors, 0 warnings",
@@ -64,6 +66,9 @@
     "gap4_dynamics_SMD": "multi-period dynamics and Sonnenschein-Mantel-Debreu construction: UNFORMALIZED anywhere (web-checked); large from-scratch general-GE programs, not interest-free-specific",
     "multi_period_dynamics": "CLOSED (Arrow-Debreu date-event formulation; intertemporal equilibrium exists, discounting = endogenous date-event prices, no interest rate). Sequential/Radner trading remains a separate matter.",
     "SMD_multiplicity": "UPSHOT CLOSED (non-degenerate multiplicity witnessed: equilibrium_not_unique). Full SMD realization (households realizing arbitrary z) still open.",
-    "time_value_of_money": "positive time value from impatience PINNED (positive_time_value_from_impatience: discount factor = b in (0,1), no interest rate). Monetary time value (liquidity/convenience yield) out of model (needs money)."
+    "time_value_of_money": "positive time value from impatience PINNED (positive_time_value_from_impatience: discount factor = b in (0,1), no interest rate). Monetary time value (liquidity/convenience yield) out of model (needs money).",
+    "sequential_radner": "CLOSED for complete markets (radner_implements_arrow_debreu: sequential budget set = AD budget set). Incomplete-span GEI is the separate case.",
+    "production": "CLOSED for constant-returns/zero-profit (production_equilibrium_exists). Decreasing-returns with profit-share distribution is the further case.",
+    "SMD_realization": "OPEN (genuinely hard surjectivity construction: build households realizing arbitrary z). Multiplicity UPSHOT already witnessed (equilibrium_not_unique)."
   }
 }
