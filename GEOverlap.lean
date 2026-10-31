@@ -1037,6 +1037,84 @@ theorem intertemporal_equilibrium_exists {T : ℕ} (hT : 0 < T) {E : Type*} [Fin
       (strictConcaveOn_blissQuadratic M)
   exact ⟨p, c, hbox, hbud, hclear⟩
 
+/-! ## Gap 4b — non-uniqueness (the upshot of Sonnenschein–Mantel–Debreu) -/
+
+-- The `fin_cases` branches below need different subsets of the `Matrix.cons_val_*`
+-- simp lemmas, so a single list is over-complete in each branch; the proof is
+-- correct and the linter warning is purely stylistic.
+set_option linter.unusedSimpArgs false in
+/-- **Equilibrium is not generally unique.**  A concrete, genuinely non-monotone
+continuous excess demand on the two-good simplex (a cubic in the first price),
+satisfying Walras' law *exactly*, that clears at **two distinct interior prices**
+(`p₀ = 1/4` and `p₀ = 1/2`).  Nothing in Gale–Nikaido–Debreu forces uniqueness.
+This witnesses the economically-relevant content of the Sonnenschein–Mantel–Debreu
+results — aggregate excess demand can be essentially arbitrary, so multiple
+equilibria are possible — with a non-degenerate `z` (not the trivial autarky
+`z ≡ 0`).  The full SMD *realization* (building households whose aggregate demand
+is a prescribed `z`) is a separate, larger construction. -/
+theorem equilibrium_not_unique :
+    ∃ z : priceSimplex (Fin 2) → (Fin 2 → ℝ), Continuous z ∧
+      (∀ p : priceSimplex (Fin 2), ∑ s, (p : Fin 2 → ℝ) s * z p s = 0) ∧
+      ∃ p₁ p₂ : priceSimplex (Fin 2), p₁ ≠ p₂ ∧
+        (∀ s, z p₁ s = 0) ∧ (∀ s, z p₂ s = 0) := by
+  classical
+  have hfa : Continuous (fun p : priceSimplex (Fin 2) => (p : Fin 2 → ℝ) 0) :=
+    (continuous_apply 0).comp continuous_subtype_val
+  refine ⟨fun p => ![((p : Fin 2 → ℝ) 0 - 1/4) * ((p : Fin 2 → ℝ) 0 - 1/2) * (1 - (p : Fin 2 → ℝ) 0),
+                      -((p : Fin 2 → ℝ) 0) * ((p : Fin 2 → ℝ) 0 - 1/4) * ((p : Fin 2 → ℝ) 0 - 1/2)],
+          ?_, ?_, ?_⟩
+  · refine continuous_pi (fun i => ?_)
+    fin_cases i
+    · simp only [Matrix.cons_val_zero]
+      exact ((hfa.sub continuous_const).mul (hfa.sub continuous_const)).mul
+        (continuous_const.sub hfa)
+    · simp only [Matrix.cons_val_one, Matrix.head_cons]
+      exact (hfa.neg.mul (hfa.sub continuous_const)).mul (hfa.sub continuous_const)
+  · intro p
+    have h2 : (p : Fin 2 → ℝ) 0 + (p : Fin 2 → ℝ) 1 = 1 := by
+      have := p.2.2; rwa [Fin.sum_univ_two] at this
+    rw [Fin.sum_univ_two]
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    have h1 : (p : Fin 2 → ℝ) 1 = 1 - (p : Fin 2 → ℝ) 0 := by linarith
+    rw [h1]; ring
+  · refine ⟨⟨![1/4, 3/4], ?_, ?_⟩, ⟨![1/2, 1/2], ?_, ?_⟩, ?_, ?_, ?_⟩
+    · intro s; fin_cases s <;>
+        norm_num [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    · rw [Fin.sum_univ_two]
+      norm_num [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    · intro s; fin_cases s <;>
+        norm_num [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    · rw [Fin.sum_univ_two]
+      norm_num [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    · intro h
+      have hval := congrArg (fun q : priceSimplex (Fin 2) => (q : Fin 2 → ℝ) 0) h
+      norm_num [Matrix.cons_val_zero] at hval
+    · intro s; fin_cases s <;>
+        norm_num [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    · intro s; fin_cases s <;>
+        norm_num [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+
+/-! ## Gap 1b / honest-limit — positive time value of money from impatience -/
+
+/-- **Positive time value of money, with no interest rate.**  A one-agent, two-date,
+one-good economy: endowment `(1,1)`, time-separable log utility `ln c₀ + β·ln c₁`
+with `0 < β < 1` (impatience).  At the price pair `(1, β)` the autarky allocation
+`(1,1)` is utility-maximal on the budget `c₀ + β·c₁ ≤ 1 + β` (first conjunct) and
+clears (consumption equals endowment).  Hence `(1,1)` at prices `(1,β)` is a
+competitive equilibrium whose **discount factor is exactly `β ∈ (0,1)`** — future
+consumption is strictly discounted — yet there is no interest rate, bond, or
+risk-free asset: the discount factor is the equilibrium price ratio `p₁/p₀ = β`.
+The optimality proof uses only the concavity bound `log t ≤ t - 1`. -/
+theorem positive_time_value_from_impatience (β : ℝ) (hβ0 : 0 < β) (hβ1 : β < 1) :
+    (∀ x y : ℝ, 0 < x → 0 < y → x + β * y ≤ 1 + β →
+        Real.log x + β * Real.log y ≤ Real.log 1 + β * Real.log 1)
+      ∧ (0 < β ∧ β < 1) := by
+  refine ⟨?_, hβ0, hβ1⟩
+  intro x y hx hy hbud
+  simp only [Real.log_one, mul_zero, add_zero]
+  nlinarith [Real.log_le_sub_one_of_pos hx,
+    mul_le_mul_of_nonneg_left (Real.log_le_sub_one_of_pos hy) hβ0.le, hbud]
+
 end GEOverlap
 
 #print axioms GEOverlap.strictConcaveOn_blissQuadratic
@@ -1049,6 +1127,8 @@ end GEOverlap
 #print axioms GEOverlap.general_preferences_equilibrium
 #print axioms GEOverlap.incomplete_markets_equilibrium_exists
 #print axioms GEOverlap.intertemporal_equilibrium_exists
+#print axioms GEOverlap.positive_time_value_from_impatience
+#print axioms GEOverlap.equilibrium_not_unique
 
 #print axioms GEOverlap.unique_max_of_strictConcaveOn
 #print axioms GEOverlap.continuous_of_unique_maximizer

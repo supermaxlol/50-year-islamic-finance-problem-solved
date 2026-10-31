@@ -5,7 +5,7 @@
 To the author's knowledge, this is the first general-equilibrium existence
 development — from the fixed-point theorem up to a competitive equilibrium — that
 is fully verified by a proof assistant **and** constructed with no risk-free /
-interest-bearing asset anywhere. All **21 headline theorems** are axiom-audited:
+interest-bearing asset anywhere. All **23 headline theorems** are axiom-audited:
 each depends only on Lean 4's three standard foundational axioms (`propext`,
 `Classical.choice`, `Quot.sound`) — no `sorry`, no added axioms, no gaps, no warnings.
 
@@ -36,6 +36,14 @@ each depends only on Lean 4's three standard foundational axioms (`propext`,
   **date-event prices are the discount factors** — time value of money arises as an
   *endogenous shadow price*, with no interest rate, bond, or risk-free asset in the
   primitives.
+- **Positive time value from impatience** (`positive_time_value_from_impatience`):
+  a one-agent, two-date log-utility economy whose unique competitive equilibrium has
+  **discount factor exactly `β ∈ (0,1)`** — future consumption strictly discounted,
+  the discount factor being the equilibrium price ratio `p₁/p₀ = β`, with no interest rate.
+- **Non-uniqueness** (`equilibrium_not_unique`): an explicit continuous excess demand
+  satisfying Walras' law exactly that clears at **two distinct prices** — the
+  economically-relevant content of Sonnenschein–Mantel–Debreu, witnessed with a
+  non-degenerate (non-autarky) excess demand.
 
 The construction uses **no numeraire interest rate**. The classical objection
 that valuation, discounting, and equilibrium require an interest-rate benchmark
@@ -56,10 +64,12 @@ For precision (and because overclaiming helps no one):
   debt (safe-claim / liquidity / screening / costly-state-verification / control-in-
   default). Those live in contract theory and mechanism design, not equilibrium
   existence, and remain open.
-- Open on the pure-theory side too: the Sonnenschein–Mantel–Debreu realization
-  result and *sequential* (Radner-trading) multi-period equilibrium are not formalized
-  here — they are separate, large general-equilibrium programs, not instances of this
-  engine.
+- Open on the pure-theory side too: the full Sonnenschein–Mantel–Debreu *realization*
+  result (constructing households whose aggregate demand is a prescribed `z`; the
+  non-uniqueness *upshot* is witnessed above), *sequential* (Radner-trading) multi-
+  period equilibrium, and *monetary* time value (liquidity / convenience yield — which
+  needs a money object) are not formalized here. They are separate, larger programs,
+  not instances of this engine.
 
 ## Verify it yourself
 
