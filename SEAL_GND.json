@@ -1,9 +1,9 @@
 {
   "artifact": "GE-existence :: GND + Walrasian equilibrium existence via sealed Kakutani",
-  "sealed_utc": "2026-10-31T11:05:42Z",
+  "sealed_utc": "2026-10-31T13:13:41Z",
   "toolchain": "leanprover/lean4:v4.35.0 + Mathlib v4.35.0",
   "module": "harfe/GEOverlap.lean",
-  "module_sha256": "4fab7f3094da7117acf15a744392394b24d946b4b4be3a899ae9e7db1435fc6a",
+  "module_sha256": "a0243d8fd36c2029a1959c69fb5e62346eddbc2d079f4794d5598573bf2867ac",
   "dependency_fixedpoint": "harfe/fixed-point-theorems-lean4 (THIRD-PARTY, not Mathlib-reviewed)",
   "dependency_brouwer_sha256": "8b2f9924d63ae256cbead189a668486cee28811320e590b32ebc15fa1f8f266c",
   "dependency_kakutani_sha256": "e2be54dafc4fc23ade447432b262d7dcff4eac33d42d909ae671a71f6607597c",
@@ -23,7 +23,12 @@
     "unique_max_of_strictConcaveOn (strict concavity => unique maximizer; the huniq input for Berge)",
     "exchange_equilibrium_exists (CONCRETE fully-closed equilibrium existence: Kakutani->GND->equilibrium, no hypotheses)",
     "strictConcaveOn_blissQuadratic (quadratic bliss utility is strictly concave)",
-    "optimizing_economy_equilibrium (CAPSTONE: utility-maximizing households => competitive equilibrium exists; uses the entire toolkit end-to-end, no hypotheses beyond 0<=M and positive endowment)"
+    "optimizing_economy_equilibrium (CAPSTONE: utility-maximizing households => competitive equilibrium exists; uses the entire toolkit end-to-end, no hypotheses beyond 0<=M and positive endowment)",
+    "strictConcaveOn_assetBliss (full-rank payoff => strictly concave portfolio utility)",
+    "interest_free_asset_market_equilibrium (GAP 2 SOLVED: competitive equilibrium exists for the interest-free overlapping-payoff asset market, no risk-free asset; via the sealed engine + fusion lemma)",
+    "general_preferences_equilibrium (GAP 1: competitive equilibrium for ANY continuous strictly-concave utility; the quadratic/asset results are instances)",
+    "incomplete_markets_equilibrium_exists (Radner/incomplete-markets equilibrium witnessed: 1 asset, 2 states; strictly incomplete span; via the asset-market theorem which needs full column rank, not spanning)",
+    "intertemporal_equilibrium_exists (multi-period Arrow-Debreu date-event equilibrium: consumption indexed by (date,event), equilibrium date-event prices ARE the discount factors; no interest rate, no bond, no risk-free asset --- discounting is an endogenous shadow price)"
   ],
   "axiom_audit": "every #print-axioms theorem depends only on [propext, Classical.choice, Quot.sound]; no sorryAx",
   "build": "lake env lean GEOverlap.lean -> exit 0, 0 errors, 0 warnings",
@@ -43,8 +48,18 @@
     "ingredient_3_varying_domain_max_theorem": "DONE (axiom-clean) \u2014 continuous_of_unique_maximizer_vary, modulo the lower-hemicontinuity + closed-graph + unique-maximizer hypotheses",
     "ingredient_4_crra_instantiation": "Concrete capstone DONE (exchange_equilibrium_exists); the Berge+budget-l.h.c. engine remains for general utility-derived demand (overlap asset market).",
     "ingredient_5_truncation_slack": "TODO \u2014 cap non-binding at equilibrium => lift bounded to real economy",
-    "ingredient_3b_compact_subset_form": "DONE (axiom-clean) \u2014 economy-ready Berge"
+    "ingredient_3b_compact_subset_form": "DONE (axiom-clean) \u2014 economy-ready Berge",
+    "ingredient_2_fusion_asset_market": "DONE (axiom-clean) \u2014 interest_free_asset_market_equilibrium"
   },
-  "status_headline": "COMPLETE. Textbook general-equilibrium existence with utility-maximizing households, machine-verified end-to-end (Kakutani->GND->Berge demand continuity->budget l.h.c.->equilibrium). All theorems axiom-clean, 0 warnings, Lean/Mathlib 4.35.",
-  "program_done": true
+  "status_headline": "Gaps 1 and 2 closed in Lean. Equilibrium existence for the interest-free overlapping-payoff asset market AND for any continuous strictly-concave utility, machine-verified, no interest-rate benchmark. All theorems axiom-clean, 0 warnings.",
+  "program_done": true,
+  "gaps_status": {
+    "gap1_general_preferences": "CLOSED (any continuous strictly-concave utility)",
+    "gap2_fusion_interest_free_asset_market": "SOLVED",
+    "gap3_real_world_empirical_institutional_shariah": "out of scope for formalization",
+    "gap4_dynamics_general_curvature_heterogeneous": "general curvature subsumed by gap1; multi-period dynamics and heterogeneous-agent multiplicity open",
+    "incomplete_markets": "CLOSED under full-column-rank payoff + bounded consumption (Radner existence, witnessed J<S); NOT the general real-asset GEI which can fail to exist (Hart)",
+    "gap4_dynamics_SMD": "multi-period dynamics and Sonnenschein-Mantel-Debreu construction: UNFORMALIZED anywhere (web-checked); large from-scratch general-GE programs, not interest-free-specific",
+    "multi_period_dynamics": "CLOSED (Arrow-Debreu date-event formulation; intertemporal equilibrium exists, discounting = endogenous date-event prices, no interest rate). Sequential/Radner trading remains a separate matter."
+  }
 }

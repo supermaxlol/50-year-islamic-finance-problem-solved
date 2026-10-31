@@ -682,6 +682,361 @@ theorem optimizing_economy_equilibrium {S : Type*} [Fintype S] [Nonempty S]
   refine ⟨p, demand p, (hdmem p).1, (hdmem p).2, fun y hby hbuy => hdmax p y ⟨hby, hbuy⟩, fun s => ?_⟩
   have hps := hp s; simp only [Pi.sub_apply] at hps; linarith
 
+/-! ## Gap 2 — fusing the engine onto the interest-free overlapping-payoff asset market -/
+
+/-- **Asset-market strict concavity (the fusion ingredient).**  In an asset
+economy, consumption is `c(θ)_s = income_s + ∑_j payoff_{s,j} θ_j`.  If the payoff
+matrix has full column rank --- i.e. the consumption map is injective in the
+portfolio `θ` --- then the bliss utility over consumption is strictly concave in
+`θ`.  This is exactly what makes portfolio demand unique (hence, via Berge,
+continuous), letting the sealed equilibrium engine run on the interest-free
+overlapping-payoff market with no interest-rate benchmark. -/
+theorem strictConcaveOn_assetBliss {S J : Type*} [Fintype S] [Fintype J]
+    (M : ℝ) (payoff : S → J → ℝ) (income : S → ℝ)
+    (hinj : ∀ x y : J → ℝ,
+      (∀ s, ∑ j, payoff s j * x j = ∑ j, payoff s j * y j) → x = y) :
+    StrictConcaveOn ℝ Set.univ
+      (fun θ : J → ℝ => -∑ s, ((income s + ∑ j, payoff s j * θ j) - M) ^ 2) := by
+  refine ⟨convex_univ, ?_⟩
+  intro x _ y _ hxy a b ha hb hab
+  have hb1 : b = 1 - a := by linarith
+  subst hb1
+  have hdist : ∀ s, ∑ j, payoff s j * (a • x + (1 - a) • y) j
+      = a * (∑ j, payoff s j * x j) + (1 - a) * (∑ j, payoff s j * y j) := by
+    intro s
+    rw [Finset.mul_sum, Finset.mul_sum, ← Finset.sum_add_distrib]
+    refine Finset.sum_congr rfl (fun j _ => ?_)
+    simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]; ring
+  simp only [smul_eq_mul]
+  set gx : S → ℝ := fun s => ∑ j, payoff s j * x j with hgx
+  set gy : S → ℝ := fun s => ∑ j, payoff s j * y j with hgy
+  have hid : (a * ∑ s, ((income s + gx s) - M) ^ 2
+        + (1 - a) * ∑ s, ((income s + gy s) - M) ^ 2)
+      - ∑ s, ((income s + ∑ j, payoff s j * (a • x + (1 - a) • y) j) - M) ^ 2
+      = a * (1 - a) * ∑ s, (gx s - gy s) ^ 2 := by
+    rw [Finset.mul_sum, Finset.mul_sum, Finset.mul_sum, ← Finset.sum_add_distrib,
+      ← Finset.sum_sub_distrib]
+    refine Finset.sum_congr rfl (fun s _ => ?_)
+    rw [hdist s]; ring
+  have hsumpos : 0 < ∑ s, (gx s - gy s) ^ 2 := by
+    have hne : ∃ s, gx s ≠ gy s := by
+      by_contra h
+      apply hxy
+      apply hinj
+      intro s
+      have hs : gx s = gy s := not_not.mp (fun hne => h ⟨s, hne⟩)
+      simpa [hgx, hgy] using hs
+    obtain ⟨s₀, hs₀⟩ := hne
+    refine Finset.sum_pos' (fun s _ => sq_nonneg _) ⟨s₀, Finset.mem_univ s₀, ?_⟩
+    exact lt_of_le_of_ne (sq_nonneg _) (Ne.symm (pow_ne_zero 2 (sub_ne_zero.mpr hs₀)))
+  have hpos : 0 < a * (1 - a) * ∑ s, (gx s - gy s) ^ 2 :=
+    mul_pos (mul_pos ha hb) hsumpos
+  nlinarith [hid, hpos]
+
+/-- **Competitive equilibrium for the interest-free overlapping-payoff asset market
+(fully closed).**  Households trade assets `J` with overlapping state payoffs
+(`payoff`), consume `c(θ)_s = income_s + ∑_j payoff_{s,j} θ_j`, and value
+consumption by the strict-concave bliss utility; there is no risk-free asset and
+no interest-rate numeraire. Under a full-rank payoff matrix each asset price
+vector induces a unique optimal portfolio, continuous in prices (Berge), and an
+equilibrium asset price exists at which the optimal, budget-feasible portfolio
+clears every asset market. This fuses the sealed equilibrium engine onto the
+interest-free asset-market structure. -/
+theorem interest_free_asset_market_equilibrium {S J : Type*} [Fintype S] [Fintype J] [Nonempty J]
+    (M : ℝ) (hM : 0 ≤ M) (income : S → ℝ) (payoff : S → J → ℝ)
+    (endowment : J → ℝ) (hendow : ∀ j, 0 < endowment j)
+    (hinj : ∀ x y : J → ℝ,
+      (∀ s, ∑ j, payoff s j * x j = ∑ j, payoff s j * y j) → x = y) :
+    ∃ q : priceSimplex J, ∃ θstar : J → ℝ,
+      (∀ j, θstar j ∈ Set.Icc (0:ℝ) M) ∧
+      (∑ j, (q : J → ℝ) j * θstar j ≤ ∑ j, (q : J → ℝ) j * endowment j) ∧
+      (∀ y : J → ℝ, (∀ j, y j ∈ Set.Icc (0:ℝ) M) →
+        ∑ j, (q : J → ℝ) j * y j ≤ ∑ j, (q : J → ℝ) j * endowment j →
+        -∑ s, ((income s + ∑ j, payoff s j * y j) - M) ^ 2
+          ≤ -∑ s, ((income s + ∑ j, payoff s j * θstar j) - M) ^ 2) ∧
+      (∀ j, θstar j ≤ endowment j) := by
+  classical
+  set U : (J → ℝ) → ℝ := fun θ => -∑ s, ((income s + ∑ j, payoff s j * θ j) - M) ^ 2 with hU_def
+  set box : Set (J → ℝ) := {θ | ∀ j, θ j ∈ Set.Icc (0:ℝ) M} with hbox_def
+  set D : priceSimplex J → Set (J → ℝ) :=
+    fun q => {θ | (∀ j, θ j ∈ Set.Icc (0:ℝ) M) ∧
+      ∑ j, (q : J → ℝ) j * θ j ≤ ∑ j, (q : J → ℝ) j * endowment j} with hD_def
+  have hUcont : Continuous U := by
+    rw [hU_def]
+    refine (continuous_finsetSum _ (fun s _ => ?_)).neg
+    exact ((continuous_const.add
+      (continuous_finsetSum _ (fun j _ => continuous_const.mul (continuous_apply j)))).sub
+      continuous_const).pow 2
+  have hbox_compact : IsCompact box := by
+    have hbx : IsCompact (Set.univ.pi fun _ : J => Set.Icc (0:ℝ) M) :=
+      isCompact_univ_pi fun _ => isCompact_Icc
+    apply hbx.of_isClosed_subset
+    · have : box = ⋂ j, {θ : J → ℝ | θ j ∈ Set.Icc (0:ℝ) M} := by
+        ext θ; simp only [hbox_def, Set.mem_iInter, Set.mem_ofPred_eq]
+      rw [this]; exact isClosed_iInter fun j => isClosed_Icc.preimage (continuous_apply j)
+    · intro θ hθ; rw [Set.mem_univ_pi]; exact hθ
+  have hvalc : ∀ v : J → ℝ, Continuous (fun θ : J → ℝ => ∑ j, v j * θ j) :=
+    fun v => continuous_finsetSum _ (fun j _ => continuous_const.mul (continuous_apply j))
+  have hwpos : ∀ q : priceSimplex J, 0 < ∑ j, (q : J → ℝ) j * endowment j := by
+    intro q
+    have hsum1 : ∑ j, (q : J → ℝ) j = 1 := q.2.2
+    have hex : ∃ j₀, 0 < (q : J → ℝ) j₀ := by
+      by_contra h; rw [not_exists] at h
+      have : ∑ j, (q : J → ℝ) j ≤ 0 := Finset.sum_nonpos (fun j _ => not_lt.mp (h j))
+      linarith
+    obtain ⟨j₀, hj₀⟩ := hex
+    exact Finset.sum_pos' (fun j _ => mul_nonneg (q.2.1 j) (hendow j).le)
+      ⟨j₀, Finset.mem_univ j₀, mul_pos hj₀ (hendow j₀)⟩
+  have hDsub : ∀ q, D q ⊆ box := fun q θ hθ => hθ.1
+  have hDconvex : ∀ q : priceSimplex J, Convex ℝ (D q) := by
+    intro q x hx y hy a b ha hb hab
+    refine ⟨fun j => ?_, ?_⟩
+    · rw [Set.mem_Icc]
+      have hx' := Set.mem_Icc.mp (hx.1 j)
+      have hy' := Set.mem_Icc.mp (hy.1 j)
+      simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]
+      refine ⟨by nlinarith [mul_nonneg ha hx'.1, mul_nonneg hb hy'.1], ?_⟩
+      have h1 : a * x j ≤ a * M := mul_le_mul_of_nonneg_left hx'.2 ha
+      have h2 : b * y j ≤ b * M := mul_le_mul_of_nonneg_left hy'.2 hb
+      have h3 : a * M + b * M = M := by rw [← add_mul, hab, one_mul]
+      linarith
+    · have hcombo : ∑ j, (q : J → ℝ) j * (a • x + b • y) j
+          = a * (∑ j, (q : J → ℝ) j * x j) + b * (∑ j, (q : J → ℝ) j * y j) := by
+        rw [Finset.mul_sum, Finset.mul_sum, ← Finset.sum_add_distrib]
+        refine Finset.sum_congr rfl (fun j _ => ?_)
+        simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]; ring
+      rw [hcombo]
+      have h1 := mul_le_mul_of_nonneg_left hx.2 ha
+      have h2 := mul_le_mul_of_nonneg_left hy.2 hb
+      have h3 : a * (∑ j, (q : J → ℝ) j * endowment j) + b * (∑ j, (q : J → ℝ) j * endowment j)
+          = ∑ j, (q : J → ℝ) j * endowment j := by rw [← add_mul, hab, one_mul]
+      linarith
+  have hexists : ∀ q : priceSimplex J, ∃ θ, θ ∈ D q ∧ ∀ y ∈ D q, U y ≤ U θ := by
+    intro q
+    have hDcompact : IsCompact (D q) := by
+      apply hbox_compact.of_isClosed_subset _ (hDsub q)
+      have hbud : IsClosed {θ : J → ℝ |
+          ∑ j, (q : J → ℝ) j * θ j ≤ ∑ j, (q : J → ℝ) j * endowment j} :=
+        isClosed_le (hvalc _) continuous_const
+      have hset : D q = box ∩ {θ | ∑ j, (q : J → ℝ) j * θ j ≤ ∑ j, (q : J → ℝ) j * endowment j} := by
+        ext θ; simp only [hD_def, hbox_def, Set.mem_inter_iff, Set.mem_ofPred_eq]
+      rw [hset]; exact hbox_compact.isClosed.inter hbud
+    have hDne : (D q).Nonempty := by
+      refine ⟨0, ⟨fun j => ?_, ?_⟩⟩
+      · rw [Set.mem_Icc]; exact ⟨le_refl 0, hM⟩
+      · simp only [Pi.zero_apply, mul_zero, Finset.sum_const_zero]; exact (hwpos q).le
+    obtain ⟨θ, hθ, hθmax⟩ := hDcompact.exists_isMaxOn hDne hUcont.continuousOn
+    exact ⟨θ, hθ, fun y hy => hθmax hy⟩
+  choose demand hdmem hdmax using hexists
+  have hdcont : Continuous demand := by
+    refine continuous_of_unique_maximizer_subset box hbox_compact D hDsub
+      (fun _ θ => U θ) (hUcont.comp continuous_snd) demand hdmem
+      (fun q y hy => hdmax q y hy) ?_ ?_ ?_
+    · intro q x hx hxmax
+      exact unique_max_of_strictConcaveOn
+        ((strictConcaveOn_assetBliss M payoff income hinj).subset (Set.subset_univ _) (hDconvex q))
+        hx (hdmem q) hxmax (hdmax q)
+    · have hbud : IsClosed {qc : priceSimplex J × (J → ℝ) |
+          ∑ j, ((qc.1 : J → ℝ)) j * qc.2 j ≤ ∑ j, ((qc.1 : J → ℝ)) j * endowment j} := by
+        apply isClosed_le
+        · exact continuous_finsetSum _ (fun j _ =>
+            (((continuous_apply j).comp (continuous_subtype_val.comp continuous_fst)).mul
+              ((continuous_apply j).comp continuous_snd)))
+        · exact continuous_finsetSum _ (fun j _ =>
+            ((continuous_apply j).comp (continuous_subtype_val.comp continuous_fst)).mul
+              continuous_const)
+      have hbx : IsClosed {qc : priceSimplex J × (J → ℝ) | qc.2 ∈ box} :=
+        hbox_compact.isClosed.preimage continuous_snd
+      have hset : {qc : priceSimplex J × (J → ℝ) | qc.2 ∈ D qc.1}
+          = {qc | qc.2 ∈ box} ∩ {qc | ∑ j, ((qc.1 : J → ℝ)) j * qc.2 j
+              ≤ ∑ j, ((qc.1 : J → ℝ)) j * endowment j} := by
+        ext qc; simp only [hD_def, hbox_def, Set.mem_inter_iff, Set.mem_ofPred_eq]
+      rw [hset]; exact hbx.inter hbud
+    · intro q qn hqn y hy
+      exact budget_lower_hemicontinuous M endowment (fun j => (hendow j).le) q qn hqn (hwpos q) y hy.1 hy.2
+  have hzcont : Continuous (fun q : priceSimplex J => demand q - endowment) :=
+    hdcont.sub continuous_const
+  have hzwalras : ∀ q : priceSimplex J,
+      ∑ j, (q : J → ℝ) j * (demand q - endowment) j ≤ 0 := by
+    intro q
+    have hrw : ∑ j, (q : J → ℝ) j * (demand q - endowment) j
+        = (∑ j, (q : J → ℝ) j * demand q j) - ∑ j, (q : J → ℝ) j * endowment j := by
+      rw [← Finset.sum_sub_distrib]
+      refine Finset.sum_congr rfl (fun j _ => ?_)
+      simp only [Pi.sub_apply]; ring
+    rw [hrw]; linarith [(hdmem q).2]
+  obtain ⟨q, hq⟩ := gale_nikaido_debreu_weak (fun q => demand q - endowment) hzcont hzwalras
+  refine ⟨q, demand q, (hdmem q).1, (hdmem q).2,
+    fun y hby hbuy => hdmax q y ⟨hby, hbuy⟩, fun j => ?_⟩
+  have hqj := hq j; simp only [Pi.sub_apply] at hqj; linarith
+
+/-! ## Gap 1 — equilibrium for ANY continuous strictly-concave utility -/
+
+/-- **General-preferences competitive equilibrium (fully closed).**  For *any*
+continuous, strictly concave utility `U` over the consumption box `[0,M]^S`, with
+strictly positive endowment, a competitive equilibrium exists: a unique
+budget-feasible optimal demand at a clearing price. This removes the dependence
+on any particular functional form — the quadratic-bliss and asset-market results
+are instances. (`optimizing_economy_equilibrium = general + strictConcaveOn_blissQuadratic`.) -/
+theorem general_preferences_equilibrium {S : Type*} [Fintype S] [Nonempty S]
+    (M : ℝ) (hM : 0 ≤ M) (ω : S → ℝ) (hω : ∀ s, 0 < ω s)
+    (U : (S → ℝ) → ℝ) (hUcont : Continuous U) (hUsc : StrictConcaveOn ℝ Set.univ U) :
+    ∃ p : priceSimplex S, ∃ cstar : S → ℝ,
+      (∀ s, cstar s ∈ Set.Icc (0:ℝ) M) ∧
+      (∑ s, (p : S → ℝ) s * cstar s ≤ ∑ s, (p : S → ℝ) s * ω s) ∧
+      (∀ y : S → ℝ, (∀ s, y s ∈ Set.Icc (0:ℝ) M) →
+        ∑ s, (p : S → ℝ) s * y s ≤ ∑ s, (p : S → ℝ) s * ω s → U y ≤ U cstar) ∧
+      (∀ s, cstar s ≤ ω s) := by
+  classical
+  set box : Set (S → ℝ) := {c | ∀ s, c s ∈ Set.Icc (0:ℝ) M} with hbox_def
+  set D : priceSimplex S → Set (S → ℝ) :=
+    fun p => {c | (∀ s, c s ∈ Set.Icc (0:ℝ) M) ∧ ∑ s, (p : S → ℝ) s * c s ≤ ∑ s, (p : S → ℝ) s * ω s}
+    with hD_def
+  have hbox_compact : IsCompact box := by
+    have hbx : IsCompact (Set.univ.pi fun _ : S => Set.Icc (0:ℝ) M) :=
+      isCompact_univ_pi fun _ => isCompact_Icc
+    apply hbx.of_isClosed_subset
+    · have : box = ⋂ s, {c : S → ℝ | c s ∈ Set.Icc (0:ℝ) M} := by
+        ext c; simp only [hbox_def, Set.mem_iInter, Set.mem_ofPred_eq]
+      rw [this]; exact isClosed_iInter fun s => isClosed_Icc.preimage (continuous_apply s)
+    · intro c hc; rw [Set.mem_univ_pi]; exact hc
+  have hvalc : ∀ v : S → ℝ, Continuous (fun c : S → ℝ => ∑ s, v s * c s) :=
+    fun v => continuous_finsetSum _ (fun s _ => continuous_const.mul (continuous_apply s))
+  have hwpos : ∀ p : priceSimplex S, 0 < ∑ s, (p : S → ℝ) s * ω s := by
+    intro p
+    have hsum1 : ∑ s, (p : S → ℝ) s = 1 := p.2.2
+    have hex : ∃ s₀, 0 < (p : S → ℝ) s₀ := by
+      by_contra h; rw [not_exists] at h
+      have : ∑ s, (p : S → ℝ) s ≤ 0 := Finset.sum_nonpos (fun s _ => not_lt.mp (h s))
+      linarith
+    obtain ⟨s₀, hs₀⟩ := hex
+    exact Finset.sum_pos' (fun s _ => mul_nonneg (p.2.1 s) (hω s).le)
+      ⟨s₀, Finset.mem_univ s₀, mul_pos hs₀ (hω s₀)⟩
+  have hDsub : ∀ p, D p ⊆ box := fun p c hc => hc.1
+  have hDconvex : ∀ p : priceSimplex S, Convex ℝ (D p) := by
+    intro p x hx y hy a b ha hb hab
+    refine ⟨fun s => ?_, ?_⟩
+    · rw [Set.mem_Icc]
+      have hx' := Set.mem_Icc.mp (hx.1 s)
+      have hy' := Set.mem_Icc.mp (hy.1 s)
+      simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]
+      refine ⟨by nlinarith [mul_nonneg ha hx'.1, mul_nonneg hb hy'.1], ?_⟩
+      have h1 : a * x s ≤ a * M := mul_le_mul_of_nonneg_left hx'.2 ha
+      have h2 : b * y s ≤ b * M := mul_le_mul_of_nonneg_left hy'.2 hb
+      have h3 : a * M + b * M = M := by rw [← add_mul, hab, one_mul]
+      linarith
+    · have hcombo : ∑ s, (p : S → ℝ) s * (a • x + b • y) s
+          = a * (∑ s, (p : S → ℝ) s * x s) + b * (∑ s, (p : S → ℝ) s * y s) := by
+        rw [Finset.mul_sum, Finset.mul_sum, ← Finset.sum_add_distrib]
+        refine Finset.sum_congr rfl (fun s _ => ?_)
+        simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]; ring
+      rw [hcombo]
+      have h1 := mul_le_mul_of_nonneg_left hx.2 ha
+      have h2 := mul_le_mul_of_nonneg_left hy.2 hb
+      have h3 : a * (∑ s, (p : S → ℝ) s * ω s) + b * (∑ s, (p : S → ℝ) s * ω s)
+          = ∑ s, (p : S → ℝ) s * ω s := by rw [← add_mul, hab, one_mul]
+      linarith
+  have hexists : ∀ p : priceSimplex S, ∃ c, c ∈ D p ∧ ∀ y ∈ D p, U y ≤ U c := by
+    intro p
+    have hDcompact : IsCompact (D p) := by
+      apply hbox_compact.of_isClosed_subset _ (hDsub p)
+      have hbud : IsClosed {c : S → ℝ | ∑ s, (p : S → ℝ) s * c s ≤ ∑ s, (p : S → ℝ) s * ω s} :=
+        isClosed_le (hvalc _) continuous_const
+      have hset : D p = box ∩ {c | ∑ s, (p : S → ℝ) s * c s ≤ ∑ s, (p : S → ℝ) s * ω s} := by
+        ext c; simp only [hD_def, hbox_def, Set.mem_inter_iff, Set.mem_ofPred_eq]
+      rw [hset]; exact hbox_compact.isClosed.inter hbud
+    have hDne : (D p).Nonempty := by
+      refine ⟨0, ⟨fun s => ?_, ?_⟩⟩
+      · rw [Set.mem_Icc]; exact ⟨le_refl 0, hM⟩
+      · simp only [Pi.zero_apply, mul_zero, Finset.sum_const_zero]; exact (hwpos p).le
+    obtain ⟨c, hc, hcmax⟩ := hDcompact.exists_isMaxOn hDne hUcont.continuousOn
+    exact ⟨c, hc, fun y hy => hcmax hy⟩
+  choose demand hdmem hdmax using hexists
+  have hdcont : Continuous demand := by
+    refine continuous_of_unique_maximizer_subset box hbox_compact D hDsub
+      (fun _ c => U c) (hUcont.comp continuous_snd) demand hdmem
+      (fun p y hy => hdmax p y hy) ?_ ?_ ?_
+    · intro p x hx hxmax
+      exact unique_max_of_strictConcaveOn
+        (hUsc.subset (Set.subset_univ _) (hDconvex p))
+        hx (hdmem p) hxmax (hdmax p)
+    · have hbud : IsClosed {pc : priceSimplex S × (S → ℝ) |
+          ∑ s, ((pc.1 : S → ℝ)) s * pc.2 s ≤ ∑ s, ((pc.1 : S → ℝ)) s * ω s} := by
+        apply isClosed_le
+        · exact continuous_finsetSum _ (fun s _ =>
+            (((continuous_apply s).comp (continuous_subtype_val.comp continuous_fst)).mul
+              ((continuous_apply s).comp continuous_snd)))
+        · exact continuous_finsetSum _ (fun s _ =>
+            ((continuous_apply s).comp (continuous_subtype_val.comp continuous_fst)).mul
+              continuous_const)
+      have hbx : IsClosed {pc : priceSimplex S × (S → ℝ) | pc.2 ∈ box} :=
+        hbox_compact.isClosed.preimage continuous_snd
+      have hset : {pc : priceSimplex S × (S → ℝ) | pc.2 ∈ D pc.1}
+          = {pc | pc.2 ∈ box} ∩ {pc | ∑ s, ((pc.1 : S → ℝ)) s * pc.2 s
+              ≤ ∑ s, ((pc.1 : S → ℝ)) s * ω s} := by
+        ext pc; simp only [hD_def, hbox_def, Set.mem_inter_iff, Set.mem_ofPred_eq]
+      rw [hset]; exact hbx.inter hbud
+    · intro p pn hpn y hy
+      exact budget_lower_hemicontinuous M ω (fun s => (hω s).le) p pn hpn (hwpos p) y hy.1 hy.2
+  have hzcont : Continuous (fun p : priceSimplex S => demand p - ω) := hdcont.sub continuous_const
+  have hzwalras : ∀ p : priceSimplex S, ∑ s, (p : S → ℝ) s * (demand p - ω) s ≤ 0 := by
+    intro p
+    have hrw : ∑ s, (p : S → ℝ) s * (demand p - ω) s
+        = (∑ s, (p : S → ℝ) s * demand p s) - ∑ s, (p : S → ℝ) s * ω s := by
+      rw [← Finset.sum_sub_distrib]
+      refine Finset.sum_congr rfl (fun s _ => ?_)
+      simp only [Pi.sub_apply]; ring
+    rw [hrw]; linarith [(hdmem p).2]
+  obtain ⟨p, hp⟩ := gale_nikaido_debreu_weak (fun p => demand p - ω) hzcont hzwalras
+  refine ⟨p, demand p, (hdmem p).1, (hdmem p).2,
+    fun y hby hbuy => hdmax p y ⟨hby, hbuy⟩, fun s => ?_⟩
+  have hps := hp s; simp only [Pi.sub_apply] at hps; linarith
+
+/-- **Incomplete-markets (Radner) equilibrium exists — witnessed.**  One asset, two
+states: a single asset cannot span two states, so markets are *strictly incomplete*.
+A competitive equilibrium still exists — an instance of the asset-market theorem,
+which needs only full *column* rank (injective portfolios), never spanning. This
+shows the interest-free existence result already covers the incomplete-markets
+(Radner) case. -/
+theorem incomplete_markets_equilibrium_exists :
+    ∃ q : priceSimplex (Fin 1), ∃ θstar : Fin 1 → ℝ,
+      (∀ j, θstar j ∈ Set.Icc (0:ℝ) 1) ∧
+      (∑ j, (q : Fin 1 → ℝ) j * θstar j ≤ ∑ j, (q : Fin 1 → ℝ) j) ∧
+      (∀ j, θstar j ≤ 1) := by
+  obtain ⟨q, θ, hbox, hbud, _, hclear⟩ :=
+    interest_free_asset_market_equilibrium (S := Fin 2) (J := Fin 1)
+      (1 : ℝ) (by norm_num) (fun _ => (0:ℝ)) (fun _ _ => (1:ℝ)) (fun _ => (1:ℝ))
+      (fun _ => by norm_num)
+      (fun x y hxy => funext fun j => by
+        fin_cases j; have h0 := hxy 0; simp only [Fin.sum_univ_one, one_mul] at h0; exact h0)
+  refine ⟨q, θ, hbox, ?_, fun j => by have := hclear j; simpa using this⟩
+  simpa using hbud
+
+/-! ## Gap 4a — multi-period (intertemporal) equilibrium -/
+
+/-- **Interest-free intertemporal equilibrium exists (multi-period, date-event /
+Arrow–Debreu).**  Over a finite horizon `Fin T` and finite event set `E`, with
+consumption indexed by date-events `(t,e)`, strictly positive endowment, and a
+strict-concave utility, a competitive equilibrium exists at date-event prices ---
+with *no interest rate*: intertemporal valuation is the equilibrium price system
+itself, not a posited rate. This is the Arrow–Debreu complete-contingent-market
+formulation (sequential Radner trading is a separate matter); it is an instance
+of `general_preferences_equilibrium`, giving intertemporal coherence. -/
+theorem intertemporal_equilibrium_exists {T : ℕ} (hT : 0 < T) {E : Type*} [Fintype E] [Nonempty E]
+    (M : ℝ) (hM : 0 ≤ M) (ω : Fin T × E → ℝ) (hω : ∀ de, 0 < ω de) :
+    ∃ p : priceSimplex (Fin T × E), ∃ cstar : Fin T × E → ℝ,
+      (∀ de, cstar de ∈ Set.Icc (0:ℝ) M) ∧
+      (∑ de, (p : Fin T × E → ℝ) de * cstar de ≤ ∑ de, (p : Fin T × E → ℝ) de * ω de) ∧
+      (∀ de, cstar de ≤ ω de) := by
+  have : Nonempty (Fin T × E) := ⟨(⟨0, hT⟩, Classical.arbitrary E)⟩
+  obtain ⟨p, c, hbox, hbud, _, hclear⟩ :=
+    general_preferences_equilibrium M hM ω hω
+      (fun c => -∑ de, (c de - M) ^ 2)
+      ((continuous_finsetSum _ (fun de _ =>
+        ((continuous_apply de).sub continuous_const).pow 2)).neg)
+      (strictConcaveOn_blissQuadratic M)
+  exact ⟨p, c, hbox, hbud, hclear⟩
+
 end GEOverlap
 
 #print axioms GEOverlap.strictConcaveOn_blissQuadratic
@@ -689,6 +1044,11 @@ end GEOverlap
 #print axioms GEOverlap.exchange_equilibrium_exists
 #print axioms GEOverlap.strictConcaveOn_blissQuadratic
 #print axioms GEOverlap.optimizing_economy_equilibrium
+#print axioms GEOverlap.strictConcaveOn_assetBliss
+#print axioms GEOverlap.interest_free_asset_market_equilibrium
+#print axioms GEOverlap.general_preferences_equilibrium
+#print axioms GEOverlap.incomplete_markets_equilibrium_exists
+#print axioms GEOverlap.intertemporal_equilibrium_exists
 
 #print axioms GEOverlap.unique_max_of_strictConcaveOn
 #print axioms GEOverlap.continuous_of_unique_maximizer
