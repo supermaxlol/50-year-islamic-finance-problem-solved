@@ -1,0 +1,15 @@
+name = "interestFreeGE"
+defaultTargets = ["GEOverlap"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0"
+
+[[require]]
+name = "fixed-point-theorems"
+git = "https://github.com/harfe/fixed-point-theorems-lean4"
+rev = "main"
+
+[[lean_lib]]
+name = "GEOverlap"
