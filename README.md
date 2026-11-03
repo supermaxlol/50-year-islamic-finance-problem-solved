@@ -9,12 +9,13 @@ The connected applications cover proportional ownership certificates, funded
 mutual protection, supplied compute enterprises, dated operating affordability
 and a guarded primary-subscription/escrow lifecycle.
 
-The 3 November 2026 release contains **50 Lean modules** and **573 recorded
+The 3 November 2026 update contains **66 Lean modules** and **811 recorded
 declaration-audit endpoints** across the foundation and accepted extension chain.
-Endpoints include supporting lemmas and controls; they are not 573 independent
+Endpoints include supporting lemmas and controls; they are not 811 independent
 discoveries. All retained logs are clean and use only standard foundations
-(`propext`, `Classical.choice`, `Quot.sound`). The new sources are byte-identical
-to their accepted research checkpoints. This release audit does not pretend
+(`propext`, `Classical.choice`, `Quot.sound`). The proof sources and identified
+runtime artifacts are byte-identical to their accepted research checkpoints;
+portable launch configuration is separate. This release audit does not pretend
 that copying accepted evidence is a fresh cold rebuild.
 
 Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
@@ -39,11 +40,29 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
   subscription posting, budgeted close, attested release, ownership activation,
   cancellation, affordable non-repeatable refunds and named dispute scopes.
   Released cash meets the imported operating-buffer condition.
+- **Actual voluntary formation (Stages 211–214):** in the defined single-new-issue
+  class, funded formation exists if and only if actual household demand at the
+  construction/buffer/outside-option floor covers supply. Independent positive
+  future incomes and arbitrary positive CRRA curvatures are admitted. Actual
+  natural-lot-compatible choices connect to reached escrow release.
+- **Exact executable funding (Stages 215–218):** integer money refines the
+  real-valued rules; the proved dispatcher and versioned protocol handle
+  refusals, cached retries, conflicting identifiers and stale versions.
+- **Persistence (Stage 219):** complete journal/result encoding, same-core
+  correspondence and conditional replay recovery are proved. The local SQLite
+  adapter passes 150 exact comparisons, eight competing-writer schedules, six
+  process-exit cases and 13 corruption rejections. SQLite itself is not proved.
+- **Connected demonstration (Stage 220):** two households' unique actual choices,
+  cost-covering formation, five executable funding requests and complete recovered
+  state are connected in Lean. The same final record is obtained in SQLite,
+  including reopening and cached retries. This is a risky two-state synthetic
+  enterprise, not observed fundraising or a guaranteed-return investment.
 
-These do **not** yet prove voluntary household/issuer formation, correspondence
-of a persistent implementation to the formal rules, truthful physical evidence,
-real custody or legal title. The [roadmap](docs/ROADMAP.md) states exactly what
-closing those gaps would add.
+The economic and pure executable core is **proved**; the database adapter is
+**tested under explicit storage/runtime assumptions**. Truthful physical evidence,
+authentication, real custody, legal title and demonstrated social outcomes are
+not supplied by these results. See the [connected example](docs/CONNECTED_DEMO.md),
+[implementation contract](runtime/README.md) and [roadmap](docs/ROADMAP.md).
 
 ## Relationship to earlier economics
 
@@ -58,7 +77,7 @@ first-ever priority conclusion is certified by the source/axiom audit.
 ## Original foundations module: what is proven
 
 The original `GEOverlap.lean` retains its 25 headline theorem audits. The new
-49 modules in `formal/` extend it; the original source and historical seal are
+65 modules in `formal/` extend it; the original source and historical seal are
 preserved unchanged.
 
 **The machinery**
@@ -112,10 +131,9 @@ For precision (and because overclaiming helps no one):
 
 - This is a **defined class** of economies (finite goods/states, strictly-concave
   utility, specific structure), not a fully general theory of all economies.
-- It is a **mathematical-foundations** result. It makes **no** empirical,
-  institutional, legal, or Shariah (jurisprudential) claim. The broader project of
-  interest-free finance has those components too; this repository addresses the
-  theoretical-foundations one.
+- It is a **mathematical-foundations and bounded-execution** result. Specified
+  institutional rules are modeled, but empirical institutional performance,
+  legal enforceability and Shariah (jurisprudential) approval are not established.
 - It establishes **existence and coherence**, with conditional uniqueness and
   sensitivity in additional specified classes. The bounded funding/protection/
   ledger applications now address selected accounting and control rules, not
@@ -161,6 +179,10 @@ lake build                      # build foundation and extension libraries
 - `evidence/axioms/` — clean retained extension compiler/axiom logs.
 - `tests/primary_escrow_controls.py` — independent exact specification controls,
   not a proof of implementation refinement or observed economic performance.
+- `runtime/` — original-byte SQLite adapter, Lean transport and backend controls;
+  portable launch helpers are separate from the kernel-checked proof core.
+- `evidence/controls/connected_witness.json` — exact complete economic-example
+  initial/final records and requests, with retained execution receipts.
 
 ## Author
 

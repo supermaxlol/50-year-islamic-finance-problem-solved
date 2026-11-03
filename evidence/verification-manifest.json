@@ -1,6 +1,6 @@
 {
   "release": "2026-11-03",
-  "latest_stage": 209,
+  "latest_stage": 220,
   "lean_version": "4.35.0",
   "nature": "Source-identical accepted proofs and retained clean axiom logs; not a fresh cold rebuild.",
   "dependency_revisions": {
@@ -15,8 +15,8 @@
     "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
     "fixed-point-theorems": "93a3eed3364281a9dbf9652bb52356a8db65057c"
   },
-  "module_count": 50,
-  "audited_endpoints": 573,
+  "module_count": 66,
+  "audited_endpoints": 811,
   "counts_are_not_distinct_discovery_counts": true,
   "modules": {
     "HeterogeneousOverlapBridge": {
@@ -1140,6 +1140,420 @@
         "GEOverlap.gale_nikaido_debreu_weak"
       ],
       "imported_without_rebuild": true
+    },
+    "PrimaryLogDemand": {
+      "stage": 211,
+      "source": "formal/PrimaryLogDemand.lean",
+      "source_sha256": "1d0bbc38ff3ae013b6fd9819b8a148b160e2385b67a9dbb54cfdef62b1d71767",
+      "audit_log": "evidence/axioms/PrimaryLogDemand.txt",
+      "audit_log_sha256": "6567558c23bfd16ced9315f0811d1bf14868f62dc9650eebb7bc5c748d1f8b1a",
+      "retained_compiled_object_sha256": "4599292d3557cc7fd1003ea0036c057697b3407fcbac0bae426d281ecba27e80",
+      "audited_declarations": [
+        "PrimaryLogDemand.alpha_pos",
+        "PrimaryLogDemand.eta_pos",
+        "PrimaryLogDemand.raw_identity",
+        "PrimaryLogDemand.demand_nonnegative",
+        "PrimaryLogDemand.demand_feasible",
+        "PrimaryLogDemand.demand_budget_strict",
+        "PrimaryLogDemand.demand_upper",
+        "PrimaryLogDemand.demand_euler",
+        "PrimaryLogDemand.log_tangent",
+        "PrimaryLogDemand.log_tangent_strict",
+        "PrimaryLogDemand.gain_bound",
+        "PrimaryLogDemand.gain_strict",
+        "PrimaryLogDemand.demand_globally_optimal",
+        "PrimaryLogDemand.demand_unique_optimum",
+        "PrimaryLogDemand.voluntary_participation",
+        "PrimaryLogDemand.positive_subscription_strictly_preferred",
+        "PrimaryLogDemand.demand_continuousOn",
+        "PrimaryLogDemand.demand_antitone",
+        "PrimaryLogDemand.demand_strict_on_active"
+      ],
+      "imported_without_rebuild": true
+    },
+    "VoluntaryPrimaryMarket": {
+      "stage": 211,
+      "source": "formal/VoluntaryPrimaryMarket.lean",
+      "source_sha256": "e4478d899c84dbe9723ac1c018e2175611fd3fed00f915bfdf55b010fccd5c49",
+      "audit_log": "evidence/axioms/VoluntaryPrimaryMarket.txt",
+      "audit_log_sha256": "5d1e73a03082803eba7ba45d58b93eab24f722ddb76486250f71f0317d244d69",
+      "retained_compiled_object_sha256": "0fb4d33e444d28bbb3a99052b661d462d2d8e7bb78fdb5e413f2734b08caa858",
+      "audited_declarations": [
+        "VoluntaryPrimaryMarket.supply_pos",
+        "VoluntaryPrimaryMarket.floor_pos",
+        "VoluntaryPrimaryMarket.funding_iff_floor",
+        "VoluntaryPrimaryMarket.issuer_entry_iff_funding",
+        "VoluntaryPrimaryMarket.quote_covers_cost_and_outside",
+        "VoluntaryPrimaryMarket.issue_budget_exact",
+        "VoluntaryPrimaryMarket.aggregate_nonnegative",
+        "VoluntaryPrimaryMarket.aggregate_continuousOn",
+        "VoluntaryPrimaryMarket.aggregate_upper",
+        "VoluntaryPrimaryMarket.aggregate_antitone",
+        "VoluntaryPrimaryMarket.aggregate_strict_on_positive",
+        "VoluntaryPrimaryMarket.high_price_bounds",
+        "VoluntaryPrimaryMarket.cost_covering_price_exists",
+        "VoluntaryPrimaryMarket.clearing_price_unique",
+        "VoluntaryPrimaryMarket.actual_optimizer_identified",
+        "VoluntaryPrimaryMarket.voluntary_formation_exists",
+        "VoluntaryPrimaryMarket.formation_iff_cost_demand",
+        "VoluntaryPrimaryMarket.actual_formation_unique",
+        "VoluntaryPrimaryMarket.actual_subscriber_participation",
+        "VoluntaryPrimaryMarket.no_formation_below_cost_demand"
+      ],
+      "imported_without_rebuild": true
+    },
+    "FormationEscrowConnection": {
+      "stage": 211,
+      "source": "formal/FormationEscrowConnection.lean",
+      "source_sha256": "04fc948048d86d021583acefa59d4159e4811fe6e120d553da7f49d28dced0b9",
+      "audit_log": "evidence/axioms/FormationEscrowConnection.txt",
+      "audit_log_sha256": "3f32efbe21064ec4b1fbf1b40ed344a189e430cf92f571541407911cbefd8519",
+      "retained_compiled_object_sha256": "5aadc4c78b111914e2d608fe4969e9b221905deb9a57c585708e2b8ae8673128",
+      "audited_declarations": [
+        "FormationEscrowConnection.physical_normalization",
+        "FormationEscrowConnection.actual_physical_optimizer",
+        "FormationEscrowConnection.actual_physical_participation",
+        "FormationEscrowConnection.released_reserve_exact",
+        "FormationEscrowConnection.released_issuer_participation",
+        "FormationEscrowConnection.released_all_paths_and_receipts",
+        "FormationEscrowConnection.actual_issue_proceeds",
+        "FormationEscrowConnection.actual_receipt_allocation",
+        "FormationEscrowConnection.example_demand",
+        "FormationEscrowConnection.example_actual_formation",
+        "FormationEscrowConnection.example_reachable",
+        "FormationEscrowConnection.example_verified_lifecycle"
+      ],
+      "imported_without_rebuild": true
+    },
+    "ManyBuyerEscrow": {
+      "stage": 212,
+      "source": "formal/ManyBuyerEscrow.lean",
+      "source_sha256": "fe568e1cbfbbf7b90342dfbab5191b3d1bc2c16854134c700b099cd426260fd9",
+      "audit_log": "evidence/axioms/ManyBuyerEscrow.txt",
+      "audit_log_sha256": "d58d9d660d1897809f39b3acea5cda07f092b6d029c79f5c2ed50cf0e048a1dc",
+      "retained_compiled_object_sha256": "759ed09524a6b658caf0cd4ffdae81edd5c315d169ab7b8f5833038edb2d86da",
+      "audited_declarations": [
+        "ManyBuyerEscrow.receiptId_injective",
+        "ManyBuyerEscrow.receipt_fresh",
+        "ManyBuyerEscrow.zero_extension",
+        "ManyBuyerEscrow.settle_extension",
+        "ManyBuyerEscrow.processed_cap",
+        "ManyBuyerEscrow.collect_many",
+        "ManyBuyerEscrow.release_many"
+      ],
+      "imported_without_rebuild": true
+    },
+    "OptimalLotsExecution": {
+      "stage": 212,
+      "source": "formal/OptimalLotsExecution.lean",
+      "source_sha256": "7af9bd1dd2dc423bab719a9f80078a5f3ab56e3532ebc8ec8ce06643e259ea53",
+      "audit_log": "evidence/axioms/OptimalLotsExecution.txt",
+      "audit_log_sha256": "fba6d1e35f5af881925b9456c2bd42f125761cb9f76a217f5dec2814d8bef274",
+      "retained_compiled_object_sha256": "d8eab9b1b1c40cfd3de4dc2b126fcaa031f35a0ed4d0b60c07a53790693a6903",
+      "audited_declarations": [
+        "OptimalLotsExecution.initial_cash_nonnegative",
+        "OptimalLotsExecution.administrative_roles_distinct",
+        "OptimalLotsExecution.lot_total",
+        "OptimalLotsExecution.lots_affordable",
+        "OptimalLotsExecution.actual_commensurate_execution",
+        "OptimalLotsExecution.reached_operating_paths"
+      ],
+      "imported_without_rebuild": true
+    },
+    "PrimaryCRRAObjective": {
+      "stage": 213,
+      "source": "formal/PrimaryCRRAObjective.lean",
+      "source_sha256": "1ad7f40db8e3b95c39b4eddb5c0a164521fd7cad810850ffc6aced585dc72589",
+      "audit_log": "evidence/axioms/PrimaryCRRAObjective.txt",
+      "audit_log_sha256": "d7b66da91743f180d1a2c6ef2edeb0f627fb0b29a69aa1655d76d4eaf4c42d42",
+      "retained_compiled_object_sha256": "b74ccb0f42574dd37cf53f4a672992fe0d0efddb4a3b89c49651be8b9c86908a",
+      "audited_declarations": [
+        "PrimaryCRRA.future_pos",
+        "PrimaryCRRA.scalar_tangent_strict",
+        "PrimaryCRRA.scalar_tangent",
+        "PrimaryCRRA.marginal_nonnegative",
+        "PrimaryCRRA.marginal_antitone",
+        "PrimaryCRRA.score_strictAnti",
+        "PrimaryCRRA.lower_price_feasible",
+        "PrimaryCRRA.score_price_strictAnti",
+        "PrimaryCRRA.future_gain_bound",
+        "PrimaryCRRA.value_difference",
+        "PrimaryCRRA.gain_bound",
+        "PrimaryCRRA.gain_strict",
+        "PrimaryCRRA.kkt_globally_optimal",
+        "PrimaryCRRA.kkt_unique_optimum"
+      ],
+      "imported_without_rebuild": true
+    },
+    "PrimaryCRRADemand": {
+      "stage": 213,
+      "source": "formal/PrimaryCRRADemand.lean",
+      "source_sha256": "a767364c829c1b7b911f382f0b206f843ec7b22ef9ae5ea5d0d533397cb4c526",
+      "audit_log": "evidence/axioms/PrimaryCRRADemand.txt",
+      "audit_log_sha256": "95d2a0d476191f914acc8e4c11ed74a4f75b8a4133af9c6241a577c72665e716",
+      "retained_compiled_object_sha256": "058590b89b79bc2edb93ad3978e8b1a2211b9ebc9cc7d40bcb8c73528ce5d4fb",
+      "audited_declarations": [
+        "PrimaryCRRA.rootCash_positive",
+        "PrimaryCRRA.rootCash_identity",
+        "PrimaryCRRA.upperChoice_feasible",
+        "PrimaryCRRA.upperChoice_score_negative",
+        "PrimaryCRRA.marginal_continuousOn",
+        "PrimaryCRRA.current_price_continuous",
+        "PrimaryCRRA.score_price_continuous",
+        "PrimaryCRRA.interval_feasible",
+        "PrimaryCRRA.score_continuousOn_interval",
+        "PrimaryCRRA.kkt_exists",
+        "PrimaryCRRA.demand_kkt",
+        "PrimaryCRRA.demand_nonnegative",
+        "PrimaryCRRA.demand_budget_strict",
+        "PrimaryCRRA.demand_upper",
+        "PrimaryCRRA.actual_global_optimum",
+        "PrimaryCRRA.actual_unique_optimum",
+        "PrimaryCRRA.voluntary_participation",
+        "PrimaryCRRA.owned_score_zero",
+        "PrimaryCRRA.positive_score_below",
+        "PrimaryCRRA.negative_score_above",
+        "PrimaryCRRA.demand_strict_on_positive",
+        "PrimaryCRRA.demand_antitone",
+        "PrimaryCRRA.demand_continuousAt",
+        "PrimaryCRRA.demand_continuousOn"
+      ],
+      "imported_without_rebuild": true
+    },
+    "PrimaryCRRAFormation": {
+      "stage": 213,
+      "source": "formal/PrimaryCRRAFormation.lean",
+      "source_sha256": "ac9234997c427142bd4736f6bedf2c9574e7068bcfa69507c76c66678be468d4",
+      "audit_log": "evidence/axioms/PrimaryCRRAFormation.txt",
+      "audit_log_sha256": "0f6e305d187addb5e87a143b4ff9bf18f204689f73eaca434ad59191a855e582",
+      "retained_compiled_object_sha256": "def2efdace1b19a614f117d177701c8bc0ede13f105a947ead0ba3bba19ca9fe",
+      "audited_declarations": [
+        "PrimaryCRRAFormation.common_asset_future",
+        "PrimaryCRRAFormation.aggregate_continuousOn",
+        "PrimaryCRRAFormation.aggregate_antitone",
+        "PrimaryCRRAFormation.aggregate_strict_on_positive",
+        "PrimaryCRRAFormation.aggregate_upper",
+        "PrimaryCRRAFormation.high_price_bounds",
+        "PrimaryCRRAFormation.cost_covering_price_exists",
+        "PrimaryCRRAFormation.clearing_price_unique",
+        "PrimaryCRRAFormation.voluntary_formation_exists",
+        "PrimaryCRRAFormation.actual_optimizer_identified",
+        "PrimaryCRRAFormation.formation_iff_cost_demand",
+        "PrimaryCRRAFormation.actual_formation_unique",
+        "PrimaryCRRAFormation.actual_subscriber_participation",
+        "PrimaryCRRAFormation.no_funded_formation"
+      ],
+      "imported_without_rebuild": true
+    },
+    "CRRALotsExecution": {
+      "stage": 214,
+      "source": "formal/CRRALotsExecution.lean",
+      "source_sha256": "4080e751581a34d5355ceac1f55a6a3009a88d9be116bd432c014fa671e9db7a",
+      "audit_log": "evidence/axioms/CRRALotsExecution.txt",
+      "audit_log_sha256": "d8c1588113ce4b4b2877a41f74e7c1fee742574f1ebf442c2eeee4bbc3ee5675",
+      "retained_compiled_object_sha256": "e3671b3d9eba42d4be6bdbf999d3efdde3713561e207372c524f0a67218d4bdf",
+      "audited_declarations": [
+        "CRRALotsExecution.initial_cash_nonnegative",
+        "CRRALotsExecution.roles_separate",
+        "CRRALotsExecution.lot_total",
+        "CRRALotsExecution.lots_affordable",
+        "CRRALotsExecution.actual_commensurate_execution",
+        "CRRALotsExecution.reached_operating_paths",
+        "CRRALotsExecution.actual_issue_proceeds",
+        "CRRALotsExecution.actual_receipt_allocation",
+        "CRRALotsExecution.ledger_value_matches",
+        "CRRALotsExecution.reached_optimality_and_participation",
+        "CRRALotsExecution.actual_formation_lifecycle"
+      ],
+      "imported_without_rebuild": true
+    },
+    "IntegerEscrowCore": {
+      "stage": 215,
+      "source": "formal/IntegerEscrowCore.lean",
+      "source_sha256": "0d6875b677f41d48d0c02246f26189267a67de9225d5b33e1983079249029fb2",
+      "audit_log": "evidence/axioms/IntegerEscrowCore.txt",
+      "audit_log_sha256": "e17439524b5fa5a68af04b1cc358beb865eadc4fe7c51231e32633a38dc5ffde",
+      "retained_compiled_object_sha256": "a494b80324d2c008753d4c0e7d2f4d96302e88987e6fdf2380dab97b24c48b7a",
+      "audited_declarations": [
+        "IntegerEscrow.amount_nonnegative",
+        "IntegerEscrow.amount_add",
+        "IntegerEscrow.amount_mul",
+        "IntegerEscrow.amount_sub",
+        "IntegerEscrow.amount_le_iff",
+        "IntegerEscrow.moneyMap_credit",
+        "IntegerEscrow.moneyMap_debit",
+        "IntegerEscrow.decode_initial",
+        "IntegerEscrow.decode_total",
+        "IntegerEscrow.decode_settle",
+        "IntegerEscrow.decode_release",
+        "IntegerEscrow.decode_refund",
+        "IntegerEscrow.decode_governance",
+        "IntegerEscrow.decode_active"
+      ],
+      "imported_without_rebuild": true
+    },
+    "IntegerEscrowRefinement": {
+      "stage": 215,
+      "source": "formal/IntegerEscrowRefinement.lean",
+      "source_sha256": "b0c8c343ab73fa34e17b3e55c22e20342c7c954242ee4cea65a807ed0117de4d",
+      "audit_log": "evidence/axioms/IntegerEscrowRefinement.txt",
+      "audit_log_sha256": "287b5556b98c27a7406b96bfb6224fea778922da23667ef11deb4b5c6e4619d1",
+      "retained_compiled_object_sha256": "32ac32eb1061b345139c4525ca15977c4b2fcc929238ac869776151ec7786992",
+      "audited_declarations": [
+        "IntegerEscrow.amount_eq_iff",
+        "IntegerEscrow.step_refines",
+        "IntegerEscrow.reachable_refines",
+        "IntegerEscrow.reachable_valid",
+        "IntegerEscrow.refund_affordable",
+        "IntegerEscrow.release_affordable",
+        "IntegerEscrow.amount_sum",
+        "IntegerEscrow.total_cash_conservation",
+        "IntegerEscrow.released_accounting",
+        "IntegerEscrow.represented_budget",
+        "IntegerEscrow.actual_equilibrium_wallets"
+      ],
+      "imported_without_rebuild": true
+    },
+    "EscrowDispatcher": {
+      "stage": 216,
+      "source": "formal/EscrowDispatcher.lean",
+      "source_sha256": "3c028118040505504aae973ba0de7723c8de2b7a5507bef370ca86eda0caebfe",
+      "audit_log": "evidence/axioms/EscrowDispatcher.txt",
+      "audit_log_sha256": "bdda299d91ff9dff5393af5a908acd638763801b98680c397cca16b7c8eb963c",
+      "retained_compiled_object_sha256": "525205d65d4fe7dbb53cdd348f1788dc4a50d868b9fe941ae71a61703b910161",
+      "audited_declarations": [
+        "EscrowDispatcher.guarded_step",
+        "EscrowDispatcher.accepted_iff_guard",
+        "EscrowDispatcher.accepted_sound",
+        "EscrowDispatcher.rejected_unchanged",
+        "EscrowDispatcher.step_or_same",
+        "EscrowDispatcher.run_reachable",
+        "EscrowDispatcher.run_initial_valid",
+        "EscrowDispatcher.run_cash_conservation",
+        "EscrowDispatcher.dispatch_receipts_monotone",
+        "EscrowDispatcher.run_receipts_monotone"
+      ],
+      "imported_without_rebuild": true
+    },
+    "EscrowSnapshot": {
+      "stage": 217,
+      "source": "formal/EscrowSnapshot.lean",
+      "source_sha256": "62eb707dd7108b2a554b7fc7296e4b06f3748f8f0aac4af1ee97f8ae055b287e",
+      "audit_log": "evidence/axioms/EscrowSnapshot.txt",
+      "audit_log_sha256": "82d239179435bcfcce0324c34fd253f9277615f4e7be83d84fb4cdc7070be9cb",
+      "retained_compiled_object_sha256": "5cd7116ed28d926374d62e66a9907a7511d86de78793fa0e7fab4874683f4a3a",
+      "audited_declarations": [
+        "EscrowSnapshot.values_ofFn",
+        "EscrowSnapshot.readPhase_code",
+        "EscrowSnapshot.readGates_row",
+        "EscrowSnapshot.readActions_row",
+        "EscrowSnapshot.account_val",
+        "EscrowSnapshot.readTerms_row",
+        "EscrowSnapshot.readRaw_encode",
+        "EscrowSnapshot.decode_encode",
+        "EscrowSnapshot.accepted_canonical",
+        "EscrowSnapshot.encode_injective",
+        "EscrowSnapshot.loadBound_encode",
+        "EscrowSnapshot.loadBound_context",
+        "EscrowSnapshot.mismatched_context_rejected",
+        "EscrowSnapshot.saved_run_restores",
+        "EscrowSnapshot.restored_initial_valid"
+      ],
+      "imported_without_rebuild": true
+    },
+    "AtomicEscrow": {
+      "stage": 218,
+      "source": "formal/AtomicEscrow.lean",
+      "source_sha256": "c92d2e7e7e2aea1a435f37fa8647472728dc3077da462af6bc217dc70d2c7b32",
+      "audit_log": "evidence/axioms/AtomicEscrow.txt",
+      "audit_log_sha256": "74753438f1cf472a42164b74ce7eeb339a7bdbedf596928edd1a4c93216d3f54",
+      "retained_compiled_object_sha256": "14856410e541c2fb410d9731e9d74edf9d7e5a404ce7541c7903bedfcdd3af54",
+      "audited_declarations": [
+        "AtomicEscrow.gateCode_eq",
+        "AtomicEscrow.actionCode_eq",
+        "AtomicEscrow.gateRow_eq",
+        "AtomicEscrow.eventRow_injective",
+        "AtomicEscrow.requestKey_binding",
+        "AtomicEscrow.fresh_eq",
+        "AtomicEscrow.committed_iff",
+        "AtomicEscrow.noncommit_unchanged",
+        "AtomicEscrow.cached_retry",
+        "AtomicEscrow.conflicting_retry",
+        "AtomicEscrow.stale_unchanged",
+        "AtomicEscrow.committed_revision",
+        "AtomicEscrow.stale_read_cannot_commit_twice",
+        "AtomicEscrow.committed_coherent",
+        "AtomicEscrow.committed_refusal_state",
+        "AtomicEscrow.fresh_retry",
+        "AtomicEscrow.fixed_context",
+        "AtomicEscrow.journal_retained",
+        "AtomicEscrow.lookup_none_iff",
+        "AtomicEscrow.journal_ids_nodup",
+        "AtomicEscrow.lookup_retained",
+        "AtomicEscrow.submit_reachable",
+        "AtomicEscrow.run_ids_nodup",
+        "AtomicEscrow.run_reachable",
+        "AtomicEscrow.run_valid"
+      ],
+      "imported_without_rebuild": true
+    },
+    "PersistentWire": {
+      "stage": 219,
+      "source": "formal/PersistentWire.lean",
+      "source_sha256": "580c4fb55cb1aa90675411a8c5456832e4b338afa4a5a36700d2bec5db533124",
+      "audit_log": "evidence/axioms/PersistentWire.txt",
+      "audit_log_sha256": "51467385875fced60c5c99be596be790633bcf8793ddc92b158466bd0bf79533",
+      "retained_compiled_object_sha256": "7d352ff4c4cacc7196d2e97cf34a5e1a8be6f85c4fc808ebf827a3ce8a9f8289",
+      "audited_declarations": [
+        "PersistentWire.readGate_code",
+        "PersistentWire.readAction_code",
+        "PersistentWire.rawEvent_row",
+        "PersistentWire.readEvent_row",
+        "PersistentWire.readRequest_wire",
+        "PersistentWire.readBool_code",
+        "PersistentWire.readEntry_wire",
+        "PersistentWire.readEntries_wire",
+        "PersistentWire.rawStore_wire",
+        "PersistentWire.readStore_wire",
+        "PersistentWire.storeWire_injective",
+        "PersistentWire.readMode_code",
+        "PersistentWire.readOutcome_wire",
+        "PersistentWire.readResult_wire",
+        "PersistentWire.serializedSubmit_wire",
+        "PersistentWire.serializedSubmit_decodes",
+        "PersistentWire.recovery_sound",
+        "PersistentWire.recovery_valid"
+      ],
+      "imported_without_rebuild": true
+    },
+    "ConnectedEnterpriseDemo": {
+      "stage": 220,
+      "source": "formal/ConnectedEnterpriseDemo.lean",
+      "source_sha256": "ae90decb5661eb0e25f86e74abebf957f470a78ecda4b1d24263cd29516358ad",
+      "audit_log": "evidence/axioms/ConnectedEnterpriseDemo.txt",
+      "audit_log_sha256": "aa54b67ab7e39ce104750d31644e03856be551055a92dcb3a582481f64253118",
+      "retained_compiled_object_sha256": "89a46fcc3dd23086b234fa8f378e12be8f6c9f0c4a7b0a4fb710f7fb082f200c",
+      "audited_declarations": [
+        "ConnectedEnterpriseDemo.fixture_risky",
+        "ConnectedEnterpriseDemo.buyer_kkt",
+        "ConnectedEnterpriseDemo.unique_optimal_choice",
+        "ConnectedEnterpriseDemo.actual_formation",
+        "ConnectedEnterpriseDemo.formation_unique",
+        "ConnectedEnterpriseDemo.voluntary_participation",
+        "ConnectedEnterpriseDemo.final_numbers",
+        "ConnectedEnterpriseDemo.all_entries_admitted",
+        "ConnectedEnterpriseDemo.subscribed_units_match",
+        "ConnectedEnterpriseDemo.current_consumption_matches",
+        "ConnectedEnterpriseDemo.ledger_value_matches",
+        "ConnectedEnterpriseDemo.persistent_target_is_actual_optimum",
+        "ConnectedEnterpriseDemo.dated_buffer_exact",
+        "ConnectedEnterpriseDemo.operating_affordable",
+        "ConnectedEnterpriseDemo.terminal_receipts_match",
+        "ConnectedEnterpriseDemo.complete_wire_roundtrip",
+        "ConnectedEnterpriseDemo.history_replays",
+        "ConnectedEnterpriseDemo.complete_history_recovers"
+      ],
+      "imported_without_rebuild": true
     }
   },
   "controls": {
@@ -1147,5 +1561,37 @@
     "source_sha256": "975d0704c52faf998c111ccb649190bf63eeaf985f029a674529b546fb29ab13",
     "receipt": "evidence/controls/primary_escrow.json",
     "receipt_sha256": "4b8bddd1b181258bc7ad8a8a520ff8d806d75fe8e37e0b9a0b005c5650885b9a"
-  }
+  },
+  "runtime_artifacts": {
+    "runtime/sqlite_adapter.py": {
+      "sha256": "9ca93f2dc8c51c68846d8d06843b068a69ecdee5fc68310a3ab449d78fc6c96f",
+      "source_identical": true
+    },
+    "runtime/check_backend.py": {
+      "sha256": "bfa1191464456f2166f4481c5dcb24dbe98c2a6318b7fd17930658942e4bc2d0",
+      "source_identical": true
+    },
+    "runtime/PersistentBridge.lean": {
+      "sha256": "c731459f97c35ed8371aec2845344e5a926ec7289f0337b25162ee1ccb5c822b",
+      "source_identical": true
+    },
+    "runtime/ExportDemo.lean": {
+      "sha256": "910de553bce2cf326d6a7a8fdb3c2e4bd0d25524dc877db39cb4c083e422d760",
+      "source_identical": true
+    },
+    "evidence/controls/connected_witness.json": {
+      "sha256": "f54f9a285f4ee2770287491065ce6dea9fd9f305a865268d8bdd9289ccecd904",
+      "source_identical": true
+    },
+    "evidence/controls/connected_demo.json": {
+      "sha256": "97675005a67455a2bf46634f910ea7102fe5d25ac4614d45fcf710ea0e390655",
+      "source_identical": true
+    },
+    "evidence/controls/sqlite_backend.json": {
+      "sha256": "d9fc809872f9317abe33a5c60b32678cd61294bc52edfebc7ac4db812537a984",
+      "source_identical": false,
+      "transformation": "Omit private local output path; add original summary hash and this disclosure."
+    }
+  },
+  "scope": "Proved economic and pure execution core; tested SQLite and one connected exact enterprise witness. No real funds or external evidence."
 }

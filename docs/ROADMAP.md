@@ -1,73 +1,58 @@
 # Remaining gaps and the claims they would enable
 
-Stage 209 closes the specified escrow-execution link. It does not reset the
-programme to an unfinished funding identity. Existence, the original benchmark,
-the scoped continuous-time bridge and the accepted nonlinear boundary theorem
-should not be re-proved on every continuation.
+## The nearest connected chain is closed to a bounded stopping point
 
-## The nearest connected formation chain
+Do not reopen completed targets: actual voluntary single-issue formation,
+natural-lot execution, integer-money refinement, executable dispatcher, complete
+serialization and the exact two-household persistent demonstration. Stages
+211–220 advance beyond the earlier Stage 209 abstract escrow result.
 
-| Link | Current status | What still has to be established |
+| Link | Current status | Remaining boundary |
 |---|---|---|
-| Subscriptions become settled segregated cash | Formal posting/accounting complete in Stage 209. | External consent, identity and settlement attestations must be truthfully bound to the fixed enterprise. |
-| Releases/refunds preserve resources and rights | Complete for the stated abstract lifecycle. | Concrete concurrency, crashes, retries and asynchronous payments are outside the atomic model. |
-| Actual subscribers and issuer voluntarily fund the enterprise | Open. | Household objectives, resources/outside options; issuer compensation, retained rights, technology and participation; actual choices jointly clear sufficient primary funding. |
-| Implemented code corresponds to formal rules | Open. | A precise projection/refinement from the selected persistent finite-precision implementation, including failed and pending operations. |
+| Actual voluntary cost-covering formation | Proved for finite independent-income CRRA buyers, one fixed-scale new issue and a price-taking supplier. Formation iff demand at the cost floor covers supply. | Supplied plan, positive background incomes and outside option; no automatic fundraising. |
+| Actual choices to formal funding | Reached escrow release proved for natural-lot-compatible actual holdings, retaining consumption and supplier participation. | Exact lots and supplied external evidence; not arbitrary rounding. |
+| Formal rules to executable transactions | Integer refinement, dispatcher, versioned API and complete numeric representation proved. | JSON/compiler/OS assumptions; not every language or program. |
+| Concrete persistence | SQLite adapter and actual crash/concurrency/retry controls pass, including an exact economic witness. | Tested, not kernel-proved storage or authenticated real custody. |
 
-Closing the last two links, with the external interfaces stated, would permit:
+The positive claim is now:
 
-> A defined class of voluntarily formed, ownership-financed enterprises operates
-> through the specified verified funding lifecycle.
+> Defined productive-ownership economies support actual voluntary cost-covering
+> enterprise formation. Exact compatible choices execute through a proved funding
+> core, and one risky economic witness runs through the specified tested persistent
+> implementation under explicit evidence, runtime and storage assumptions.
 
-It would not mean every project raises money, nobody loses capital, real
-custody is honest, or a national economy is proven fairer.
+This is a good research-prototype stopping point. Freeze/package the evidence
+and choose the paper's scope. Production credentials, payment rails and field
+deployment should be separate projects, not ever-expanding publication criteria.
 
-## A concrete next economic proof target
+## Further gaps and the claims they would add
 
-Start with one fixed-scale enterprise issuing `N` new ownership units. Investors
-have no initial units of this unformed enterprise. Their actual optimization is
-over current consumption and future outcome-dependent receipts, subject to
-nonnegative subscriptions and available cash. The issuer chooses whether to
-form the enterprise or take a specified outside option.
-
-Let `C` be construction/acquisition cost, `B` the proved operating buffer and
-`R` a stated issuer reservation amount. A candidate cost-covering price floor is
-`q_min = (C+B+R)/N`. One promising sufficient-condition route is to derive actual
-continuous demand `D(q)` and show that `D(q_min)≥N`, while demand falls below
-`N` at sufficiently high prices. Then a clearing issue price at or above the
-floor could support subscriptions, issuer participation and Stage 209 funding.
-Demand regularity, household global optimality and the issuer's actual choice
-must be proved, including corners and equality cases; they are not accepted
-here merely because this route is plausible.
-
-This is a **proposed next theorem**, not a completed result in this release.
-If demand at cost is inadequate, no formation can be the correct outcome. The
-goal is a proved class of viable voluntary raises, not a promise to finance
-every plan. Scale choice, retained issuer ownership, fees and strategic issue
-pricing would be later extensions rather than hidden assumptions.
-
-## Detailed gap-to-claim register
-
-| Target | Required result | Claim enabled after completion | Still outside it |
+| Target | What must be established | Claim enabled after completion | Still not implied |
 |---|---|---|---|
-| Voluntary primary formation | Derive actual subscriber demand and issuer participation, not merely consent; prove funding close or characterize no formation, including outside options and cancellations. | The stated enterprise is supported by actual optimal choices and cost-covering funding. | Every arbitrary project can be funded. |
-| Endogenous production/scale | Optimize technology/management/scale and financing-dependent payoffs; count costs, working capital and compensation once. | Formation includes selected new production rather than supplied operating plans only. | Guaranteed profit or economy-wide optimality. |
-| Executable escrow refinement | Define concrete state and map each admitted/rejected operation to the formal lifecycle, with pending payment reconciliation. | The selected implementation enforces the stated rules under its environment assumptions. | A different program/language, custody truth or all cybersecurity. |
-| Durable settlement/authentication | Specify atomic storage, crash recovery, idempotency, signature/domain binding, key revocation and role governance. | Covered execution survives specified failures and authenticates named authority. | Prompt service, honest officials or independently controlled roles automatically. |
-| Integer cash and fees | Prove the chosen currency rounding/allocation algorithm and operator fee policy. | Implemented payouts satisfy budget/eligibility/quota properties. | Exact real proportionality or arbitrary grid equilibrium. |
-| Voluntary mutual protection | Actual contribution demand, pool asset choice and participation jointly clear with productive ownership. | Funded protection arises from participant choices and scarce backing. | Unlimited catastrophe coverage. |
-| Dynamic protection/liquidity | Claims timing, correlated losses, reserve policy, sale costs, finite support and withdrawals. | Stated solvency/liquidity guarantees through specified stress paths. | Elimination of real loss or guaranteed instant exit. |
-| Dynamic incomplete markets | Actual date-zero and interim optimization, information, strategies, budget constraints and market span. | A specified sequential economy, beyond static terminal valuation and the companion's complete-market implementation. | Arbitrary incomplete markets or automatic trading convergence. |
-| Broader uniqueness domains | Control wealth effects around further reference classes, with actual demand, corners and exclusion of alternative equilibria. | Additional defined classes admit unique equilibria and sensitivity. | Universal uniqueness, which is already false for the broad class. |
-| Redundant payoffs and further utility domains | Define payoff-equivalent portfolios/quotients or selection rules and prove existence/regularity in the relaxed domain. | More economies, or uniquely identified exposures modulo redundancy. | Unique labels for identical assets without selection. |
-| Certified computation | Executable solver, assumptions, convergence/termination and error/corner/multiplicity certificates. | Computed allocations have the stated mathematical accuracy. | Real-world price adjustment converges. |
-| Asset evidence, custody and title | Measured observation reliability, provenance, challenge/correction procedures, segregated settlement and enforceable rights. | Defined recorded claims have demonstrated backing and remedies. | Unfalsifiable telemetry or universal jurisdiction/religious approval. |
-| Distribution and governance | Model initial wealth, access, control, inheritance, fees and distress; compare outcomes using common resources and credible evidence. | Specific arrangements broaden ownership or improve measured welfare/access in the stated setting. | No-interest financing necessarily prevents concentration. |
-| Field and causal evidence | Execute a prospective feasibility pilot, then an appropriately designed comparison for specific outcomes. | The workflow operates on actual assets; later, supported causal or descriptive outcome claims. | A demo or synthetic model proves national-scale superiority. |
-| Publication delivery | Select journal/scope, choose application integration, verify declarations and create matching manuscript/support/replication exports. | A checked submission package for the selected journal. | Acceptance, priority or completion of the entire programme. |
+| Publication synchronization | Select journal/article scope; integrate selected later results; synchronize main/supplement, Word and replication files; review declarations. | A checked submission package matching the selected proofs. | Acceptance, historical priority or completion of all institutions. |
+| Independent reproduction | A clean, sufficiently resourced environment rebuilds the pinned source and reruns optional executable controls. | Independent kernel/runtime replication of this release. | Real asset performance or institution-wide correctness. |
+| Authentication and historical evidence | Signed/domain-bound requests, replay-resistant credentials, revocation, checked settlement and preserved evidence decisions. | Admitted actions correspond to authenticated authority and the specified evidence history. | An oracle always tells the truth. |
+| Freshness and anti-fork | External trusted revision anchor or consensus/attestation bound to ledger identity/checkpoints. | An old valid prefix or conflicting history is detected under that trust model. | Trustless real-world custody or every network failure handled. |
+| Stronger storage refinement | A semantics/refinement proof for the chosen adapter/backend model, explicit filesystem/hardware assumptions and relevant failure tests. | The stated persistent implementation inherits formal transaction guarantees within that model. | A proof of every storage device or actual power-loss durability. |
+| Actual payments/custody/title | Pending/confirmed/failed transfer reconciliation, segregated custody, verified rights, correction and legal remedies. | Recorded claims have demonstrated backing and enforceable operation in a named setting. | Automatic legal or Shariah approval everywhere. |
+| Endogenous technology and scale | Jointly optimize plan, capacity, management/effort, inputs, remuneration and funding-dependent receipts. | New production choices, not supplied plans alone, enter the specified formation economy. | Guaranteed profitability or globally optimal investment. |
+| Multiple simultaneous primary issues | Joint household allocation and issuer decisions with interacting prices, resource use and outside options. | A defined multi-enterprise formation economy. | Every project financed or all prices unique. |
+| Voluntary mutual protection | Actual contribution demand, pool assets, participant/manager incentives and ownership markets jointly clear. | Funded protection arises from choices, not supplied contributions alone. | Unlimited common-shock coverage. |
+| Dynamic protection and exit | Dated correlated claims, reserves, sales, finite support, withdrawals and distress rights. | Named liquidity/solvency guarantees across supplied stress paths. | Loss elimination or guaranteed instant exit. |
+| Dynamic incomplete markets | Actual interim optimization, information, strategies, budgets and changing asset span. | A specified sequential incomplete-market economy beyond static terminal pricing. | Arbitrary incomplete markets or trading convergence. |
+| Broader uniqueness domains | Control wealth effects/corners around additional references and exclude other equilibria there. | Larger specified classes with uniqueness and sensitivity. | Universal uniqueness: an actual counterexample already disproves it. |
+| Redundant payoffs/utility domains | Portfolio-equivalence quotients or selection rules; relaxed assumptions with proofs. | More domains or identified exposures modulo redundant labels. | Unique holdings of identical claims without selection. |
+| Certified computation | Executable solver with convergence, error and active-set/multiplicity certificates. | Computed allocations have the stated accuracy. | Actual market prices converge dynamically. |
+| Distribution and governance | Model access, initial wealth, control, inheritance, fees, competition and distress; compare matched-resource arrangements. | Particular rules broaden ownership or improve measured welfare/access under stated conditions. | Ownership finance necessarily prevents concentration. |
+| Field and causal evidence | Prospective asset/settlement pilot, then a credible outcome comparison where feasible. | Real workflow feasibility and later supported outcome claims. | Synthetic simulations prove national superiority. |
 
-Do not list impossible/untrue goals as missing proofs: universal uniqueness,
-full benefits above available resources, effortless exact rounding of every
-real equilibrium, or ordinary differentiability through every genuine kink.
-The correct objective is progressively broader **specified** classes with
-proved guarantees and visible exclusions.
+## Not missing proofs
+
+Universal uniqueness, benefits exceeding available resources, exact costless
+rounding of every divisible equilibrium, derivatives through every genuine kink,
+or truthful telemetry by definition are not valid completion criteria. The
+objective is broader specified classes with explicit guarantees.
+
+Classical state-price/general-equilibrium predecessors remain acknowledged.
+The contribution is this explicit formal development and its connected results,
+not a certified first-ever invention of valuation without a primitive loan.

@@ -1,0 +1,7 @@
+'ManyBuyerEscrow.receiptId_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManyBuyerEscrow.receipt_fresh' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManyBuyerEscrow.zero_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManyBuyerEscrow.settle_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManyBuyerEscrow.processed_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManyBuyerEscrow.collect_many' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManyBuyerEscrow.release_many' depends on axioms: [propext, Classical.choice, Quot.sound]

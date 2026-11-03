@@ -55,9 +55,18 @@ def main():
     result = runpy.run_path(str(ROOT/control['source']))['check']()
     assert result == json.loads((ROOT/control['receipt']).read_text())
     assert result['passed']
+    for relative, info in manifest.get('runtime_artifacts', {}).items():
+        assert sha(ROOT/relative) == info['sha256'], ('Runtime/evidence changed', relative)
+    backend = json.loads((ROOT/'evidence/controls/sqlite_backend.json').read_text())
+    demo = json.loads((ROOT/'evidence/controls/connected_demo.json').read_text())
+    assert backend['passed'] and demo['passed']
+    assert backend['counts']['process_exit_faults'] == 6
+    assert backend['counts']['actual_two_connection_schedules'] == 8
+    assert demo['witness_sha256'] == sha(ROOT/'evidence/controls/connected_witness.json')
     print(f'PASS: {len(modules)} source-identical modules; {total} retained declaration audits; standard foundations only.')
     print(f"PASS: {result['named_controls']} controls, {result['exact_refund_cases']} exact refund cases, {result['generated_attempts']} generated attempts.")
     print('PASS: import closure, pinned dependencies and configured library roots. No Lean module rebuilt.')
+    print('PASS: retained SQLite and connected-demo source/evidence bindings; these runtime controls were not rerun.')
     print('This audits retained evidence; run lake build separately for a fresh kernel build.')
 
 

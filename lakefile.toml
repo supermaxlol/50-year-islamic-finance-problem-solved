@@ -35,5 +35,10 @@ roots = [
   "OverlapResourceGlobal", "OwnershipCertificates", "OwnershipKKTSufficiency",
   "OwnershipLimitTools", "OwnershipStrictSupport", "PrimaryEscrow", "SlackBoundTransfer",
   "SupportedOwnershipUniqueness", "TangentMarketExistence", "TangentProjection",
-  "TangentSolverStability"
+  "TangentSolverStability", "PrimaryLogDemand", "VoluntaryPrimaryMarket",
+  "FormationEscrowConnection", "ManyBuyerEscrow", "OptimalLotsExecution",
+  "PrimaryCRRAObjective", "PrimaryCRRADemand", "PrimaryCRRAFormation",
+  "CRRALotsExecution", "IntegerEscrowCore", "IntegerEscrowRefinement",
+  "EscrowDispatcher", "EscrowSnapshot", "AtomicEscrow", "PersistentWire",
+  "ConnectedEnterpriseDemo"
 ]

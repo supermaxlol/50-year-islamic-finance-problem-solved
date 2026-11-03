@@ -42,8 +42,11 @@ Activated units initialize the separate distribution ledger with zero declared
 distributable cash: retained operating capital is not simultaneously investor
 yield. Actual future distributable receipts require separate posting/allocation.
 
-The theorem is serial abstract safety, not liveness or bank integration. An
-asynchronous implementation needs idempotent pending/confirmed/failed payment
-handling, durable state and a refinement proof. Evidence predicates do not prove
+The Stage 209 theorem is serial abstract safety, not liveness or bank integration.
+Later stages now supply actual voluntary formation, exact integer execution,
+the proved dispatcher/API protocol and a tested persistent adapter. See
+[the connected demonstration](CONNECTED_DEMO.md) and [storage contract](../runtime/README.md).
+Actual asynchronous payments still need pending/confirmed/failed reconciliation,
+authentication and independently checked settlement. Evidence predicates do not prove
 physical truth, and the visible issuer cancellation right need not be the fairest
 possible constitution. Those choices must be negotiated and evaluated explicitly.

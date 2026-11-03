@@ -1,0 +1,6 @@
+'OptimalLotsExecution.initial_cash_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OptimalLotsExecution.administrative_roles_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OptimalLotsExecution.lot_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OptimalLotsExecution.lots_affordable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OptimalLotsExecution.actual_commensurate_execution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OptimalLotsExecution.reached_operating_paths' depends on axioms: [propext, Classical.choice, Quot.sound]

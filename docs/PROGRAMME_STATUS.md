@@ -23,7 +23,7 @@ conflicting interests or institutional power disappear.
 
 “Verified” below refers to the stated formal theorem under its assumptions, not
 an approval of an entire institution. Only the 4.35 foundation and Stages
-183–209 dependency chain are included in this repository release. Earlier
+183–220 accepted dependency chain are included in this repository release. Earlier
 benchmark/diffusion results are described as programme context, not newly
 released or independently rebuilt by this package.
 
@@ -45,7 +45,16 @@ released or independently rebuilt by this package.
 | Dated funding | Construction plus the exact prefix-deficit buffer is necessary and sufficient for affordability along each supplied operating path. Terminal cash reconciles. | Positive terminal profit alone is insufficient. Omitted shocks/costs or delayed receipts can invalidate the cashflow premise. | Stage 207; `FormationLedgerCore`, `FormationLedgerBridge`. |
 | Distribution ledger | Eight admitted operation types preserve stock/cap, funded claims, reservations and recorded cash through finite histories. | Abstract rules, not source refinement, authenticated wallets, durable storage or custody truth. Allocation policy is a premise. | Stage 207, part of its 39 endpoints. |
 | Integer-lot inheritance | A divisible optimum/equilibrium inherits grid optimality/clearing when actual endowments, supply and holdings are already commensurate. | No costless rounding or general discrete-market existence theorem. | Stage 207. |
-| Primary escrow lifecycle | Consented settled subscriptions fund a fixed issue; close covers construction plus reserve; gates control release; active ownership reconciles; cancellation refunds remain affordable and cannot repay the same entitlement twice; disputes pause named actions. Released operating cash meets the imported buffer criterion. | Issue price/plan supplied, no fees/partial draws. Consent/settlement inputs trusted. No optimal voluntary formation, source refinement, custody, title or liveness proof. | Stage 209; `PrimaryEscrow`, `EscrowFundingBridge`, 32 endpoints. |
+| Primary escrow lifecycle | Consented settled subscriptions fund a fixed issue; close covers construction plus reserve; gates control release; active ownership reconciles; cancellation refunds remain affordable and cannot repay the same entitlement twice; disputes pause named actions. Released operating cash meets the imported buffer criterion. | Stage 209 alone supplies price/plan, with no fees/partial draws or custody/title/liveness proof. Later formation/executable extensions are listed below. | Stage 209; `PrimaryEscrow`, `EscrowFundingBridge`, 32 endpoints. |
+| Voluntary primary formation | Actual household demand and price-taking issuer participation support funded formation iff demand at the cost-covering floor covers supply; formed price and holdings are unique in the stated class. | One fresh fixed-scale issue and supplied operating plan. Independent positive future incomes and arbitrary positive CRRA curvatures are covered; not every project can raise money. | Stages 211/213; 103 endpoints across six modules. |
+| Actual choices to reached escrow | Actual optimal holdings/consumption and supplier participation connect to a reached funded/released state for arbitrarily many finite buyers when the actual holdings fit natural lots. | Evidence supplied; exact compatibility, not arbitrary rounding or a general discrete-market equilibrium. | Stages 212/214; 24 endpoints. |
+| Integer money | Accepted natural-number money operations decode to the real-valued lifecycle under a positive currency quantum. | Forward refinement under exact representation; no general rounding or fee allocation theorem. | Stage 215; 25 endpoints. |
+| Executable dispatcher | The same Lean function used by runtime controls implements admitted steps, preserves full state on economic refusal, and inherits finite-history safety. | Typed pure execution with sound external-check assumptions; role labels are not signatures. | Stage 216; 10 endpoints; 20,053 tested requests. |
+| Complete state codec | Full terms, resources, balances, ownership, evidence, time and pauses survive exact numeric encoding; context is bound. | Canonical representation is not authenticity. | Stage 217; 15 endpoints. |
+| Atomic API protocol | Version checks, exact payload binding, retained journal/cache, retry/conflict/stale behavior and coherent result/state are proved. | A linearized protocol theorem does not prove a database or distributed consensus. | Stage 218; 25 endpoints; 2,281 requests in retained controls. |
+| Complete envelope and recovery | Requests, all journal entries/cached outcomes, stores and results round-trip; serialized execution equals the accepted core; admitted recovery equals fixed-policy replay. | Trusted genesis/check policy; cannot detect a self-consistent replacement history or valid-prefix rollback without external freshness/authentication. | Stage 219; 18 endpoints. |
+| Concrete SQLite adapter | Actual version-conditioned all-or-nothing updates, reopening, competing writers and process-exit/lost-response cases pass exact controls. | Tested Python/SQLite, not a kernel proof of database, filesystem, hardware or power-loss durability. Mock evidence; no real funds. | Stage 219; 150 comparisons/reopens, eight writer schedules, six process exits, 13 corruption rejections. |
+| Connected economic execution | Two households' unique global optima support the specified formed issue; the actual computed request history preserves their consumption/rights and funded operating paths. Its entire final store is recovered and matched in SQLite. | One exact risky synthetic example; issuer accepts break-even equality. Operating paths are supplied, not actual telemetry or implemented operating-payment event types. | Stage 220; 18 endpoints; five actual commits, five reopens, five cached retries. |
 
 The newer broad existence class does not exclude every certain portfolio merely
 by assuming full column rank. Absence of an externally supplied lending
@@ -68,7 +77,7 @@ return are different propositions.
 | Bangladesh infrastructure work | A dated case distinguishes installed/usable capacity, accounts and missing contractual evidence. | Does not by itself identify the entire causal loss-to-currency chain or validate every model equation. |
 
 The mathematical manuscript remains the last integrated main/supplement
-revision (Stage 202). Applications 203–209 have not been silently inserted into
+revision (Stage 202). Applications 203–220 have not been silently inserted into
 it by this public code update. A matching new submission package remains a
 separate document task.
 
@@ -79,9 +88,11 @@ separate document task.
 > settlement mechanisms without supplying a lending benchmark. We have also
 > developed institutional designs and specified simulations that make the
 > allocation of authority, resources and loss explicit. The completed results
-> provide a substantial conditional foundation for ownership finance; voluntary
-> formation, implementation correspondence and demonstrated social outcomes
-> remain distinct next achievements.
+> provide a substantial conditional foundation for ownership finance. Actual
+> voluntary cost-covering formation and a proved pure executable funding core
+> are now included, with a bounded persistent demonstration tested against the
+> same results. Authentication, real-world custody and demonstrated social
+> outcomes remain distinct achievements to establish.
 
 This is a mathematical and structural contribution to the valuation/benchmark
 part of the longstanding Islamic-finance challenge. “The 50-year problem” is

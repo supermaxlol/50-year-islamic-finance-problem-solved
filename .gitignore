@@ -5,3 +5,5 @@ build/
 .emms_cache/
 __pycache__/
 /tests/CONTROL_CHECKS.json
+/runtime/logs/
+/runtime/BACKEND_CONTROLS.json

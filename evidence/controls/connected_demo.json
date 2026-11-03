@@ -1,0 +1,35 @@
+{
+  "stage": 220,
+  "passed": true,
+  "exact_witness_initial_and_final_matches": 2,
+  "economic_request_commits": 5,
+  "accepted_economic_events": 5,
+  "reopen_checks": 5,
+  "cached_retries": 5,
+  "unchanged_final_records_after_retries": 5,
+  "core_calls": 28,
+  "risky_states": 2,
+  "households": 2,
+  "price": 2,
+  "units_per_household": 3,
+  "supply": 6,
+  "current_consumption": [
+    10,
+    14
+  ],
+  "construction_paid": 7,
+  "operating_buffer": 5,
+  "terminal_enterprise_receipts": [
+    12,
+    0
+  ],
+  "actual_formation_kernel_verified": true,
+  "database_execution_tested_not_kernel_verified": true,
+  "real_funds_or_evidence": false,
+  "witness_sha256": "f54f9a285f4ee2770287491065ce6dea9fd9f305a865268d8bdd9289ccecd904",
+  "database_sha256": "0cf07b96734d916cad7991f03963ccdb54d9ef037cd2b9a2d100ce540c0b2ae9",
+  "backend_sources": {
+    "sqlite_adapter.py": "9ca93f2dc8c51c68846d8d06843b068a69ecdee5fc68310a3ab449d78fc6c96f",
+    "PersistentBridge.lean": "c731459f97c35ed8371aec2845344e5a926ec7289f0337b25162ee1ccb5c822b"
+  }
+}
