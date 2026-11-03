@@ -1,0 +1,18 @@
+'OwnershipPositive.refloor_economicValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.refloor_marginal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.refloor_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.refloor_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.prepare_floors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.equilibrium_from_preparation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.positive_initial_ownership_equilibrium_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipPositive.positive_initial_ownership_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.Controls.sample_ownership_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.Controls.sample_ownership_clears' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipPositive.Controls.unequal_initial_ownership_example' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipPositive.Controls.resources_below_old_floor_still_admitted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

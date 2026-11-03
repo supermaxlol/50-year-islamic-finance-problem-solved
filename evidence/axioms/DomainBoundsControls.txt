@@ -1,0 +1,5 @@
+'DomainBoundsControls.below_floor_is_economic_not_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DomainBoundsControls.zero_consumption_not_economic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DomainBoundsControls.zero_holdings_marginal_eq_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DomainBoundsControls.positive_ownership_strict_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DomainBoundsControls.sample_primitive_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

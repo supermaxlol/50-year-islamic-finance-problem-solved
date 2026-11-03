@@ -1,0 +1,24 @@
+'OwnershipSupported.reference_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.aggregate_cost_equality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.allocation_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.supported_price_from_owner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.price_and_allocation_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.unique_supported_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.CornerControl.primitive_conditions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.CornerControl.primitive_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.CornerControl.unique_actual_market' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.CornerControl.settlement_weight_compatibility' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipSupported.CornerControl.different_current_multipliers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipSupported.CornerControl.strict_nonowner_inequalities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipSupported.InteriorControl.initial_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.InteriorControl.primitive_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.InteriorControl.unique_actual_market' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSupported.InteriorControl.waiting_weight_compatibility' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

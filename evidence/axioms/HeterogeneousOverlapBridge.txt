@@ -1,0 +1,13 @@
+'OwnershipBridge.exists_continuous_optimal_demand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.aggregate_budget_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.heterogeneous_free_disposal_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.allocation_lt_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.cost_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.optimal_prices_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.optimal_budget_exhausts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.heterogeneous_exact_clearing_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.normalized_cost_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.normalized_budget_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBridge.heterogeneous_current_consumption_equilibrium' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

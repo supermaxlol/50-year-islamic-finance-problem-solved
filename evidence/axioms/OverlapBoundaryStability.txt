@@ -1,0 +1,6 @@
+'OverlapBoundary.positive_reference_owner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapBoundary.boundary_prices_tendsto_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapBoundary.all_actual_equilibria_near_boundary_reference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OverlapBoundary.strict_nonowner_persists' depends on axioms: [propext, Classical.choice, Quot.sound]

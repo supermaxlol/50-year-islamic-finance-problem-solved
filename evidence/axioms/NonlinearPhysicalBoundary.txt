@@ -1,0 +1,28 @@
+'NonlinearComplementarityBridge.actual_equilibrium_response' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonlinearComplementarityBridge.all_actual_response_eventually' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NonlinearComplementarityBridge.small_remainder_response_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NonlinearComplementarityBridge.physical_small_remainder_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NonlinearComplementarityBridge.scaled_response_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.partial_derivative_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.remainder_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.remainder_strict_derivative_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.nonlinear_force_small_state_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PhysicalBoundaryResponse.nearby_actual_boundary_uniqueness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.nearby_actual_boundary_exists_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PhysicalBoundaryResponse.physical_zero_response' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.near_actual_linear_size_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.actual_state_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.actual_boundary_directional_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalBoundaryResponse.actual_boundary_response_exists_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

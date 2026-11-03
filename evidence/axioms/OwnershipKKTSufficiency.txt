@@ -1,0 +1,4 @@
+'OwnershipSufficiency.utility_tangent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSufficiency.future_tangent_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSufficiency.economic_tangent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipSufficiency.global_optimality_of_corner_conditions' depends on axioms: [propext, Classical.choice, Quot.sound]

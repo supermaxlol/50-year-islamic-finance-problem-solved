@@ -1,0 +1,6 @@
+'OverlapStability.economic_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.midpoint_not_worse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.reference_pareto_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.affine_value_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.affine_marginal_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.allocation_limit_reference' depends on axioms: [propext, Classical.choice, Quot.sound]

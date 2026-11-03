@@ -1,15 +1,65 @@
 # Verified Foundations for Interest-Free Finance
 
-**A machine-checked general-equilibrium existence theory for economies with no interest-rate benchmark.**
+**Machine-checked foundations, productive-ownership equilibrium and bounded
+funding institutions without an externally supplied lending benchmark.**
 
-To the author's knowledge, this is the first general-equilibrium existence
-development — from the fixed-point theorem up to a competitive equilibrium — that
-is fully verified by a proof assistant **and** constructed with no risk-free /
-interest-bearing asset anywhere. All **25 headline theorems** are axiom-audited:
-each depends only on Lean 4's three standard foundational axioms (`propext`,
-`Classical.choice`, `Quot.sound`) — no `sorry`, no added axioms, no gaps, no warnings.
+We construct defined ownership economies in which payoffs, probabilities,
+preferences, resources and permitted trades determine valuation and holdings.
+The connected applications cover proportional ownership certificates, funded
+mutual protection, supplied compute enterprises, dated operating affordability
+and a guarded primary-subscription/escrow lifecycle.
 
-## What is proven
+The 3 November 2026 release contains **50 Lean modules** and **573 recorded
+declaration-audit endpoints** across the foundation and accepted extension chain.
+Endpoints include supporting lemmas and controls; they are not 573 independent
+discoveries. All retained logs are clean and use only standard foundations
+(`propext`, `Classical.choice`, `Quot.sound`). The new sources are byte-identical
+to their accepted research checkpoints. This release audit does not pretend
+that copying accepted evidence is a fresh cold rebuild.
+
+Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
+[remaining gaps and claim upgrades](docs/ROADMAP.md), and
+[the primary funding constitution](docs/PRIMARY_FUNDING.md).
+
+## Latest connected results
+
+- **Actual heterogeneous overlapping-payoff markets:** existence with global
+  household optimization, positive prices, binding budgets and exact clearing;
+  initially assetless households are included in the stated finite CRRA class.
+- **Multiplicity and conditional uniqueness:** an actual economy supports two
+  distinct equilibria. Around a supported no-net-trade reference, a separate
+  theorem establishes unique actual equilibria and one-sided boundary responses
+  for sufficiently small admissible joint primitive changes.
+- **Ownership certificates and funded protection:** specified denomination,
+  backing, exhaustion and cash-allocation identities are connected to valuation.
+- **Compute and due-date cash:** supplied bottleneck production and funded
+  operating plans produce payoff data; the exact cash buffer characterizes
+  payment affordability across supplied state paths.
+- **Primary escrow (Stage 209):** 32 audited endpoints cover consented settled
+  subscription posting, budgeted close, attested release, ownership activation,
+  cancellation, affordable non-repeatable refunds and named dispute scopes.
+  Released cash meets the imported operating-buffer condition.
+
+These do **not** yet prove voluntary household/issuer formation, correspondence
+of a persistent implementation to the formal rules, truthful physical evidence,
+real custody or legal title. The [roadmap](docs/ROADMAP.md) states exactly what
+closing those gaps would add.
+
+## Relationship to earlier economics
+
+General-equilibrium existence with household ownership of production is
+classical: see [Arrow and Debreu (1954)](https://doi.org/10.2307/1907353) and
+[McKenzie (1954)](https://doi.org/10.2307/1907539). This repository does not claim
+to have first discovered the possibility of valuation without a primitive loan.
+Its contribution is the explicit formal development, connected ownership-market
+extensions, sensitivity results and bounded institutional applications. No
+first-ever priority conclusion is certified by the source/axiom audit.
+
+## Original foundations module: what is proven
+
+The original `GEOverlap.lean` retains its 25 headline theorem audits. The new
+49 modules in `formal/` extend it; the original source and historical seal are
+preserved unchanged.
 
 **The machinery**
 - **Kakutani** fixed-point theorem for correspondences; **Brouwer** fixed-point theorem.
@@ -66,11 +116,15 @@ For precision (and because overclaiming helps no one):
   institutional, legal, or Shariah (jurisprudential) claim. The broader project of
   interest-free finance has those components too; this repository addresses the
   theoretical-foundations one.
-- It establishes **existence and coherence** of interest-free equilibrium and
-  discounting. It does **not** address the informational and control functions of
-  debt (safe-claim / liquidity / screening / costly-state-verification / control-in-
-  default). Those live in contract theory and mechanism design, not equilibrium
-  existence, and remain open.
+- It establishes **existence and coherence**, with conditional uniqueness and
+  sensitivity in additional specified classes. The bounded funding/protection/
+  ledger applications now address selected accounting and control rules, not
+  the complete safe-claim, liquidity, screening, monitoring or distress functions
+  of debt. Equilibrium existence alone does not establish those functions.
+- Full payoff rank is not the same as ruling out a certain portfolio. The broad
+  class needs no supplied lending benchmark; narrower risky controls and trading
+  restrictions retain their own assumptions. Discount weights, time preference
+  and potentially implied safe returns are not abolished.
 - Still open: the full Sonnenschein–Mantel–Debreu *realization* result (constructing
   households whose aggregate demand is a prescribed `z`; the non-uniqueness *upshot*
   is witnessed above, but the surjectivity construction is a separate, genuinely hard
@@ -82,18 +136,31 @@ For precision (and because overclaiming helps no one):
 
 ## Verify it yourself
 
-Requires Lean 4 (`v4.35.0`) and Mathlib (`v4.35.0`). See `NOTICE.md` for the
-Brouwer/Kakutani dependency.
+Requires Lean 4 (`v4.35.0`). Exact dependency revisions are pinned in
+`lake-manifest.json`; see `NOTICE.md` for attribution. The source/log audit uses
+only Python 3.11 or newer and does not install tools or rebuild accepted proofs:
+
+```sh
+python3 scripts/verify_release.py
+```
+
+This checks source/log hashes, import closure, declaration/axiom correspondence,
+package pins and the independent exact escrow controls. A fresh kernel build,
+when you choose to run one with sufficient disk/memory, is separate:
 
 ```sh
 lake exe cache get              # fetch the Mathlib build cache
-lake build                      # build the development
-lake env lean GEOverlap.lean    # re-run the #print axioms audit
+lake build                      # build foundation and extension libraries
 ```
 
 - `GEOverlap.lean` — the full development.
 - `AXIOM_AUDIT.txt` — the axiom audit (every theorem: `[propext, Classical.choice, Quot.sound]`).
-- `SEAL_GND.json` — module hash, theorem inventory, and provenance.
+- `SEAL_GND.json` — historical foundations snapshot, not the latest gap ledger.
+- `formal/` — accepted productive-ownership extension sources.
+- `evidence/verification-manifest.json` — portable module/stage/hash inventory.
+- `evidence/axioms/` — clean retained extension compiler/axiom logs.
+- `tests/primary_escrow_controls.py` — independent exact specification controls,
+  not a proof of implementation refinement or observed economic performance.
 
 ## Author
 

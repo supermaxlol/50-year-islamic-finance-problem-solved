@@ -1,0 +1,2 @@
+'OwnershipTrade.right_derivative_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.positive_ray_in_box' depends on axioms: [propext, Classical.choice, Quot.sound]

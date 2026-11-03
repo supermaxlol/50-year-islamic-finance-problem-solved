@@ -1,0 +1,15 @@
+'OverlapResource.resource_budget_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.independent_income_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.endowment_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.futureReceipt_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_value_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_marginal_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_allocation_limit_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_prices_tendsto_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_all_actual_equilibria_near_reference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OverlapResource.resource_global_actual_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_current_consumption_contDiffOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_global_actual_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.interior_resource_trading_control' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,6 @@
+'TangentProjection.pair_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentProjection.pair_smul_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentProjection.weightedCore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentProjection.feasible_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentProjection.feasible_convex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentProjection.variational_solution' depends on axioms: [propext, Classical.choice, Quot.sound]

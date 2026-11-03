@@ -1,0 +1,18 @@
+'OwnershipTrade.ray_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.receipts_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.objective_ray_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.cost_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.optimal_ray_slope_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.buy_direction_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.outputDirection_buy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.slope_buy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.cost_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.buy_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.sell_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.owned_asset_euler_equality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.Controls.floor_seller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.Controls.floor_buy_is_infeasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipTrade.Controls.genuine_one_sided_max_not_stationary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,3 @@
+'OwnershipBounds.short_segment_in_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBounds.cost_combo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipBounds.slack_optimum_transfers' depends on axioms: [propext, Classical.choice, Quot.sound]

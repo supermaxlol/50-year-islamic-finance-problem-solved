@@ -1,0 +1,8 @@
+'OverlapResource.resourceResidual_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resourceResidual_eq_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resourceResidual_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.admissible_near_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resourceResidual_contDiffAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_partial_isInvertible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_local_root_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapResource.resource_local_actual_family' depends on axioms: [propext, Classical.choice, Quot.sound]

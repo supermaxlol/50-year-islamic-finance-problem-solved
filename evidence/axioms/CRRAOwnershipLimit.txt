@@ -1,0 +1,15 @@
+'OwnershipLimit.within_iff_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.bounded_subsequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.redistributed_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.redistributed_clears' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.redistributed_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.equilibrium_of_limits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.nonnegative_initial_ownership_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.Controls.zero_initial_ownership_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.Controls.zero_initial_ownership_clears' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipLimit.Controls.zero_initial_ownership_is_genuine_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipLimit.Controls.zero_initial_risky_overlap_equilibrium' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

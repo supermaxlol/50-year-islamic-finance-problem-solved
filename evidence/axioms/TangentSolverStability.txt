@@ -1,0 +1,7 @@
+'TangentSolverStability.force_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentSolverStability.same_total_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentSolverStability.holdings_same_total_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentSolverStability.same_total_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentSolverStability.shift_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentSolverStability.response_lipschitz_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TangentSolverStability.physical_response_lipschitz_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

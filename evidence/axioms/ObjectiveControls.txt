@@ -1,0 +1,4 @@
+'ObjectiveControls.risky_CRRA_two_household_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ObjectiveControls.sample_no_nonzero_certain_receipt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ObjectiveControls.clipped_log_not_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ObjectiveControls.zero_curvature_not_strictConcave' depends on axioms: [propext, Classical.choice, Quot.sound]

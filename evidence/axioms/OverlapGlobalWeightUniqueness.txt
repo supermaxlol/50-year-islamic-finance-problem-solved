@@ -1,0 +1,6 @@
+'OverlapStability.all_equilibrium_allocation_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.actual_allocation_subsequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.prices_tendsto_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.all_actual_equilibria_near_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.affine_global_actual_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapStability.interior_globally_unique_trading_family' depends on axioms: [propext, Classical.choice, Quot.sound]

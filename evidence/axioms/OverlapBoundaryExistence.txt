@@ -1,0 +1,15 @@
+'OverlapBoundary.supply_positive_near_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapBoundary.boundary_changed_economy_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapBoundary.boundary_existence_and_all_equilibrium_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OverlapBoundary.WeakCornerControl.supported_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapBoundary.WeakCornerControl.actual_weak_boundary_market' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OverlapBoundary.WeakCornerControl.two_simultaneous_weak_corners' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OverlapBoundary.WeakCornerControl.waiting_weight_compatibility' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

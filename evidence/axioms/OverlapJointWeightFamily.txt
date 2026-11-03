@@ -1,0 +1,7 @@
+'OverlapJoint.jointResidual_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapJoint.jointResidual_eq_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapJoint.jointResidual_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapJoint.jointResidual_contDiffAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapJoint.joint_partial_isInvertible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapJoint.joint_local_root_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapJoint.joint_local_actual_family' depends on axioms: [propext, Classical.choice, Quot.sound]

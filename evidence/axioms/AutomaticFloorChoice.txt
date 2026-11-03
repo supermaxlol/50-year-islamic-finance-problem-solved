@@ -1,0 +1,7 @@
+'OwnershipFloorChoice.finite_positive_minorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipFloorChoice.finite_positive_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipFloorChoice.common_small_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipFloorChoice.Controls.zero_curvature_cannot_shrink_unit_weight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OwnershipFloorChoice.Controls.nonpositive_target_not_enough' depends on axioms: [propext, Classical.choice, Quot.sound]

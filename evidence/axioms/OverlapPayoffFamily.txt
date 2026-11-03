@@ -1,0 +1,7 @@
+'OverlapPayoff.payoffResidual_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapPayoff.payoffResidual_eq_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapPayoff.payoffResidual_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapPayoff.payoffResidual_contDiffAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapPayoff.payoff_partial_isInvertible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapPayoff.payoff_local_root_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OverlapPayoff.payoff_local_actual_family' depends on axioms: [propext, Classical.choice, Quot.sound]

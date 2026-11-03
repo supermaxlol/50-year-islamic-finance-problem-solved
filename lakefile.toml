@@ -1,15 +1,39 @@
 name = "interestFreeGE"
-defaultTargets = ["GEOverlap"]
+defaultTargets = ["GEOverlap", "ProductiveOwnership"]
+fixedToolchain = true
+allowNonModules = true
 
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-rev = "v4.35.0"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
 
 [[require]]
 name = "fixed-point-theorems"
 git = "https://github.com/harfe/fixed-point-theorems-lean4"
-rev = "main"
+rev = "93a3eed3364281a9dbf9652bb52356a8db65057c"
 
 [[lean_lib]]
 name = "GEOverlap"
+
+[[lean_lib]]
+name = "ProductiveOwnership"
+srcDir = "formal"
+roots = [
+  "AutomaticFloorChoice", "BridgeControls", "CRRAFeasibleTrades", "CRRAFloorExclusion",
+  "CRRAOverlapMarginalBounds", "CRRAOwnershipLimit", "CRRAOwnershipObjective",
+  "CRRAPositiveOwnershipExistence", "CRRAScalar", "CRRAUnflooredDomain",
+  "CRRAUniformEquilibriumBounds", "DomainBoundsControls", "EnergyComputeOwnership",
+  "EscrowFundingBridge", "FeasibleRayCalculus", "FormationLedgerBridge", "FormationLedgerCore",
+  "FundedProtection", "HeterogeneousOverlapBridge", "JointPrimitiveEconomy",
+  "NonlinearPhysicalBoundary", "NormalizedCRRAPreferences", "ObjectiveControls",
+  "OverlapAllocationStability", "OverlapBoundaryExistence", "OverlapBoundaryStability",
+  "OverlapBoundaryTangent", "OverlapEulerDerivative", "OverlapGlobalWeightUniqueness",
+  "OverlapJointWeightFamily", "OverlapJointWeightGlobal", "OverlapLocalWeightFamily",
+  "OverlapMultipleEquilibria", "OverlapPayoffDomain", "OverlapPayoffFamily",
+  "OverlapPayoffGlobal", "OverlapReferenceLinearization", "OverlapResourceFamily",
+  "OverlapResourceGlobal", "OwnershipCertificates", "OwnershipKKTSufficiency",
+  "OwnershipLimitTools", "OwnershipStrictSupport", "PrimaryEscrow", "SlackBoundTransfer",
+  "SupportedOwnershipUniqueness", "TangentMarketExistence", "TangentProjection",
+  "TangentSolverStability"
+]

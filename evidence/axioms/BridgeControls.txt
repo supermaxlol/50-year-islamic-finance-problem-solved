@@ -1,0 +1,6 @@
+'BridgeControls.box_convex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BridgeControls.quadratic_increasing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BridgeControls.two_household_probe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BridgeControls.constant_not_increasing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BridgeControls.risky_full_column_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BridgeControls.risky_no_nonzero_certain_receipt' depends on axioms: [propext, Classical.choice, Quot.sound]

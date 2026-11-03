@@ -1,0 +1,5 @@
+'OwnershipCRRA.utility_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipCRRA.utility_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipCRRA.utility_strictMonoOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipCRRA.utility_strictConcaveOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipCRRA.utility_clipped_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]

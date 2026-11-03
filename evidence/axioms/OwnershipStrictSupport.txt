@@ -1,0 +1,9 @@
+'OwnershipStrictSupport.utility_tangent_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipStrictSupport.future_tangent_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipStrictSupport.economic_tangent_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipStrictSupport.corner_pairing_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipStrictSupport.economic_support_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipStrictSupport.economic_support_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OwnershipStrictSupport.bundle_equal_of_not_worse_and_cost_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

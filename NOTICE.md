@@ -11,4 +11,9 @@ This development builds on:
   own audit. See https://github.com/harfe/fixed-point-theorems-lean4
 
 The fixed-point theorems are supplied by the harfe dependency and are not
-re-hosted here. All other theorems in `GEOverlap.lean` are original to this work.
+re-hosted here. The exact dependency revision is pinned. The formalizations
+in `GEOverlap.lean` and `formal/` are maintained in this project under its MIT
+license. Underlying classical mathematics is not claimed as a new invention:
+the status documentation names its economic and mathematical predecessors.
+The historical foundation seal is retained unchanged; current scope and the
+extension inventory are stated in README.md and the release manifest.
