@@ -38,6 +38,11 @@ If the supplied reserve dominates Stage 207's exact prefix-deficit buffer in
 every supplied state, the released operating cash pays every dated operating
 obligation. A positive final payoff alone would not establish this.
 
+Stage 222 adds the [safe reserve window](FINANCEABILITY_FRONTIER.md): with
+unchanged household primitives, productive payoffs and issue size, the required
+operating buffer must fit below the voluntarily financeable reserve ceiling.
+This separates funding sufficiency from dated affordability.
+
 Activated units initialize the separate distribution ledger with zero declared
 distributable cash: retained operating capital is not simultaneously investor
 yield. Actual future distributable receipts require separate posting/allocation.

@@ -1,6 +1,6 @@
 # What has been constructed, proved and tested
 
-As of 3 November 2026. The project has progressed from benchmark-independent
+As of 4 November 2026. The project has progressed from benchmark-independent
 valuation to a connected, conditional theory of ownership markets and selected
 funding institutions. It is not merely a proposal to set an interest-rate symbol
 to zero. It also is not a completed operating financial system.
@@ -23,7 +23,7 @@ conflicting interests or institutional power disappear.
 
 “Verified” below refers to the stated formal theorem under its assumptions, not
 an approval of an entire institution. Only the 4.35 foundation and Stages
-183–220 accepted dependency chain are included in this repository release. Earlier
+183–220 accepted dependency chain and the Stage 222 frontier are included in this repository release. Earlier
 benchmark/diffusion results are described as programme context, not newly
 released or independently rebuilt by this package.
 
@@ -48,6 +48,7 @@ released or independently rebuilt by this package.
 | Primary escrow lifecycle | Consented settled subscriptions fund a fixed issue; close covers construction plus reserve; gates control release; active ownership reconciles; cancellation refunds remain affordable and cannot repay the same entitlement twice; disputes pause named actions. Released operating cash meets the imported buffer criterion. | Stage 209 alone supplies price/plan, with no fees/partial draws or custody/title/liveness proof. Later formation/executable extensions are listed below. | Stage 209; `PrimaryEscrow`, `EscrowFundingBridge`, 32 endpoints. |
 | Voluntary primary formation | Actual household demand and price-taking issuer participation support funded formation iff demand at the cost-covering floor covers supply; formed price and holdings are unique in the stated class. | One fresh fixed-scale issue and supplied operating plan. Independent positive future incomes and arbitrary positive CRRA curvatures are covered; not every project can raise money. | Stages 211/213; 103 endpoints across six modules. |
 | Actual choices to reached escrow | Actual optimal holdings/consumption and supplier participation connect to a reached funded/released state for arbitrarily many finite buyers when the actual holdings fit natural lots. | Evidence supplied; exact compatibility, not arbitrary rounding or a general discrete-market equilibrium. | Stages 212/214; 24 endpoints. |
+| Financeability frontier and safe reserve window | Same-supply formed plans have identical actual prices and holdings when household primitives/payoffs are fixed. Formation and dated affordability hold iff required buffer <= reserve <= issue proceeds minus construction and outside option. | Supplied plan and paths; changing payoffs or scale is a new economy. Cash-path safety alone does not establish terminal distribution compatibility. | Stage 222; `FinanceabilityFrontier`, seven endpoints. |
 | Integer money | Accepted natural-number money operations decode to the real-valued lifecycle under a positive currency quantum. | Forward refinement under exact representation; no general rounding or fee allocation theorem. | Stage 215; 25 endpoints. |
 | Executable dispatcher | The same Lean function used by runtime controls implements admitted steps, preserves full state on economic refusal, and inherits finite-history safety. | Typed pure execution with sound external-check assumptions; role labels are not signatures. | Stage 216; 10 endpoints; 20,053 tested requests. |
 | Complete state codec | Full terms, resources, balances, ownership, evidence, time and pauses survive exact numeric encoding; context is bound. | Canonical representation is not authenticity. | Stage 217; 15 endpoints. |

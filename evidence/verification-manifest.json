@@ -1,6 +1,6 @@
 {
-  "release": "2026-11-03",
-  "latest_stage": 220,
+  "release": "2026-11-04",
+  "latest_stage": 222,
   "lean_version": "4.35.0",
   "nature": "Source-identical accepted proofs and retained clean axiom logs; not a fresh cold rebuild.",
   "dependency_revisions": {
@@ -15,8 +15,8 @@
     "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
     "fixed-point-theorems": "93a3eed3364281a9dbf9652bb52356a8db65057c"
   },
-  "module_count": 66,
-  "audited_endpoints": 811,
+  "module_count": 67,
+  "audited_endpoints": 818,
   "counts_are_not_distinct_discovery_counts": true,
   "modules": {
     "HeterogeneousOverlapBridge": {
@@ -1552,6 +1552,24 @@
         "ConnectedEnterpriseDemo.complete_wire_roundtrip",
         "ConnectedEnterpriseDemo.history_replays",
         "ConnectedEnterpriseDemo.complete_history_recovers"
+      ],
+      "imported_without_rebuild": true
+    },
+    "FinanceabilityFrontier": {
+      "stage": 222,
+      "source": "formal/FinanceabilityFrontier.lean",
+      "source_sha256": "24c98a4b2c80723f0691883e271921290d0a1727d2381be32eda383beec775ca",
+      "audit_log": "evidence/axioms/FinanceabilityFrontier.txt",
+      "audit_log_sha256": "b269a36cecde592acb090353e897c7126e500151f6519c592e236dd68c42c418",
+      "retained_compiled_object_sha256": "d8d2eed39895fabc04a9cac2e5ee29365ad415cb3c9a3da36e5490ec50c906fa",
+      "audited_declarations": [
+        "FinanceabilityFrontier.transfer",
+        "FinanceabilityFrontier.formed_prices_holdings_invariant",
+        "FinanceabilityFrontier.exact_frontier",
+        "FinanceabilityFrontier.reserve_frontier",
+        "FinanceabilityFrontier.lower_cost_preserves_formation",
+        "FinanceabilityFrontier.above_frontier_no_formation",
+        "FinanceabilityFrontier.safe_reserve_window"
       ],
       "imported_without_rebuild": true
     }

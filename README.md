@@ -9,9 +9,9 @@ The connected applications cover proportional ownership certificates, funded
 mutual protection, supplied compute enterprises, dated operating affordability
 and a guarded primary-subscription/escrow lifecycle.
 
-The 3 November 2026 update contains **66 Lean modules** and **811 recorded
+The 4 November 2026 update contains **67 Lean modules** and **818 recorded
 declaration-audit endpoints** across the foundation and accepted extension chain.
-Endpoints include supporting lemmas and controls; they are not 811 independent
+Endpoints include supporting lemmas and controls; they are not 818 independent
 discoveries. All retained logs are clean and use only standard foundations
 (`propext`, `Classical.choice`, `Quot.sound`). The proof sources and identified
 runtime artifacts are byte-identical to their accepted research checkpoints;
@@ -57,6 +57,11 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
   state are connected in Lean. The same final record is obtained in SQLite,
   including reopening and cached retries. This is a risky two-state synthetic
   enterprise, not observed fundraising or a guaranteed-return investment.
+- **Financeability frontier (Stage 222):** holding household primitives, payoffs
+  and issue size fixed, a formed price gives an exact ceiling on construction,
+  reserve and supplier outside option. Formation and dated operating affordability
+  hold together exactly when the required buffer fits below that ceiling.
+  See the [safe reserve window](docs/FINANCEABILITY_FRONTIER.md).
 
 The economic and pure executable core is **proved**; the database adapter is
 **tested under explicit storage/runtime assumptions**. Truthful physical evidence,
@@ -77,7 +82,7 @@ first-ever priority conclusion is certified by the source/axiom audit.
 ## Original foundations module: what is proven
 
 The original `GEOverlap.lean` retains its 25 headline theorem audits. The new
-65 modules in `formal/` extend it; the original source and historical seal are
+66 modules in `formal/` extend it; the original source and historical seal are
 preserved unchanged.
 
 **The machinery**

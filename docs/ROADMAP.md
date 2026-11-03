@@ -5,7 +5,8 @@
 Do not reopen completed targets: actual voluntary single-issue formation,
 natural-lot execution, integer-money refinement, executable dispatcher, complete
 serialization and the exact two-household persistent demonstration. Stages
-211–220 advance beyond the earlier Stage 209 abstract escrow result.
+211–220 advance beyond the earlier Stage 209 abstract escrow result. Stage 222
+also closes the [fixed-supply financeability and safe reserve window](FINANCEABILITY_FRONTIER.md).
 
 | Link | Current status | Remaining boundary |
 |---|---|---|

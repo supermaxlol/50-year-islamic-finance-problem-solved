@@ -1,0 +1,7 @@
+'FinanceabilityFrontier.transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinanceabilityFrontier.formed_prices_holdings_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinanceabilityFrontier.exact_frontier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinanceabilityFrontier.reserve_frontier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinanceabilityFrontier.lower_cost_preserves_formation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinanceabilityFrontier.above_frontier_no_formation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinanceabilityFrontier.safe_reserve_window' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -40,5 +40,5 @@ roots = [
   "PrimaryCRRAObjective", "PrimaryCRRADemand", "PrimaryCRRAFormation",
   "CRRALotsExecution", "IntegerEscrowCore", "IntegerEscrowRefinement",
   "EscrowDispatcher", "EscrowSnapshot", "AtomicEscrow", "PersistentWire",
-  "ConnectedEnterpriseDemo"
+  "ConnectedEnterpriseDemo", "FinanceabilityFrontier"
 ]
