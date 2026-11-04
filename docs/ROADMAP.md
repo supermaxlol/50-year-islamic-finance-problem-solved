@@ -7,10 +7,15 @@ natural-lot execution, integer-money refinement, executable dispatcher, complete
 serialization and the exact two-household persistent demonstration. Stages
 211–220 advance beyond the earlier Stage 209 abstract escrow result. Stage 222
 also closes the [fixed-supply financeability and safe reserve window](FINANCEABILITY_FRONTIER.md).
+Stage 224 closes [strict participation, bounded cashflow stress and an exact
+executable reserve certificate](STRICT_PARTICIPATION_AND_RESERVES.md) in one
+joint module. These are completed targets, not unfinished next steps.
 
 | Link | Current status | Remaining boundary |
 |---|---|---|
 | Actual voluntary cost-covering formation | Proved for finite independent-income CRRA buyers, one fixed-scale new issue and a price-taking supplier. Formation iff demand at the cost floor covers supply. | Supplied plan, positive background incomes and outside option; no automatic fundraising. |
+| Strict participation and cashflow stress | Strict entry iff floor demand strictly exceeds supply; positive subscribers strictly gain. Prefix-loss bounds yield sufficient funded stress reserves. | Specified outside options, aligned stress paths and unchanged terminal contracts; not universal welfare or zero risk. |
+| Executable reserve certificate | Minimum affordable integer reserve and earliest negative prefix are proved and compose with strict formation. | Exact minor units; JSON/runtime tested, not formally verified. No forecast or custody truth. |
 | Actual choices to formal funding | Reached escrow release proved for natural-lot-compatible actual holdings, retaining consumption and supplier participation. | Exact lots and supplied external evidence; not arbitrary rounding. |
 | Formal rules to executable transactions | Integer refinement, dispatcher, versioned API and complete numeric representation proved. | JSON/compiler/OS assumptions; not every language or program. |
 | Concrete persistence | SQLite adapter and actual crash/concurrency/retry controls pass, including an exact economic witness. | Tested, not kernel-proved storage or authenticated real custody. |
@@ -30,7 +35,7 @@ deployment should be separate projects, not ever-expanding publication criteria.
 
 | Target | What must be established | Claim enabled after completion | Still not implied |
 |---|---|---|---|
-| Publication synchronization | Select journal/article scope; integrate selected later results; synchronize main/supplement, Word and replication files; review declarations. | A checked submission package matching the selected proofs. | Acceptance, historical priority or completion of all institutions. |
+| Publication synchronization | Main/supplement include the selected later results; still select journal/article scope, synchronize Word and replication files, and review declarations. | A checked submission package matching the selected proofs. | Acceptance, historical priority or completion of all institutions. |
 | Independent reproduction | A clean, sufficiently resourced environment rebuilds the pinned source and reruns optional executable controls. | Independent kernel/runtime replication of this release. | Real asset performance or institution-wide correctness. |
 | Authentication and historical evidence | Signed/domain-bound requests, replay-resistant credentials, revocation, checked settlement and preserved evidence decisions. | Admitted actions correspond to authenticated authority and the specified evidence history. | An oracle always tells the truth. |
 | Freshness and anti-fork | External trusted revision anchor or consensus/attestation bound to ledger identity/checkpoints. | An old valid prefix or conflicting history is detected under that trust model. | Trustless real-world custody or every network failure handled. |

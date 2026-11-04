@@ -1,6 +1,6 @@
 {
   "release": "2026-11-04",
-  "latest_stage": 222,
+  "latest_stage": 224,
   "lean_version": "4.35.0",
   "nature": "Source-identical accepted proofs and retained clean axiom logs; not a fresh cold rebuild.",
   "dependency_revisions": {
@@ -15,8 +15,8 @@
     "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
     "fixed-point-theorems": "93a3eed3364281a9dbf9652bb52356a8db65057c"
   },
-  "module_count": 67,
-  "audited_endpoints": 818,
+  "module_count": 68,
+  "audited_endpoints": 841,
   "counts_are_not_distinct_discovery_counts": true,
   "modules": {
     "HeterogeneousOverlapBridge": {
@@ -1572,6 +1572,40 @@
         "FinanceabilityFrontier.safe_reserve_window"
       ],
       "imported_without_rebuild": true
+    },
+    "StrictPrimaryParticipation": {
+      "stage": 224,
+      "source": "formal/StrictPrimaryParticipation.lean",
+      "source_sha256": "29e09cf37d56f09aa8a7141ba299f4d695730bae6a9d5e0932fb75d89076bb57",
+      "audit_log": "evidence/axioms/StrictPrimaryParticipation.txt",
+      "audit_log_sha256": "81f0cc67322372bd13a5117d7525fa393237e3727286532fbfa659b6ee5f72ac",
+      "retained_compiled_object_sha256": "cc05895dd11f399cfe87b70930754a65e5a4628648cb1921b2a9c8343a09a425",
+      "audited_declarations": [
+        "StrictPrimaryParticipation.issuer_strict_iff_cost",
+        "StrictPrimaryParticipation.equilibrium_strict_iff_demand",
+        "StrictPrimaryParticipation.strict_formation_iff",
+        "StrictPrimaryParticipation.subscriber_strict_iff_positive",
+        "StrictPrimaryParticipation.some_subscriber_strict",
+        "StrictPrimaryParticipation.strict_fixture",
+        "StrictPrimaryParticipation.original_fixture_issuer_indifferent",
+        "CashflowStressReserve.safe_iff_prefix",
+        "CashflowStressReserve.stress_preserves_safety",
+        "CashflowStressReserve.buffer_stress_bound",
+        "CashflowStressReserve.buffer_lipschitz",
+        "CashflowStressReserve.funded_stress_window",
+        "CashflowStressReserve.terminal_cash_preserved",
+        "CashflowStressReserve.delayed_receipt_example",
+        "ReserveCalculator.needed_nonnegative",
+        "ReserveCalculator.needed_is_least",
+        "ReserveCalculator.firstShortfall_none_iff",
+        "ReserveCalculator.firstShortfall_certificate",
+        "ReserveCalculator.needed_decodes",
+        "ReserveCalculator.exact_real_affordability",
+        "ReserveCalculator.calculator_correct",
+        "ReserveCalculator.exact_examples",
+        "ReserveCalculator.certified_strict_funding"
+      ],
+      "imported_without_rebuild": true
     }
   },
   "controls": {
@@ -1609,6 +1643,24 @@
       "sha256": "d9fc809872f9317abe33a5c60b32678cd61294bc52edfebc7ac4db812537a984",
       "source_identical": false,
       "transformation": "Omit private local output path; add original summary hash and this disclosure."
+    },
+    "runtime/ReserveWorker.lean": {
+      "sha256": "4664b9555129c32a4b11bc4da59740676ca6dac7879848c134f87baf2a6fcedd",
+      "source_identical": true
+    },
+    "evidence/controls/reserve_worker.ndjson": {
+      "sha256": "dabd7b23c21eca4ac8d1eac5fbd977f217ec05e918c5ff49b02560fae28a2990",
+      "source_identical": true
+    },
+    "evidence/controls/reserve_calculator.json": {
+      "sha256": "e61ef142f78c154fa16c73ec51cccfe31a69542e845cb883e5f53bf3c55f8abd",
+      "source_identical": false,
+      "transformation": "Remove private absolute binding paths; retain each original artifact hash by basename. Add this disclosure and source summary hash."
+    },
+    "tests/reserve_calculator_controls.py": {
+      "sha256": "d70307ee04d7384cb1452be9fe879c9a540ee86290dd6c4b7ec3eaeffc878b9f",
+      "source_identical": false,
+      "transformation": "Original oracle and deterministic cases retained; private runtime launch replaced by a portable retained-reply audit, not a new runtime test."
     }
   },
   "scope": "Proved economic and pure execution core; tested SQLite and one connected exact enterprise witness. No real funds or external evidence."

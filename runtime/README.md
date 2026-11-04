@@ -54,6 +54,30 @@ lake env lean --run runtime/ExportDemo.lean
 Its accepted complete initial/request/final record is also retained in
 `evidence/controls/connected_witness.json`. See [the connected demonstration](../docs/CONNECTED_DEMO.md).
 
+## Exact reserve calculator
+
+After a kernel build, the separate same-source calculator worker accepts one
+JSON line `[budget, cashflows]`, with signed integers encoded as strings:
+
+```
+lake env lean --run runtime/ReserveWorker.lean
+```
+
+For input `["4",["-5","12"]]` it returns required reserve `"5"`, affordability
+`false`, first shortfall prefix `1`, its balance `"-1"`, and terminal balance
+`"11"`. Positive terminal cash does not pay an earlier bill. Negative initial
+budgets can fail at prefix zero. The pure functions are proved; JSON/IO are
+tested boundaries. Any positive currency quantum decodes the integer model
+exactly, without a rounding claim.
+
+The retained worker replies and sanitized original receipt are in
+`evidence/controls/reserve_worker.ndjson` and `reserve_calculator.json`.
+`python3 tests/reserve_calculator_controls.py` checks those 566 numerical replies
+and seven malformed-input rejections with the original deterministic oracle;
+it does not launch Lean or rerun the runtime. The launch command above is
+reproduction guidance, not a new cold-build receipt. See
+[the theorem and application scope](../docs/STRICT_PARTICIPATION_AND_RESERVES.md).
+
 ## Explicit trust boundaries
 
 Role numbers are not authentication. Evidence checks are fixed mocks, not

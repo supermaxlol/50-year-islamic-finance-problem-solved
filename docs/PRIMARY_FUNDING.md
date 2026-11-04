@@ -43,6 +43,13 @@ unchanged household primitives, productive payoffs and issue size, the required
 operating buffer must fit below the voluntarily financeable reserve ceiling.
 This separates funding sufficiency from dated affordability.
 
+Stage 224 sharpens the economic and operating boundary: strict issuer entry
+requires strict demand excess at the funding floor, and prefix-cash stress
+bounds yield sufficient reserve protection within the same financeability
+ceiling. An exact integer calculator certifies the minimum reserve and first
+unaffordable prefix. See [strict participation and reserves](STRICT_PARTICIPATION_AND_RESERVES.md).
+These results do not change the original escrow trace or supply truthful cash forecasts.
+
 Activated units initialize the separate distribution ledger with zero declared
 distributable cash: retained operating capital is not simultaneously investor
 yield. Actual future distributable receipts require separate posting/allocation.

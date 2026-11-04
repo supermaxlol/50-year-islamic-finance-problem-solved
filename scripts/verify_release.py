@@ -63,10 +63,13 @@ def main():
     assert backend['counts']['process_exit_faults'] == 6
     assert backend['counts']['actual_two_connection_schedules'] == 8
     assert demo['witness_sha256'] == sha(ROOT/'evidence/controls/connected_witness.json')
+    reserve=runpy.run_path(str(ROOT/'tests/reserve_calculator_controls.py'))['check']()
+    assert reserve['passed']
     print(f'PASS: {len(modules)} source-identical modules; {total} retained declaration audits; standard foundations only.')
     print(f"PASS: {result['named_controls']} controls, {result['exact_refund_cases']} exact refund cases, {result['generated_attempts']} generated attempts.")
     print('PASS: import closure, pinned dependencies and configured library roots. No Lean module rebuilt.')
     print('PASS: retained SQLite and connected-demo source/evidence bindings; these runtime controls were not rerun.')
+    print('PASS: 566 retained reserve replies and seven malformed-input rejections checked against the independent oracle; no runtime rerun.')
     print('This audits retained evidence; run lake build separately for a fresh kernel build.')
 
 

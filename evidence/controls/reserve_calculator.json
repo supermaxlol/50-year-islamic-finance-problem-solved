@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "seconds": 157.219,
+  "checked_utc": "2026-11-04T03:59:46.664114+00:00",
+  "exact_comparisons": 566,
+  "malformed_rejections": 7,
+  "same_lean_functions_executed": true,
+  "independent_oracle": "prefix sums, minimum prefix and first negative balance",
+  "integer_strings_no_rounding": true,
+  "original_summary_sha256": "beef51eaf78ae902cb3c86c85c4057ca2939f6a75acd210ac3629300bab74119",
+  "transformation": "Remove private absolute binding paths; retain each original artifact hash by basename. Add this disclosure and source summary hash.",
+  "original_artifact_hashes": {
+    "check_calculator.py": "aac2c45fcc188143d752830a94204bea90dd9e4855083b218d5d5b200fe3fb9a",
+    "ReserveWorker.lean": "4664b9555129c32a4b11bc4da59740676ca6dac7879848c134f87baf2a6fcedd",
+    "ReserveWorker.log": "dabd7b23c21eca4ac8d1eac5fbd977f217ec05e918c5ff49b02560fae28a2990",
+    "StrictPrimaryParticipation.lean": "29e09cf37d56f09aa8a7141ba299f4d695730bae6a9d5e0932fb75d89076bb57",
+    "StrictPrimaryParticipation.olean": "cc05895dd11f399cfe87b70930754a65e5a4628648cb1921b2a9c8343a09a425"
+  },
+  "retained_reply_log": "evidence/controls/reserve_worker.ndjson",
+  "original_oracle_source_sha256": "aac2c45fcc188143d752830a94204bea90dd9e4855083b218d5d5b200fe3fb9a"
+}

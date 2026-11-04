@@ -9,13 +9,13 @@ The connected applications cover proportional ownership certificates, funded
 mutual protection, supplied compute enterprises, dated operating affordability
 and a guarded primary-subscription/escrow lifecycle.
 
-The 4 November 2026 update contains **67 Lean modules** and **818 recorded
+The 4 November 2026 update contains **68 Lean modules** and **841 recorded
 declaration-audit endpoints** across the foundation and accepted extension chain.
-Endpoints include supporting lemmas and controls; they are not 818 independent
+Endpoints include supporting lemmas and controls; they are not 841 independent
 discoveries. All retained logs are clean and use only standard foundations
-(`propext`, `Classical.choice`, `Quot.sound`). The proof sources and identified
-runtime artifacts are byte-identical to their accepted research checkpoints;
-portable launch configuration is separate. This release audit does not pretend
+(`propext`, `Classical.choice`, `Quot.sound`). Proof sources and runtime artifacts
+marked source-identical retain their accepted bytes; receipt sanitization and
+portable wrappers are disclosed separately. This release audit does not pretend
 that copying accepted evidence is a fresh cold rebuild.
 
 Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
@@ -62,6 +62,13 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
   reserve and supplier outside option. Formation and dated operating affordability
   hold together exactly when the required buffer fits below that ceiling.
   See the [safe reserve window](docs/FINANCEABILITY_FRONTIER.md).
+- **Strict participation, stress and exact reserves (Stage 224):** strict issuer
+  participation holds exactly when actual demand at the funding floor strictly
+  exceeds supply. Positive subscribers strictly gain relative to zero investment.
+  Cumulative cashflow loss bounds give funded reserve-stress certificates. The
+  proved integer calculator returns the minimum reserve and earliest negative
+  cash prefix; the same functions' transport passes 566 exact comparisons and
+  seven malformed-input rejections. See [the connected guarantees and limits](docs/STRICT_PARTICIPATION_AND_RESERVES.md).
 
 The economic and pure executable core is **proved**; the database adapter is
 **tested under explicit storage/runtime assumptions**. Truthful physical evidence,
@@ -82,7 +89,7 @@ first-ever priority conclusion is certified by the source/axiom audit.
 ## Original foundations module: what is proven
 
 The original `GEOverlap.lean` retains its 25 headline theorem audits. The new
-66 modules in `formal/` extend it; the original source and historical seal are
+67 modules in `formal/` extend it; the original source and historical seal are
 preserved unchanged.
 
 **The machinery**

@@ -23,7 +23,7 @@ conflicting interests or institutional power disappear.
 
 “Verified” below refers to the stated formal theorem under its assumptions, not
 an approval of an entire institution. Only the 4.35 foundation and Stages
-183–220 accepted dependency chain and the Stage 222 frontier are included in this repository release. Earlier
+183–220 accepted dependency chain, Stage 222 frontier and Stage 224 strict/stress/reserve extension are included in this repository release. Earlier
 benchmark/diffusion results are described as programme context, not newly
 released or independently rebuilt by this package.
 
@@ -49,6 +49,9 @@ released or independently rebuilt by this package.
 | Voluntary primary formation | Actual household demand and price-taking issuer participation support funded formation iff demand at the cost-covering floor covers supply; formed price and holdings are unique in the stated class. | One fresh fixed-scale issue and supplied operating plan. Independent positive future incomes and arbitrary positive CRRA curvatures are covered; not every project can raise money. | Stages 211/213; 103 endpoints across six modules. |
 | Actual choices to reached escrow | Actual optimal holdings/consumption and supplier participation connect to a reached funded/released state for arbitrarily many finite buyers when the actual holdings fit natural lots. | Evidence supplied; exact compatibility, not arbitrary rounding or a general discrete-market equilibrium. | Stages 212/214; 24 endpoints. |
 | Financeability frontier and safe reserve window | Same-supply formed plans have identical actual prices and holdings when household primitives/payoffs are fixed. Formation and dated affordability hold iff required buffer <= reserve <= issue proceeds minus construction and outside option. | Supplied plan and paths; changing payoffs or scale is a new economy. Cash-path safety alone does not establish terminal distribution compatibility. | Stage 222; `FinanceabilityFrontier`, seven endpoints. |
+| Strict voluntary participation | Strict issuer entry iff actual demand at the funding floor strictly exceeds supply. Each subscriber strictly gains over zero investment iff its actual holding is positive; some positive subscriber exists. A supplied construction-six variant strictly benefits its issuer and both subscribers. | Specified outside options and fixed-scale plan, not universal welfare. The original construction-seven persistent fixture remains unchanged. | Stage 224; `StrictPrimaryParticipation`, seven endpoints in the joint module. |
+| Cashflow stress tolerance | An adverse cumulative-receipt gap bounded by epsilon raises minimum reserve by at most epsilon; a two-sided bound gives a reserve Lipschitz bound. Stress reserves combine with the actual funding ceiling. | Supplied aligned dates/paths; conservative stress window is sufficient, not necessary for a loose bound. Payoff or settlement changes require revaluation. | Stage 224; `CashflowStressReserve`, seven endpoints in the same module. |
+| Exact executable reserve certificate | Signed-integer functions return the least affordable budget and first negative prefix. Any positive currency quantum decodes exactly to real cash safety. Successful certificates compose with strict actual formation. | Exact representation, not rounding, truthful forecasts or real custody. Parser/IO remain tested. | Stage 224; `ReserveCalculator`, nine endpoints; 566 exact runtime comparisons and seven malformed rejections. |
 | Integer money | Accepted natural-number money operations decode to the real-valued lifecycle under a positive currency quantum. | Forward refinement under exact representation; no general rounding or fee allocation theorem. | Stage 215; 25 endpoints. |
 | Executable dispatcher | The same Lean function used by runtime controls implements admitted steps, preserves full state on economic refusal, and inherits finite-history safety. | Typed pure execution with sound external-check assumptions; role labels are not signatures. | Stage 216; 10 endpoints; 20,053 tested requests. |
 | Complete state codec | Full terms, resources, balances, ownership, evidence, time and pauses survive exact numeric encoding; context is bound. | Canonical representation is not authenticity. | Stage 217; 15 endpoints. |
@@ -77,10 +80,11 @@ return are different propositions.
 | HAMBA | Livestock identity, evidence, marketplace and partner workflow design, prototype and prospective field protocol. | Pre-pilot; simulated paths are not observed farmers, financed animals or measured poverty effects. |
 | Bangladesh infrastructure work | A dated case distinguishes installed/usable capacity, accounts and missing contractual evidence. | Does not by itself identify the entire causal loss-to-currency chain or validate every model equation. |
 
-The mathematical manuscript remains the last integrated main/supplement
-revision (Stage 202). Applications 203–220 have not been silently inserted into
-it by this public code update. A matching new submission package remains a
-separate document task.
+The mathematical manuscript and its existing supplement now explicitly include
+selected formation, financeability, strict-participation and reserve results
+(Stages 223/225 document revisions). The public source update does not publish
+the manuscripts, private data or a new journal upload package. A matching
+Word/replication/submission package remains a separate document task.
 
 ## The present affirmative claim
 
