@@ -1,0 +1,3 @@
+'PrimaryPriceCorners.lower_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimaryPriceCorners.zero_demand_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimaryPriceCorners.certified_formation_with_corners' depends on axioms: [propext, Classical.choice, Quot.sound]

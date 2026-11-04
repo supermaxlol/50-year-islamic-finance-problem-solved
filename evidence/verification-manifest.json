@@ -1,6 +1,6 @@
 {
   "release": "2026-11-04",
-  "latest_stage": 224,
+  "latest_stage": 226,
   "lean_version": "4.35.0",
   "nature": "Source-identical accepted proofs and retained clean axiom logs; not a fresh cold rebuild.",
   "dependency_revisions": {
@@ -15,8 +15,8 @@
     "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
     "fixed-point-theorems": "93a3eed3364281a9dbf9652bb52356a8db65057c"
   },
-  "module_count": 68,
-  "audited_endpoints": 841,
+  "module_count": 70,
+  "audited_endpoints": 871,
   "counts_are_not_distinct_discovery_counts": true,
   "modules": {
     "HeterogeneousOverlapBridge": {
@@ -1606,6 +1606,58 @@
         "ReserveCalculator.certified_strict_funding"
       ],
       "imported_without_rebuild": true
+    },
+    "ConnectedPayoutPrice": {
+      "source": "formal/ConnectedPayoutPrice.lean",
+      "source_sha256": "61e08c2e462968126deca185c50ee9067bf1f6350bc044c2299c10f631fab004",
+      "audit_log": "evidence/axioms/ConnectedPayoutPrice.txt",
+      "audit_log_sha256": "254dded9424889b72be2c9c00c0435978c1bb6f9d4864f5e9b2ffa8cd632298d",
+      "audited_declarations": [
+        "StrictExecutedFormation.actual_strict_formation",
+        "StrictExecutedFormation.recorded_supplier_strict",
+        "StrictExecutedFormation.recorded_buyer_strict",
+        "StrictExecutedFormation.same_terms",
+        "StrictExecutedFormation.recovered_strict_example",
+        "IntegerPayouts.allocate_sum",
+        "IntegerPayouts.allocate_length",
+        "IntegerPayouts.step_zero",
+        "IntegerPayouts.step_error",
+        "IntegerPayouts.allocate_quotas",
+        "IntegerPayouts.quota_error_real",
+        "IntegerPayouts.fee_bound",
+        "IntegerPayouts.settlement_budget",
+        "IntegerPayouts.decoded_budget",
+        "IntegerPayouts.zero_sum_aux",
+        "IntegerPayouts.admissible_budget",
+        "IntegerPayouts.complete_certificate",
+        "IntegerPayouts.exact_examples",
+        "PrimaryPriceCertificates.lower_from_score",
+        "PrimaryPriceCertificates.upper_from_score",
+        "PrimaryPriceCertificates.price_enclosure",
+        "PrimaryPriceCertificates.midpoint_error",
+        "PrimaryPriceCertificates.certified_formation",
+        "PrimaryPriceCertificates.enclosure_strict",
+        "PrimaryPriceCertificates.midpoint_split_width",
+        "PrimaryPriceCertificates.exact_fixture_score_certificates",
+        "PrimaryPriceCertificates.certified_fixture"
+      ],
+      "imported_without_rebuild": true,
+      "stage": 226,
+      "retained_compiled_object_sha256": "38728db1fcc88134aa4bf2b81561b68f10ceb0f88b6ab93a7844df2c4ef7363f"
+    },
+    "PriceCornerCertificates": {
+      "source": "formal/PriceCornerCertificates.lean",
+      "source_sha256": "38495315b44cbf3836617c049b86ca0a436b663593a702f68600336565d7d9f7",
+      "audit_log": "evidence/axioms/PriceCornerCertificates.txt",
+      "audit_log_sha256": "b955b48eb9f2015526dc707181e02c9c0f957d6fa49454546f3e10dfa9860212",
+      "audited_declarations": [
+        "PrimaryPriceCorners.lower_certificate",
+        "PrimaryPriceCorners.zero_demand_certificate",
+        "PrimaryPriceCorners.certified_formation_with_corners"
+      ],
+      "imported_without_rebuild": true,
+      "stage": 226,
+      "retained_compiled_object_sha256": "005c614be73702f73b34283d5ab741496c5206158301ea66fe378116aee2b15f"
     }
   },
   "controls": {
