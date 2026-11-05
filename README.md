@@ -22,16 +22,24 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
 [remaining gaps and claim upgrades](docs/ROADMAP.md), and
 [the primary funding constitution](docs/PRIMARY_FUNDING.md).
 
-## Why this matters (motivation, not a theorem)
+## Why this matters — the missing piece
 
-As automation lets capital produce value with less labor, income from wages
-weakens and the distribution question becomes one of *ownership* — who holds the
-productive assets. This work does not forecast automation or prove any policy.
-It provides a machine-checked *coherence baseline*: an economy in which
-households are sustained by **proportional ownership claims on production**,
-rather than by wages or an interest-bearing debt benchmark, admits a competitive
-equilibrium that clears. Interest-free finance is one instance; the result is
-secular and general.
+As automation lets capital produce more of the output and labor less of it, the
+economic question shifts from *"what is my wage?"* to *"what do I own?"*
+Economists have seen this coming — the problem is often posed as *whoever owns the
+machines ends up owning the output* — but the ownership answer has always carried
+an unproven hole: no one had shown that an economy in which people are sustained by
+**ownership of production instead of wages** can actually *clear* — positive
+prices, budgets that balance, markets that settle — and do so with **no
+interest-rate benchmark** anchoring it.
+
+That coherence result is the piece that was missing, and it is what this work
+supplies, **machine-checked**: for a defined economy built on state-contingent
+ownership claims, a competitive equilibrium exists, with binding budgets, exact
+clearing, and no risk-free lending rate. It does not forecast automation or claim
+any policy is just or achievable — it proves that the economy such a world would
+require is mathematically coherent rather than wishful. Interest-free finance is
+one instance; the result is secular and general.
 
 ## Latest connected results
 
