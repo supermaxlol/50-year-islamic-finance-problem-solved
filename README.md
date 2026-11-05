@@ -9,7 +9,7 @@ The connected applications cover proportional ownership certificates, funded
 mutual protection, supplied compute enterprises, dated operating affordability
 and a guarded primary-subscription/escrow lifecycle.
 
-The 4 November 2026 update contains **68 Lean modules** and **841 recorded
+The November 2026 update contains **70 Lean modules** and **871 recorded
 declaration-audit endpoints** across the foundation and accepted extension chain.
 Endpoints include supporting lemmas and controls; they are not 841 independent
 discoveries. All retained logs are clean and use only standard foundations
@@ -69,6 +69,17 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
   proved integer calculator returns the minimum reserve and earliest negative
   cash prefix; the same functions' transport passes 566 exact comparisons and
   seven malformed-input rejections. See [the connected guarantees and limits](docs/STRICT_PARTICIPATION_AND_RESERVES.md).
+- **Integer payouts, fees and certified price bounds (Stage 226):** a declared
+  ordered cumulative-quota rule distributes integer cash after a basis-point fee
+  with exact fee-plus-owner conservation, zero payment to zero ownership, and error
+  below one minor unit per payment; it is the declared ordered-rounding rule, not
+  the older largest-remainder allocator. Feasible household-score certificates
+  enclose the actual formed price — a log-utility example gives the interval
+  `[1.99, 2.01]` (midpoint error at most `1/100`) and certifies strictly inactive
+  households — without inserting the known price; this is a conditional certificate,
+  not a general numerical solver. The payout transport passes 508 exact comparisons
+  and eleven malformed-input rejections. No new database run is involved. See
+  [payouts and price certificates](docs/PAYOUTS_AND_PRICE_CERTIFICATES.md).
 
 The economic and pure executable core is **proved**; the database adapter is
 **tested under explicit storage/runtime assumptions**. Truthful physical evidence,
@@ -89,7 +100,7 @@ first-ever priority conclusion is certified by the source/axiom audit.
 ## Original foundations module: what is proven
 
 The original `GEOverlap.lean` retains its 25 headline theorem audits. The new
-67 modules in `formal/` extend it; the original source and historical seal are
+69 modules in `formal/` extend it; the original source and historical seal are
 preserved unchanged.
 
 **The machinery**
