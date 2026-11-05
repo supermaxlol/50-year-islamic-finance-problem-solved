@@ -9,7 +9,9 @@ serialization and the exact two-household persistent demonstration. Stages
 also closes the [fixed-supply financeability and safe reserve window](FINANCEABILITY_FRONTIER.md).
 Stage 224 closes [strict participation, bounded cashflow stress and an exact
 executable reserve certificate](STRICT_PARTICIPATION_AND_RESERVES.md) in one
-joint module. These are completed targets, not unfinished next steps.
+joint module. Stage 226 closes [integer payout/fee distribution and certified
+price bounds](PAYOUTS_AND_PRICE_CERTIFICATES.md). These are completed targets,
+not unfinished next steps.
 
 | Link | Current status | Remaining boundary |
 |---|---|---|
