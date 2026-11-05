@@ -47,11 +47,11 @@
     "incorrect_lower_certificate_rejected": true
   },
   "bindings": {
-    "/Users/shehzad/Desktop/BarakaDapp/papers/pdf/NextStep/Event\u2013State\u2013Contract-Finance/226_JOINT_EXECUTION_PAYOUT_PRICE_2026-11-04/check_payouts.py": "4b92d86166f53d158026536e18074e96202448d4ba0ca61c8c7ed13a0914efbb",
-    "/Users/shehzad/Desktop/BarakaDapp/papers/pdf/NextStep/Event\u2013State\u2013Contract-Finance/226_JOINT_EXECUTION_PAYOUT_PRICE_2026-11-04/formal/PayoutWorker.lean": "89b22452887020d45cd373622fde8bb77be4f74e0890c59ff387188fc1f0f7e3",
-    "/Users/shehzad/Desktop/BarakaDapp/papers/pdf/NextStep/Event\u2013State\u2013Contract-Finance/226_JOINT_EXECUTION_PAYOUT_PRICE_2026-11-04/logs/PayoutWorker.log": "4b81f3ce42b54d2d41a161893bec4349fdc38e8bd7bae3ff93e9a7e8a5b8aedc",
-    "/Users/shehzad/Desktop/BarakaDapp/papers/pdf/NextStep/Event\u2013State\u2013Contract-Finance/226_JOINT_EXECUTION_PAYOUT_PRICE_2026-11-04/formal/ConnectedPayoutPrice.lean": "61e08c2e462968126deca185c50ee9067bf1f6350bc044c2299c10f631fab004",
-    "/Users/shehzad/Desktop/BarakaDapp/papers/pdf/NextStep/Event\u2013State\u2013Contract-Finance/226_JOINT_EXECUTION_PAYOUT_PRICE_2026-11-04/objects/ConnectedPayoutPrice.olean": "38728db1fcc88134aa4bf2b81561b68f10ceb0f88b6ab93a7844df2c4ef7363f"
+    "check_payouts.py": "4b92d86166f53d158026536e18074e96202448d4ba0ca61c8c7ed13a0914efbb",
+    "PayoutWorker.lean": "89b22452887020d45cd373622fde8bb77be4f74e0890c59ff387188fc1f0f7e3",
+    "PayoutWorker.log": "4b81f3ce42b54d2d41a161893bec4349fdc38e8bd7bae3ff93e9a7e8a5b8aedc",
+    "ConnectedPayoutPrice.lean": "61e08c2e462968126deca185c50ee9067bf1f6350bc044c2299c10f631fab004",
+    "ConnectedPayoutPrice.olean": "38728db1fcc88134aa4bf2b81561b68f10ceb0f88b6ab93a7844df2c4ef7363f"
   },
   "retained_reply_log": "evidence/controls/payout_worker.ndjson",
   "transformation": "Remove private absolute binding paths; retain evidence by basename. Portable retained-reply audit.",
