@@ -11,7 +11,7 @@ and a guarded primary-subscription/escrow lifecycle.
 
 The November 2026 update contains **70 Lean modules** and **871 recorded
 declaration-audit endpoints** across the foundation and accepted extension chain.
-Endpoints include supporting lemmas and controls; they are not 841 independent
+Endpoints include supporting lemmas and controls; they are not 871 independent
 discoveries. All retained logs are clean and use only standard foundations
 (`propext`, `Classical.choice`, `Quot.sound`). Proof sources and runtime artifacts
 marked source-identical retain their accepted bytes; receipt sanitization and
@@ -21,6 +21,17 @@ that copying accepted evidence is a fresh cold rebuild.
 Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
 [remaining gaps and claim upgrades](docs/ROADMAP.md), and
 [the primary funding constitution](docs/PRIMARY_FUNDING.md).
+
+## Why this matters (motivation, not a theorem)
+
+As automation lets capital produce value with less labor, income from wages
+weakens and the distribution question becomes one of *ownership* — who holds the
+productive assets. This work does not forecast automation or prove any policy.
+It provides a machine-checked *coherence baseline*: an economy in which
+households are sustained by **proportional ownership claims on production**,
+rather than by wages or an interest-bearing debt benchmark, admits a competitive
+equilibrium that clears. Interest-free finance is one instance; the result is
+secular and general.
 
 ## Latest connected results
 
