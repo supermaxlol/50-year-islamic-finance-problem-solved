@@ -1,0 +1,3 @@
+'MultiHousehold.utility_demand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiHousehold.multi_household_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiHousehold.production_ownership_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]

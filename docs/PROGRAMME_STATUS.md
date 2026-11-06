@@ -1,6 +1,6 @@
 # What has been constructed, proved and tested
 
-As of 4 November 2026. The project has progressed from benchmark-independent
+As of 6 November 2026. The project has progressed from benchmark-independent
 valuation to a connected, conditional theory of ownership markets and selected
 funding institutions. It is not merely a proposal to set an interest-rate symbol
 to zero. It also is not a completed operating financial system.
@@ -23,7 +23,7 @@ conflicting interests or institutional power disappear.
 
 “Verified” below refers to the stated formal theorem under its assumptions, not
 an approval of an entire institution. Only the 4.35 foundation and Stages
-183–220 accepted dependency chain, Stage 222 frontier, Stage 224 strict/stress/reserve extension and Stage 226 payout/price-certificate extension are included in this repository release. Earlier
+183–220 accepted dependency chain, Stage 222 frontier, Stage 224 strict/stress/reserve extension, Stage 226 payout/price-certificate extension, and Stages 228–249 production/welfare/frontier extension are included in this repository release. Earlier
 benchmark/diffusion results are described as programme context, not newly
 released or independently rebuilt by this package.
 

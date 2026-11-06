@@ -1,0 +1,2 @@
+'InteractingFormation.interacting_funded_formation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'InteractingFormation.interacting_formation_interior' depends on axioms: [propext, Classical.choice, Quot.sound]

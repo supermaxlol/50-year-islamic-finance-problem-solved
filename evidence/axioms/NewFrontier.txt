@@ -1,0 +1,4 @@
+'NewFrontier.dr_profit_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NewFrontier.dr_profit_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NewFrontier.money_object_positive_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NewFrontier.pure_money_object_value' depends on axioms: [propext, Classical.choice, Quot.sound]

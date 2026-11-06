@@ -9,9 +9,9 @@ The connected applications cover proportional ownership certificates, funded
 mutual protection, supplied compute enterprises, dated operating affordability
 and a guarded primary-subscription/escrow lifecycle.
 
-The November 2026 update contains **70 Lean modules** and **871 recorded
+The November 2026 update contains **90 Lean modules** and **918 recorded
 declaration-audit endpoints** across the foundation and accepted extension chain.
-Endpoints include supporting lemmas and controls; they are not 871 independent
+Endpoints include supporting lemmas and controls; they are not 918 independent
 discoveries. All retained logs are clean and use only standard foundations
 (`propext`, `Classical.choice`, `Quot.sound`). Proof sources and runtime artifacts
 marked source-identical retain their accepted bytes; receipt sanitization and
@@ -99,6 +99,19 @@ one instance; the result is secular and general.
   not a general numerical solver. The payout transport passes 508 exact comparisons
   and eleven malformed-input rejections. No new database run is involved. See
   [payouts and price certificates](docs/PAYOUTS_AND_PRICE_CERTIFICATES.md).
+- **Production, welfare and general-equilibrium frontier (Stages 228–249):** endogenous
+  profit-maximizing production with profit income in household budgets; multi-issue
+  interacting formation; decreasing returns and a money object; both SMD directions
+  (function-level realizability and the rational-demand aggregate excess demand);
+  micro-founded multi-household equilibrium; first and second welfare theorems (including
+  a separating-hyperplane support result and its economic wrapper from preferences);
+  core, uniqueness and money premium; Walras' law from local non-satiation; Nash
+  bargaining; continuous firm supply over a production set; and expenditure
+  minimization. The upstream engines are a set-valued Gale–Nikaido–Debreu theorem,
+  a general Berge maximum theorem, a price-extraction/separating-price lemma, and a
+  reusable production-economy structure. Full Mantel surjectivity and genuinely
+  sequential incomplete-market equilibrium remain open; see
+  [the frontier note](docs/GE_FRONTIER_2026-11-06.md).
 
 The economic and pure executable core is **proved**; the database adapter is
 **tested under explicit storage/runtime assumptions**. Truthful physical evidence,
@@ -119,7 +132,7 @@ first-ever priority conclusion is certified by the source/axiom audit.
 ## Original foundations module: what is proven
 
 The original `GEOverlap.lean` retains its 25 headline theorem audits. The new
-69 modules in `formal/` extend it; the original source and historical seal are
+89 modules in `formal/` extend it; the original source and historical seal are
 preserved unchanged.
 
 **The machinery**
@@ -185,14 +198,15 @@ For precision (and because overclaiming helps no one):
   class needs no supplied lending benchmark; narrower risky controls and trading
   restrictions retain their own assumptions. Discount weights, time preference
   and potentially implied safe returns are not abolished.
-- Still open: the full Sonnenschein–Mantel–Debreu *realization* result (constructing
-  households whose aggregate demand is a prescribed `z`; the non-uniqueness *upshot*
-  is witnessed above, but the surjectivity construction is a separate, genuinely hard
-  program). *Incomplete-market* (GEI) sequential equilibrium and *decreasing-returns*
-  production with profit-share distribution are the general cases of the two theorems
-  above (which cover complete markets and constant returns respectively). And
-  *monetary* time value (liquidity / convenience yield) needs a money object — a
-  different model, not this engine.
+- Still open: the full Sonnenschein–Mantel–Debreu *surjectivity* result (realizing
+  an arbitrary continuous Walras `z` as the aggregate of rational households; the
+  non-uniqueness *upshot* is witnessed above, and both formalizable directions —
+  function-level realizability and the rational-demand aggregate excess demand —
+  are machine-checked in Stages 233/239, but the multi-household ray construction
+  is a separate, genuinely hard program). *Incomplete-market* (GEI) sequential
+  equilibrium also remains open. Decreasing-returns production with profit-share
+  distribution and a money object are now closed in Stages 232/236/238/248;
+  *monetary* time value beyond the money-object premium needs further modeling.
 
 ## Verify it yourself
 

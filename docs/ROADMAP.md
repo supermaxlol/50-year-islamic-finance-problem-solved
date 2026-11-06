@@ -10,7 +10,11 @@ also closes the [fixed-supply financeability and safe reserve window](FINANCEABI
 Stage 224 closes [strict participation, bounded cashflow stress and an exact
 executable reserve certificate](STRICT_PARTICIPATION_AND_RESERVES.md) in one
 joint module. Stage 226 closes [integer payout/fee distribution and certified
-price bounds](PAYOUTS_AND_PRICE_CERTIFICATES.md). These are completed targets,
+price bounds](PAYOUTS_AND_PRICE_CERTIFICATES.md). Stages 228–249 close the
+production/welfare/frontier extension (endogenous profit-maximizing production,
+both welfare theorems, upstream engines, Nash bargaining, firm supply,
+expenditure minimization — see
+[the frontier note](GE_FRONTIER_2026-11-06.md)). These are completed targets,
 not unfinished next steps.
 
 | Link | Current status | Remaining boundary |

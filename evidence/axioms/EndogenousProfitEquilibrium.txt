@@ -1,0 +1,5 @@
+'EndogenousProfit.exists_profit_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EndogenousProfit.profit_max_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EndogenousProfit.profit_augmented_equilibrium_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EndogenousProfit.endogenous_production_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EndogenousProfit.surplus_raises_aggregate_consumption' depends on axioms: [propext, Classical.choice, Quot.sound]

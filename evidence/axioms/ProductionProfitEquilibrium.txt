@@ -1,0 +1,3 @@
+'ProductionProfit.production_equilibrium_with_profit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProductionProfit.subsumes_constant_returns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProductionProfit.micro_founded_production_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]

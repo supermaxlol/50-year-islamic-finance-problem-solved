@@ -1,0 +1,2 @@
+'PriceSeparation.exists_price_repr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PriceSeparation.separating_price' depends on axioms: [propext, Classical.choice, Quot.sound]

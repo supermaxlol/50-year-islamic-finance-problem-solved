@@ -1,0 +1,1 @@
+'FirmSupply.firm_supply_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]

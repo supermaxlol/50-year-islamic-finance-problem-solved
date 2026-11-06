@@ -1,6 +1,6 @@
 {
-  "release": "2026-11-04",
-  "latest_stage": 226,
+  "release": "2026-11-06",
+  "latest_stage": 249,
   "lean_version": "4.35.0",
   "nature": "Source-identical accepted proofs and retained clean axiom logs; not a fresh cold rebuild.",
   "dependency_revisions": {
@@ -15,8 +15,8 @@
     "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
     "fixed-point-theorems": "93a3eed3364281a9dbf9652bb52356a8db65057c"
   },
-  "module_count": 70,
-  "audited_endpoints": 871,
+  "module_count": 90,
+  "audited_endpoints": 918,
   "counts_are_not_distinct_discovery_counts": true,
   "modules": {
     "HeterogeneousOverlapBridge": {
@@ -1658,6 +1658,233 @@
       "imported_without_rebuild": true,
       "stage": 226,
       "retained_compiled_object_sha256": "005c614be73702f73b34283d5ab741496c5206158301ea66fe378116aee2b15f"
+    },
+    "EndogenousProfitEquilibrium": {
+      "stage": 228,
+      "source": "formal/EndogenousProfitEquilibrium.lean",
+      "source_sha256": "0413201999984fcda7ae7bb1971d09a1537242fe28808f59ff46123b2bb27b9a",
+      "audit_log": "evidence/axioms/EndogenousProfitEquilibrium.txt",
+      "audit_log_sha256": "4e173c03acd4ed339d35d4bb284a76257da77ea4a5ed5ca544355f4c0ffd0097",
+      "audited_declarations": [
+        "EndogenousProfit.exists_profit_max",
+        "EndogenousProfit.profit_max_nonneg",
+        "EndogenousProfit.profit_augmented_equilibrium_exists",
+        "EndogenousProfit.endogenous_production_equilibrium",
+        "EndogenousProfit.surplus_raises_aggregate_consumption"
+      ]
+    },
+    "SimultaneousFormation": {
+      "stage": 229,
+      "source": "formal/SimultaneousFormation.lean",
+      "source_sha256": "7783776304e84e55a3e1b01d31897be11c8bb8d71862178025ecfab543bcb88d",
+      "audit_log": "evidence/axioms/SimultaneousFormation.txt",
+      "audit_log_sha256": "c38377f2f9b8ae0c9d9b2a6abb186afa709e89b546a73f2011a70dcd3bbdd167",
+      "audited_declarations": [
+        "SimultaneousFormation.simultaneous_formation_exists",
+        "SimultaneousFormation.simultaneous_formation_iff",
+        "SimultaneousFormation.simultaneous_no_formation_of_shortfall"
+      ]
+    },
+    "ProductionProfitEquilibrium": {
+      "stage": 230,
+      "source": "formal/ProductionProfitEquilibrium.lean",
+      "source_sha256": "bfaa1413fca69e98d69ee5472f4f88a3b79dc95968b9217cbc6936d9f68e0767",
+      "audit_log": "evidence/axioms/ProductionProfitEquilibrium.txt",
+      "audit_log_sha256": "5a2ecf4962ea2e6fb7ef75693915bc69b98c20c88181f5849ac52ad2a4a22cd3",
+      "audited_declarations": [
+        "ProductionProfit.production_equilibrium_with_profit",
+        "ProductionProfit.subsumes_constant_returns",
+        "ProductionProfit.micro_founded_production_equilibrium"
+      ]
+    },
+    "InteractingFormation": {
+      "stage": 231,
+      "source": "formal/InteractingFormation.lean",
+      "source_sha256": "6cbbe1864054e6fbf527fc5b06184bf084ea704b55eb44b799781867c49af9f8",
+      "audit_log": "evidence/axioms/InteractingFormation.txt",
+      "audit_log_sha256": "2f3c1b11a7b7c72080af85d6455d10e1364a1c246cb296526e38a5173e7b31a4",
+      "audited_declarations": [
+        "InteractingFormation.interacting_funded_formation",
+        "InteractingFormation.interacting_formation_interior"
+      ]
+    },
+    "NewFrontier": {
+      "stage": 232,
+      "source": "formal/NewFrontier.lean",
+      "source_sha256": "07908ddd2eb8a25fa956c1cd87825bab4ca79c5dbf574bb08eb56f27a55138d0",
+      "audit_log": "evidence/axioms/NewFrontier.txt",
+      "audit_log_sha256": "f7ac9798d34169ca97d6ed0a8260fa22162d82139195d4016dcc2408e871c9d7",
+      "audited_declarations": [
+        "NewFrontier.dr_profit_max",
+        "NewFrontier.dr_profit_positive",
+        "NewFrontier.money_object_positive_value",
+        "NewFrontier.pure_money_object_value"
+      ]
+    },
+    "SMDRealization": {
+      "stage": 233,
+      "source": "formal/SMDRealization.lean",
+      "source_sha256": "5afeed1b6d1b1a4268e49cf6a178d7cac163a541ee6f30d3d49c081d5f0cef94",
+      "audit_log": "evidence/axioms/SMDRealization.txt",
+      "audit_log_sha256": "8ee017a014a549857e2fcd3f1be3dae0a39f853f8c9c99705c0e86a74a896977",
+      "audited_declarations": [
+        "SMDRealization.realizes_excess",
+        "SMDRealization.smd_realization_equilibrium"
+      ]
+    },
+    "MultiHouseholdEquilibrium": {
+      "stage": 234,
+      "source": "formal/MultiHouseholdEquilibrium.lean",
+      "source_sha256": "9f0e7a98f0b0f29dc87dc60743e229711403e1391b16aa1c808e3ad290800dff",
+      "audit_log": "evidence/axioms/MultiHouseholdEquilibrium.txt",
+      "audit_log_sha256": "507b66c41662ed5c8a41eb63941cc716074a6b0f667130ca52f4e8c3928bcbd1",
+      "audited_declarations": [
+        "MultiHousehold.utility_demand",
+        "MultiHousehold.multi_household_equilibrium",
+        "MultiHousehold.production_ownership_equilibrium"
+      ]
+    },
+    "FrontierResults": {
+      "stage": 235,
+      "source": "formal/FrontierResults.lean",
+      "source_sha256": "3793880d6f30edd7527e990f7f897e0242a600f84f286e9377a3980dc66de32a",
+      "audit_log": "evidence/axioms/FrontierResults.txt",
+      "audit_log_sha256": "ea95bf3fe5ff0dd9c609d5b743beb75bb9ef6ada38524f2f6694d91c9a963b30",
+      "audited_declarations": [
+        "Welfare.first_welfare_theorem",
+        "Core.equilibrium_unblocked",
+        "Uniqueness.equilibrium_unique_of_warp",
+        "Money.money_premium_eq_convenience",
+        "Money.money_value_exceeds_fundamental",
+        "Walras.walras_last_market"
+      ]
+    },
+    "BudgetLHCGeneral": {
+      "stage": 239,
+      "source": "formal/BudgetLHCGeneral.lean",
+      "source_sha256": "b6cc330387ba24a68dbeb466f22aff87a0f01aa17aef853f3c0c87fcb70d16fe",
+      "audit_log": "evidence/axioms/BudgetLHCGeneral.txt",
+      "audit_log_sha256": "f5f565350175e78e6662cfaf3ab5258f679483da7434830cb09b39232d70b41e",
+      "audited_declarations": [
+        "ProfitCapstone.budget_lhc_general",
+        "ProfitCapstone.utility_demand_income",
+        "ProfitCapstone.profit_income_equilibrium",
+        "ProfitCapstone.endogenous_scale_firm_equilibrium",
+        "ProfitCapstone.rational_aggregate_excess_smd"
+      ]
+    },
+    "SecondWelfare": {
+      "stage": 237,
+      "source": "formal/SecondWelfare.lean",
+      "source_sha256": "ba0cae800e84d16ac70c3440e6f6b81eaf2eaf78f50ee7011e7c97e0add8a4e9",
+      "audit_log": "evidence/axioms/SecondWelfare.txt",
+      "audit_log_sha256": "87fe706d68df343d7ad386f5cc40a5bf13ad930c6c3aba35b74137de00c39b62",
+      "audited_declarations": [
+        "SecondWelfare.supporting_prices_of_separation"
+      ]
+    },
+    "AggregateSets": {
+      "stage": 240,
+      "source": "formal/AggregateSets.lean",
+      "source_sha256": "9405fa56b3a9509c62a1182bff31080cb0cdbdf7d8060820a4b6b1596be12aee",
+      "audit_log": "evidence/axioms/AggregateSets.txt",
+      "audit_log_sha256": "5b402750956e74d292b3fc8f725195df9bc16bac94bedb87fbc05424a38ce8b4",
+      "audited_declarations": [
+        "AggregateSets.convex_finsetSum",
+        "AggregateSets.isOpen_finsetSum_of_open"
+      ]
+    },
+    "WalrasLNS": {
+      "stage": 241,
+      "source": "formal/WalrasLNS.lean",
+      "source_sha256": "b9c3f271cde29d5aa6ba773f12cd971b7b37ba1a7cb73df859cff8a782e1d028",
+      "audit_log": "evidence/axioms/WalrasLNS.txt",
+      "audit_log_sha256": "3a23894d8beb82ff71b58e98e5608ee4c43c3d0114ce6f7adc7ec499448a3aa5",
+      "audited_declarations": [
+        "WalrasLNS.budget_binds_of_lns",
+        "WalrasLNS.walras_law_of_binds"
+      ]
+    },
+    "SetValuedGND": {
+      "stage": 242,
+      "source": "formal/SetValuedGND.lean",
+      "source_sha256": "18d0e5118457a387b46d5166ac05b827d1ea9e7fc00c7843efa2ceda56b996b2",
+      "audit_log": "evidence/axioms/SetValuedGND.txt",
+      "audit_log_sha256": "053a2e365d88563b238531bdeb2fca35579f849f1243f1ffac0d2570639c95c8",
+      "audited_declarations": [
+        "SetValuedGND.setValued_gnd"
+      ]
+    },
+    "BergeArgmax": {
+      "stage": 243,
+      "source": "formal/BergeArgmax.lean",
+      "source_sha256": "890844ff37e7153f4e25823fc9d3c264541606aacb8c0f9286a946880a0aeb22",
+      "audit_log": "evidence/axioms/BergeArgmax.txt",
+      "audit_log_sha256": "6ad0e4aab3982364c94b0cbb8c2a63769945778bda2ecf4549f39c3f838accc8",
+      "audited_declarations": [
+        "BergeArgmax.berge_argmax"
+      ]
+    },
+    "PriceSeparation": {
+      "stage": 244,
+      "source": "formal/PriceSeparation.lean",
+      "source_sha256": "f890d2fe73c3509b76a23bd248234e366aa458919d2cbd87e09fb7b8436a19b1",
+      "audit_log": "evidence/axioms/PriceSeparation.txt",
+      "audit_log_sha256": "15d7d265ad5c2603a437fb1ecac95e667fe2c3d1ebf1df2ad967b6ee15745073",
+      "audited_declarations": [
+        "PriceSeparation.exists_price_repr",
+        "PriceSeparation.separating_price"
+      ]
+    },
+    "ProductionEconomy": {
+      "stage": 245,
+      "source": "formal/ProductionEconomy.lean",
+      "source_sha256": "24baca49fe9ba8f7ed25378d97d1d90e0a8573e05fc016cf033be3de6a1b2e33",
+      "audit_log": "evidence/axioms/ProductionEconomy.txt",
+      "audit_log_sha256": "a6e96ca521f4652a2d296adfb10f001596c1f7c002b9509183d06c19ccf5d980",
+      "audited_declarations": [
+        "ProductionEconomy.equilibrium_exists"
+      ]
+    },
+    "SecondWelfareWrapper": {
+      "stage": 246,
+      "source": "formal/SecondWelfareWrapper.lean",
+      "source_sha256": "a7de8db6c96bb3099d24006e22331174af3702d6cb2b3eabc43a96207b16c1c7",
+      "audit_log": "evidence/axioms/SecondWelfareWrapper.txt",
+      "audit_log_sha256": "e00bd7ae5ca6660a5c682c681c0382a662650f1f0512c35bb42087861faf5d28",
+      "audited_declarations": [
+        "SecondWelfareWrapper.second_welfare_from_preferences"
+      ]
+    },
+    "NashBargaining": {
+      "stage": 247,
+      "source": "formal/NashBargaining.lean",
+      "source_sha256": "ad41f189a3691cb77bec7873fa3fbac291e83c85fa7694f0d9f5a6ac5137ef7e",
+      "audit_log": "evidence/axioms/NashBargaining.txt",
+      "audit_log_sha256": "2081bec2f63df5987da387955831367ecc6092e9464aea5fb16a3ce6232300c8",
+      "audited_declarations": [
+        "NashBargaining.nash_bargaining_solution"
+      ]
+    },
+    "FirmSupply": {
+      "stage": 248,
+      "source": "formal/FirmSupply.lean",
+      "source_sha256": "4c14bbb1c56a7013e7eeed8d8b16ec226b3abb48673ab1945408c1f8bdc8160b",
+      "audit_log": "evidence/axioms/FirmSupply.txt",
+      "audit_log_sha256": "10ebafd34797537ab07ef19b872fcf2b311469f46a4cd0ebc93ab34e8fc4365f",
+      "audited_declarations": [
+        "FirmSupply.firm_supply_continuous"
+      ]
+    },
+    "ExpenditureMin": {
+      "stage": 249,
+      "source": "formal/ExpenditureMin.lean",
+      "source_sha256": "a782817039abd213b71bc152e0f3b98afb71800a16e1839053c4390186b5d9cc",
+      "audit_log": "evidence/axioms/ExpenditureMin.txt",
+      "audit_log_sha256": "bdb72511d02a74975666071e222ec9b04e9b81d61819a5412c761c83ed9cefb5",
+      "audited_declarations": [
+        "ExpenditureMin.expenditure_min_exists"
+      ]
     }
   },
   "controls": {

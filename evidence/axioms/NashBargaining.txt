@@ -1,0 +1,1 @@
+'NashBargaining.nash_bargaining_solution' depends on axioms: [propext, Classical.choice, Quot.sound]

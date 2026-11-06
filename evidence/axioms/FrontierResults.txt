@@ -1,0 +1,6 @@
+'Welfare.first_welfare_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Core.equilibrium_unblocked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Uniqueness.equilibrium_unique_of_warp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Money.money_premium_eq_convenience' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Money.money_value_exceeds_fundamental' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Walras.walras_last_market' depends on axioms: [propext, Classical.choice, Quot.sound]

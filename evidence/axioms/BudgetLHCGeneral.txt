@@ -1,0 +1,5 @@
+'ProfitCapstone.budget_lhc_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProfitCapstone.utility_demand_income' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProfitCapstone.profit_income_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProfitCapstone.endogenous_scale_firm_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProfitCapstone.rational_aggregate_excess_smd' depends on axioms: [propext, Classical.choice, Quot.sound]
