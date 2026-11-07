@@ -119,6 +119,52 @@ authentication, real custody, legal title and demonstrated social outcomes are
 not supplied by these results. See the [connected example](docs/CONNECTED_DEMO.md),
 [implementation contract](runtime/README.md) and [roadmap](docs/ROADMAP.md).
 
+## What this contribution is — and is not
+
+This repository is a **sealed 90-module Lean formalization**, SHA-audited and kept to
+standard foundations, rare in this space because it separates two questions the
+literature usually blurs:
+
+- **(a) Existence:** payoffs, preferences and permitted trades can close an
+  ownership economy *without an external lending benchmark*.
+- **(b) Allocation/settlement:** conservation-preserving settlement at minor-unit
+  granularity with ordered cumulative-quota distribution.
+
+Both are proved **in the model** — binding-budget clearing with productive
+payoffs and certificates. They point at the mechanism bottleneck, not at every
+consequence of the production equation.
+
+### The "50-year problem" in Islamic finance — what it is
+
+The phrase originates with the critique coined by **M. Ayub (2007)**, reinforced by
+**M. Umer Chapra**, and echoed by **Monzer Kahf**: despite five decades of
+instrument engineering, Islamic finance has not built a genuinely riba-free
+benchmark. Practice prices against LIBOR/SOFR/SONIA/MYOR-i and preserves a
+carry on those liquidity assumptions; murabaha/tawarruq reproduce the cash-flow
+shape of conventional credit; genuine profit-and-loss sharing (musharakah/
+mudarabah) remains a small slice of assets; IIBR/MYOR-i are transaction-referenced
+Islamic references that inherit conventional overnight structure. None of these is
+a formal claim made by this repo; they are the market facts the repo is positioned
+against.
+
+### What this repository closes — and what it does not
+
+| Missing from the 50-year problem | Can this mechanism deliver it? |
+|---|---|
+| A price-formation rule independent of risk-free rates | **Yes, in the model** — binding-budget clearing with productive payoffs + certificates; no exogenous benchmark import is required |
+| Executable, conservation-preserving settlement for equity/profit-share | **Yes, in the model** — machine-checked transitions at minor-unit granularity with ordered cumulative-quota payout |
+| A widely accepted benchmark rate for the industry | **No** — market coordination + regulator problem; price without it does not self-adopt |
+| Jurisprudential acceptance by sharia councils | **No** — the proof shows computational correctness, not fiqh judgement |
+| Banks actually stopping LIBOR/SOFR proxies | **No** — liquidity, hedging and contracts shift for institutional, not formal, reasons |
+
+**Claim.** *Here is a machine-checkable proof that a defined ownership economy
+can clear, conserve, and distribute without an external interest-rate
+benchmark — the missing mechanism behind the 50-year problem.*
+
+**Not claimed.** *"I solved the 50-year problem."* That extends beyond any formal
+artifact; the remaining three items are out of scope and belong to institutions and
+people.
+
 ## Relationship to earlier economics
 
 General-equilibrium existence with household ownership of production is
