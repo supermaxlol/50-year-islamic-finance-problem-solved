@@ -157,3 +157,5 @@ The thesis above is the *why*. The uptake is the *where*. Memos 1–69 (`A–H` 
 **Section Z** of that map rows every memo against **timing / oracle trust / capital source / governance trigger** and ends with the invariant that sustains them all: *if the oracle is compromised, the invariant holds for bad data.*
 
 Where it plugs in — `docs/TECHNICAL_FIT_2026-11-06.md` in the repo. That file is the argument that the bigger picture isn't romance — it is a settlement/conservation primitive with a named failure mode per case.
+
+Second layer — load on demand: the 69 memos beneath the tables are the dossier that answers audit questions. Read them to see the failure modes, not the success stories.

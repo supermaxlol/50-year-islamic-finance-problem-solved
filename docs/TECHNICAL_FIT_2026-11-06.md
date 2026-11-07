@@ -1,5 +1,7 @@
 # Where this mechanism fits in the real world — evidence map
 
+This is the evidence that makes the bigger picture more than romance; read the memos to see the failure modes, not the success stories.
+
 Companion to *One maths for the last 50 and the next 50* (`README.md` top, and `BIGGER_PICTURE_2026-11-06.md`). The thesis says mechanism is proved; this file says where that mechanism plugs in.
 
 Each memo keeps the same honest boundary: the math closes the *settlement/allocation/conservation* sub-problem; law, custody, legitimacy, fiqh, and geopolitics stay outside the proof.

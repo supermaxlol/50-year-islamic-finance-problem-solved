@@ -24,6 +24,8 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
 
 **Where the mechanism fits in the real world — [technical-fit memos](docs/TECHNICAL_FIT_2026-11-06.md)** (69 memos, §Z failure matrix) and its companion synthesis, **[bigger picture](docs/BIGGER_PICTURE_2026-11-06.md)** (one maths for the last 50 and the next 50).
 
+Reading it in two layers: this page + §Z is the aha (deployable in 2 minutes: two questions, two answers, five rows of what doesn't follow); the 69 memos below it are the evidence layer — load on demand, not "Appendix" burial — read them to see the failure modes, not the success stories.
+
 # One maths for the last 50 and the next 50.
 
 ## Solved the 50-year-old Islamic finance maths problem — and the maths problem we will face in the next 50 years
