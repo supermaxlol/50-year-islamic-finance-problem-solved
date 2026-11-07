@@ -18,7 +18,15 @@ Y = f(K, L)   K = capital, L = labor
 
 If $L \to 0$, then $Y \to 0$. That doxa — human labor always required for output — was never a theorem. It was an assumption so basic nobody questioned it.
 
-The same doxa haunted Islamic finance from the other side. If every economy must borrow at interest to price time, then a riba-free economy is a contradiction in terms. For 50 years, Ayub (2007), reinforced by Chapra, echoed by Kahf, made the complaint precisely: Islamic finance operates on conventional reference rates — LIBOR, then SOFR/SONIA/SARON, then MYOR-i/IIBR as transaction-referenced clones — reproducing the cash-flow shape of interest under Islamic contract language, while genuine profit-and-loss sharing (musharakah / mudarabah) stayed marginal.
+The same doxa haunted Islamic finance from the other side.
+
+If every economy must borrow at interest to price time, then a riba-free economy looks like a contradiction in terms.
+
+For 50 years, Ayub (2007), reinforced by Chapra, echoed by Kahf, made the complaint precisely.
+
+Islamic finance operates on conventional reference rates. First LIBOR. Then Euribor. Then SOFR, SONIA, SARON, MYOR-i, IIBR-as-referenced-clones.
+
+The cash-flow shape of interest survives inside Islamic contract language. Genuine profit-and-loss sharing (musharakah / mudarabah) stays marginal.
 
 Both questions have the same shape:
 
@@ -38,9 +46,17 @@ Fisher (1935) and Colin Clark divided the economy by **how value is created**, n
 | Secondary (transformation) | Turn raw material into usable goods | Tools, houses, cars |
 | Tertiary (services) | One person provides value directly to another | Doctors, teachers, barbers |
 
-In England in 1381, green ~ 45%, yellow ~ 30%, blue ~ 26%. By 1851 green shrank under 20%, transformation employed ~ half the jobs but services already held ~ 50% of *value*. Today in the US: green ~ 1%, yellow < 20%, blue ~ 80%.
+In England in 1381, green ~ 45%, yellow ~ 30%, blue ~ 26%.
 
-The "knowledge industry," "attention economy," "relational sector," "fourth = trade/finance, fifth = health/education" proposals that follow after 1950 all make the same move: **split blue by job type, not by mode of creation.**
+By 1851 green had collapsed under 20%. Transformation employed almost half the jobs. Services already held half the *value*.
+
+Today in the US, green is 1%. Yellow is under 20%. Blue is ~80%.
+
+Jobs and value are not the same pie. That gap is the whole Fisher-Clark point.
+
+The "knowledge industry," "attention economy," "relational sector," "fourth = trade/finance, fifth = health/education" proposals that follow after 1950 all make the same move:
+
+**split blue by job type, not by mode of creation.**
 
 The real candidate for a fourth sector is not a job at all:
 
@@ -54,9 +70,35 @@ The real candidate for a fourth sector is not a job at all:
 
 **Conventionally assumed answer:** No — indeterminate pricing, collapse, negative prices, hyperinflation.
 
-**What the literature says:** Ayub/Chapra/Kahf diagnoses have always pointed at one mechanism: Islamic finance contracts exist, but their **price-formation rule still imports a conventional overnight rate**. Hence PLS stays marginal. MYOR-i (volume-weighted commodity-murabahah transactions) and IIBR (panel-contributed, Reuters-hosted) are honest advances in transaction-referenced Islamic rates, but they inherit the price dynamics of conventional funding markets.
+**What the literature says:**
 
-**What the repository proves:** For a *defined* class of productive-ownership economies — finite goods/states, strictly-concave CRRA utility, profit-augmented budgets, proportional certificates, state-contingent claims, escrow formation rules — there **exists** a clearing price vector with every household budget binding, with **no exogenous lending benchmark anywhere in the proof**. Discounting arises as endogenous shadow pricing ($p_1/p_0 = \beta$ in the log-utility two-date witness), not as an interest rate on a risk-free asset.
+Ayub, Chapra, Kahf point at one mechanism.
+
+Islamic contracts *exist*. Their price-formation rule still imports a conventional overnight rate.
+
+So PLS stays marginal.
+
+MYOR-i is volume-weighted commodity-murabahah transactions. IIBR is panel-contributed, Reuters-hosted.
+
+Both are honest advances in transaction-referenced Islamic rates. Both inherit the price dynamics of conventional funding markets.
+
+**What the repository proves:**
+
+Take a defined class of productive-ownership economies.
+
+Finite goods. Finite states. CRRA utility. Profit-augmented budgets. Certificates. Escrow rules.
+
+For that class, a clearing price vector *exists*. Every household budget binds.
+
+No exogenous lending benchmark is used anywhere in the proof.
+
+Discounting is endogenous shadow pricing:
+
+$$
+p_1/p_0 = \beta
+$$
+
+in the log-utility two-date witness. Not a bank rate.
 
 That closes the mechanism gap the 50-year conversation always lacked, while leaving three items **deliberately out of scope**:
 
