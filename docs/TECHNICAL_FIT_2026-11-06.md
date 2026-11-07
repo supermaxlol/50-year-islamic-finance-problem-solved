@@ -6,6 +6,11 @@ Companion to *One maths for the last 50 and the next 50* (`README.md` top, and `
 
 Each memo keeps the same honest boundary: the math closes the *settlement/allocation/conservation* sub-problem; law, custody, legitimacy, fiqh, and geopolitics stay outside the proof.
 
+> **Invariant that holds every row below:**
+> *If the oracle input is wrong, the ledger still conserves — for bad data.*
+>
+> The math proves the transition, never the truth of what the oracle fed it.
+
 - A. Bhutan through H. Post-wage households: the place-specific fit memos.
 - 17–37: systemic arrears, payment rails, cross-border settlement.
 - 38–69: climate, pensions, healthcare, food, shipping, water, spectrum, housing, and related arrears family — same certificate+escrow+reserve shape, same external gaps.
@@ -14,6 +19,10 @@ Each memo keeps the same honest boundary: the math closes the *settlement/alloca
 ## Executive tables — read these first
 
 These three tables compress the 69 memos into a checkable picture. Everything below repeats them as evidence; these tables are the claim.
+
+**Start here in 2 minutes:**
+Table 1 reads as "real problem → does the math close the mechanism → what still blocks it."
+Tables 2–3 row the rest by tractability: what clears cleanly today, what needs a statute, what needs a council.
 
 ### Table 1 — Place mapping: real problem → does the math solve it? → still missing
 

@@ -6,6 +6,10 @@ Author: Shehzad Ahmed
 Date: 2026-11-06
 Status: internal synthesis, not peer-reviewed. All proprietary claims scoped below.
 
+> We show what a riba-free market needs to clear.
+> We show what a post-wage market needs to distribute.
+> The proofs are sealed; the pilots are not.
+
 ---
 
 ## 1. The question nobody had made well-posed
@@ -47,6 +51,14 @@ Fisher (1935) and Colin Clark divided the economy by **how value is created**, n
 | Tertiary (services) | One person provides value directly to another | Doctors, teachers, barbers |
 
 In England in 1381, green ~ 45%, yellow ~ 30%, blue ~ 26%.
+
+Take the loaf on the counter.
+
+A farmer grows the wheat.
+A mill grinds it to flour. A baker bakes the loaf.
+A shop sells the loaf.
+
+Three moments. Three sectors. Jobs are still blue, but the *mode of creation* just told you which sector each moment belongs to.
 
 By 1851 green had collapsed under 20%. Transformation employed almost half the jobs. Services already held half the *value*.
 
@@ -114,16 +126,29 @@ That closes the mechanism gap the 50-year conversation always lacked, while leav
 
 ## 4. The next 50 years — the post-wage problem
 
-Remove wages as the income line and the textbook demand side breaks: households have no way to buy what machines produce, demand collapses even as supply rises, and capital owners accumulate surplus.
+Remove wages as the income line and the textbook demand side breaks.
 
-Your question — "what do I own?" not "what is my wage?" — is the only coherent re-framing, and the model formalizes it:
+Households have no way to buy what machines produce.
+Demand collapses even as supply rises.
+Capital owners accumulate the surplus.
+
+"what do I own?" not "what is my wage?" — is the only coherent re-framing, and the model formalizes it:
 
 - **Income is state-contingent claims** on production output, held as certificates.
 - **Demand is funded by those claims**, not by forwarded wages.
 - **Prices still clear** because scarcity is retained — finite goods, finite states, competing desires. Infinite resources would imply zero prices; that has not changed.
 - **Distribution is a conservation-preserving integer rule**, not a policy slogan: ordered cumulative-quota payout, zero payment to zero ownership, fee + owners = intake to the minor unit.
 
-Bhutan's hydro→BTC treasury, Iran's energy→mining settlement under sanctions, Norway/Alaska sovereign funds paying citizen dividends from rents — these are *prototypes* of the same intuition: sovereign revenue was decoupled from wage labor and routed through ownership of a physical productive stream. The Lean model does not prove those funds healthy. It proves the **allocation primitive** they would need if they want to be auditable instead of discretionary.
+Bhutan is the clearest prototype. Monsoon surplus exceeds domestic use. The state books it as compute, then as a reserve.
+
+It is an illustration. Not a proof.
+
+Iran and the Alaska/Norway funds are other illustrations of the same move.
+
+Sovereign revenue decoupled from wage labor. Routed through ownership of a physical productive stream.
+
+The Lean model does not prove those funds healthy.
+It proves the allocation primitive they would need if they wanted to be auditable instead of discretionary.
 
 ---
 

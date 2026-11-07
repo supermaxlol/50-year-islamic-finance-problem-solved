@@ -32,93 +32,103 @@ Reading it in two layers: this page + §Z is the aha (deployable in 2 minutes: t
 
 ## Why this matters — the missing piece
 
-As automation lets capital produce more of the output and labor less of it, the
-economic question shifts from *"what is my wage?"* to *"what do I own?"*
-Economists have seen this coming — the problem is often posed as *whoever owns the
-machines ends up owning the output* — but the ownership answer has always carried
-an unproven hole: no one had shown that an economy in which people are sustained by
-**ownership of production instead of wages** can actually *clear* — positive
-prices, budgets that balance, markets that settle — and do so with **no
-interest-rate benchmark** anchoring it.
+As automation does this: capital produces more of the output. Labor produces less.
 
-That coherence result is the piece that was missing, and it is what this work
-supplies, **machine-checked**: for a defined economy built on state-contingent
-ownership claims, a competitive equilibrium exists, with binding budgets, exact
-clearing, and no risk-free lending rate. It does not forecast automation or claim
-any policy is just or achievable — it proves that the economy such a world would
-require is mathematically coherent rather than wishful. Interest-free finance is
-one instance; the result is secular and general.
+The question changes.
+Not "what is my wage?"
+"What do I own?"
+
+Economists have seen this coming.
+The problem is often posed as *whoever owns the machines ends up owning the output*.
+
+But one hole stayed open.
+No one had shown that an economy sustained by **ownership of production instead of wages** can actually clear.
+
+Positive prices. Budgets that balance. Markets that settle.
+And do it with **no interest-rate benchmark** anchoring it.
+
+That coherence result is the piece that was missing.
+And it is what this work supplies, **machine-checked**.
+
+Take a defined economy built on state-contingent ownership claims.
+A competitive equilibrium exists.
+Budgets bind. Clearing is exact. No risk-free lending rate is used.
+
+It does not forecast automation.
+It does not claim any policy is just or achievable.
+
+It proves that the economy a wage-free world would require is mathematically coherent, rather than wishful.
+
+Interest-free finance is one instance. The result is secular and general.
 
 ## Latest connected results
 
-- **Actual heterogeneous overlapping-payoff markets:** existence with global
-  household optimization, positive prices, binding budgets and exact clearing;
-  initially assetless households are included in the stated finite CRRA class.
-- **Multiplicity and conditional uniqueness:** an actual economy supports two
-  distinct equilibria. Around a supported no-net-trade reference, a separate
-  theorem establishes unique actual equilibria and one-sided boundary responses
-  for sufficiently small admissible joint primitive changes.
-- **Ownership certificates and funded protection:** specified denomination,
-  backing, exhaustion and cash-allocation identities are connected to valuation.
-- **Compute and due-date cash:** supplied bottleneck production and funded
-  operating plans produce payoff data; the exact cash buffer characterizes
-  payment affordability across supplied state paths.
-- **Primary escrow (Stage 209):** 32 audited endpoints cover consented settled
-  subscription posting, budgeted close, attested release, ownership activation,
-  cancellation, affordable non-repeatable refunds and named dispute scopes.
+- **Actual heterogeneous overlapping-payoff markets:** existence with global household optimization.
+  Positive prices. Binding budgets. Exact clearing.
+  Initially assetless households are included in the stated finite CRRA class.
+- **Multiplicity and conditional uniqueness:** an actual economy supports two distinct equilibria.
+  Around a supported no-net-trade reference, a separate theorem establishes unique actual equilibria.
+  One-sided boundary responses hold for sufficiently small admissible joint primitive changes.
+- **Ownership certificates and funded protection:** specified denomination. Backing. Exhaustion. Cash-allocation identities.
+  Those identities are connected to valuation.
+- **Compute and due-date cash:** supplied bottleneck production and funded operating plans produce payoff data.
+  The exact cash buffer characterizes payment affordability across supplied state paths.
+- **Primary escrow (Stage 209):** 32 audited endpoints.
+  Consented settled subscription posting. Budgeted close. Attested release. Ownership activation.
+  Cancellation. Affordable non-repeatable refunds. Named dispute scopes.
   Released cash meets the imported operating-buffer condition.
-- **Actual voluntary formation (Stages 211–214):** in the defined single-new-issue
-  class, funded formation exists if and only if actual household demand at the
-  construction/buffer/outside-option floor covers supply. Independent positive
-  future incomes and arbitrary positive CRRA curvatures are admitted. Actual
-  natural-lot-compatible choices connect to reached escrow release.
-- **Exact executable funding (Stages 215–218):** integer money refines the
-  real-valued rules; the proved dispatcher and versioned protocol handle
-  refusals, cached retries, conflicting identifiers and stale versions.
-- **Persistence (Stage 219):** complete journal/result encoding, same-core
-  correspondence and conditional replay recovery are proved. The local SQLite
-  adapter passes 150 exact comparisons, eight competing-writer schedules, six
-  process-exit cases and 13 corruption rejections. SQLite itself is not proved.
-- **Connected demonstration (Stage 220):** two households' unique actual choices,
-  cost-covering formation, five executable funding requests and complete recovered
-  state are connected in Lean. The same final record is obtained in SQLite,
-  including reopening and cached retries. This is a risky two-state synthetic
-  enterprise, not observed fundraising or a guaranteed-return investment.
-- **Financeability frontier (Stage 222):** holding household primitives, payoffs
-  and issue size fixed, a formed price gives an exact ceiling on construction,
-  reserve and supplier outside option. Formation and dated operating affordability
-  hold together exactly when the required buffer fits below that ceiling.
+- **Actual voluntary formation (Stages 211–214):** one defined single-new-issue class.
+  Funded formation exists iff actual household demand at the construction floor covers supply.
+  Floor = construction + buffer + outside option.
+  Independent positive future incomes are admitted.
+  Arbitrary positive CRRA curvatures are admitted.
+  Actual natural-lot choices connect to the reached escrow release.
+- **Exact executable funding (Stages 215–218):** integer money refines the real-valued rules.
+  The proved dispatcher handles refusals. The versioned protocol handles retries, conflicts and stale versions.
+- **Persistence (Stage 219):** complete journal and result encoding are proved. Same-core correspondence holds. Conditional replay recovery holds.
+  The local SQLite adapter passes 150 exact comparisons, eight competing-writer schedules, six process-exit cases, 13 corruption rejections.
+  SQLite itself is not proved.
+- **Connected demonstration (Stage 220):** two households. Unique actual choices.
+  Cost-covering formation. Five executable funding requests. Complete recovered state.
+  The same final record is obtained in SQLite — including reopening and cached retries.
+  This is a risky two-state synthetic enterprise. Not observed fundraising. Not a guaranteed-return investment.
+- **Financeability frontier (Stage 222):** hold primitives, payoffs and issue size fixed.
+  A formed price gives an exact ceiling on construction, reserve and supplier outside option.
+  Formation and dated affordability hold together exactly when the required buffer fits below that ceiling.
   See the [safe reserve window](docs/FINANCEABILITY_FRONTIER.md).
-- **Strict participation, stress and exact reserves (Stage 224):** strict issuer
-  participation holds exactly when actual demand at the funding floor strictly
-  exceeds supply. Positive subscribers strictly gain relative to zero investment.
-  Cumulative cashflow loss bounds give funded reserve-stress certificates. The
-  proved integer calculator returns the minimum reserve and earliest negative
-  cash prefix; the same functions' transport passes 566 exact comparisons and
-  seven malformed-input rejections. See [the connected guarantees and limits](docs/STRICT_PARTICIPATION_AND_RESERVES.md).
-- **Integer payouts, fees and certified price bounds (Stage 226):** a declared
-  ordered cumulative-quota rule distributes integer cash after a basis-point fee
-  with exact fee-plus-owner conservation, zero payment to zero ownership, and error
-  below one minor unit per payment; it is the declared ordered-rounding rule, not
-  the older largest-remainder allocator. Feasible household-score certificates
-  enclose the actual formed price — a log-utility example gives the interval
-  `[1.99, 2.01]` (midpoint error at most `1/100`) and certifies strictly inactive
-  households — without inserting the known price; this is a conditional certificate,
-  not a general numerical solver. The payout transport passes 508 exact comparisons
-  and eleven malformed-input rejections. No new database run is involved. See
-  [payouts and price certificates](docs/PAYOUTS_AND_PRICE_CERTIFICATES.md).
-- **Production, welfare and general-equilibrium frontier (Stages 228–249):** endogenous
-  profit-maximizing production with profit income in household budgets; multi-issue
-  interacting formation; decreasing returns and a money object; both SMD directions
-  (function-level realizability and the rational-demand aggregate excess demand);
-  micro-founded multi-household equilibrium; first and second welfare theorems (including
-  a separating-hyperplane support result and its economic wrapper from preferences);
-  core, uniqueness and money premium; Walras' law from local non-satiation; Nash
-  bargaining; continuous firm supply over a production set; and expenditure
-  minimization. The upstream engines are a set-valued Gale–Nikaido–Debreu theorem,
-  a general Berge maximum theorem, a price-extraction/separating-price lemma, and a
-  reusable production-economy structure. Full Mantel surjectivity and genuinely
-  sequential incomplete-market equilibrium remain open; see
+- **Strict participation, stress and exact reserves (Stage 224):**
+  Strict issuer participation holds iff actual demand at the funding floor strictly exceeds supply.
+  Positive subscribers gain strictly over zero investment.
+  Cashflow-loss bounds give funded reserve-stress certificates.
+  The integer calculator returns the minimum reserve. It also returns the earliest negative cash prefix.
+  Transport passes 566 exact comparisons. Seven malformed inputs are rejected.
+  See [the connected guarantees and limits](docs/STRICT_PARTICIPATION_AND_RESERVES.md).
+- **Integer payouts, fees and certified price bounds (Stage 226):**
+  A declared ordered cumulative-quota rule distributes integer cash after a basis-point fee.
+  Fee plus owners is conserved exactly.
+  Zero ownership pays zero. Error is below one minor unit per payment.
+  This is the declared rule — not the older largest-remainder allocator.
+  Household-score certificates enclose the actual formed price.
+  Log-utility example: interval `[1.99, 2.01]`. Midpoint error at most `1/100`.
+  Strictly inactive households are certified too — without inserting the known price.
+  This is a conditional certificate. Not a general numerical solver.
+  Transport passes 508 exact comparisons. Eleven malformed inputs rejected. No new database run.
+  See [payouts and price certificates](docs/PAYOUTS_AND_PRICE_CERTIFICATES.md).
+- **Production, welfare and general-equilibrium frontier (Stages 228–249):**
+  Four groups, each closed separately.
+  **Production.** Endogenous profit-maximizing production.
+  Profit income sits inside household budgets.
+  Multi-issue interacting formation.
+  Decreasing returns and a money object.
+  **Welfare.** First and second welfare theorems.
+  A separating-hyperplane score and its wrapper from preferences.
+  Core, uniqueness, money premium.
+  **Demand.** Both SMD directions. Micro-founded multi-household equilibrium.
+  Nash bargaining. Expenditure minimization.
+  **Engines.** Set-valued Gale–Nikaido–Debreu. General Berge maximum theorem.
+  Price extraction / separating price. Production-economy structure.
+  Continuous firm supply over a production set.
+  Full Mantel surjectivity and genuinely sequential incomplete-market equilibrium remain open; see
   [the frontier note](docs/GE_FRONTIER_2026-11-06.md).
 
 The economic and pure executable core is **proved**; the database adapter is
@@ -144,16 +154,22 @@ consequence of the production equation.
 
 ### The "50-year problem" in Islamic finance — what it is
 
-The phrase originates with the critique coined by **M. Ayub (2007)**, reinforced by
-**M. Umer Chapra**, and echoed by **Monzer Kahf**: despite five decades of
-instrument engineering, Islamic finance has not built a genuinely riba-free
-benchmark. Practice prices against LIBOR/SOFR/SONIA/MYOR-i and preserves a
-carry on those liquidity assumptions; murabaha/tawarruq reproduce the cash-flow
-shape of conventional credit; genuine profit-and-loss sharing (musharakah/
-mudarabah) remains a small slice of assets; IIBR/MYOR-i are transaction-referenced
-Islamic references that inherit conventional overnight structure. None of these is
-a formal claim made by this repo; they are the market facts the repo is positioned
-against.
+The phrase originates with the critique coined by **M. Ayub (2007)**.
+Reinforced by **M. Umer Chapra**. Echoed by **Monzer Kahf**.
+
+Despite five decades of instrument engineering, Islamic finance has not built a genuinely riba-free benchmark.
+
+Practice prices against LIBOR. SOFR. SONIA. MYOR-i.
+It preserves a carry on those liquidity assumptions.
+
+Murabaha and tawarruq reproduce the cash-flow shape of conventional credit.
+Genuine profit-and-loss sharing (musharakah / mudarabah) remains a small slice of assets.
+
+IIBR and MYOR-i are transaction-referenced Islamic references.
+They inherit conventional overnight structure.
+
+None of these is a formal claim made by this repo.
+They are the market facts the repo is positioned against.
 
 ### What this repository closes — and what it does not
 
