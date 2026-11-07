@@ -22,6 +22,8 @@ Start with [the detailed status table](docs/PROGRAMME_STATUS.md),
 [remaining gaps and claim upgrades](docs/ROADMAP.md), and
 [the primary funding constitution](docs/PRIMARY_FUNDING.md).
 
+**Where the mechanism fits in the real world — [technical-fit memos](docs/TECHNICAL_FIT_2026-11-06.md)** (69 memos, §Z failure matrix) and its companion synthesis, **[bigger picture](docs/BIGGER_PICTURE_2026-11-06.md)** (one maths for the last 50 and the next 50).
+
 # One maths for the last 50 and the next 50.
 
 ## Solved the 50-year-old Islamic finance maths problem — and the maths problem we will face in the next 50 years

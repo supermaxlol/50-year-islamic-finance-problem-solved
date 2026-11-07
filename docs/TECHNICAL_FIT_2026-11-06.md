@@ -1,11 +1,13 @@
+# Where this mechanism fits in the real world — evidence map
 
----
+Companion to *One maths for the last 50 and the next 50* (`README.md` top, and `BIGGER_PICTURE_2026-11-06.md`). The thesis says mechanism is proved; this file says where that mechanism plugs in.
 
-# Appendix — the eight case memos (case → fit → gap → metric)
+Each memo keeps the same honest boundary: the math closes the *settlement/allocation/conservation* sub-problem; law, custody, legitimacy, fiqh, and geopolitics stay outside the proof.
 
-Each entry keeps the same honest boundary: the math closes the *settlement/allocation/conservation* sub-problem; law, custody, legitimacy, fiqh, and geopolitics stay outside the proof.
-
----
+- A. Bhutan through H. Post-wage households: the place-specific fit memos.
+- 17–37: systemic arrears, payment rails, cross-border settlement.
+- 38–69: climate, pensions, healthcare, food, shipping, water, spectrum, housing, and related arrears family — same certificate+escrow+reserve shape, same external gaps.
+- Z: cross-memo failure matrix + honest bounds (oracle truth, timing, capital source, governance trigger) — read Z first if you have 2 minutes.
 
 ## A. Bhutan (DHI, hydro→compute)
 **Case (public view).** Bhutan routes surplus monsoon hydro through Druk Holding & Investment into computing/mining contracts; public reporting shows a sovereign BTC reserve and drawdown to fund Gelephu and payroll. Volatility is real; income is concentrated in the treasury; households see no proportional claim.
@@ -427,3 +429,31 @@ Every entry keeps the same rule: math closes the settlement/conservation leg; la
 **Workaround.** Retroactive reimbursements; state grants.
 **Verified-settlement match.** Childcare-credit certificate + provider escrow + release-timing reserve.
 
+
+## Z — Cross-memo failure matrix & honest bounds
+
+Every memo keeps the same rule: **math closes the settlement/conservation/allocation leg; everything else is external.**
+
+| Case(s) | Timing (when value clears) | Oracle trust needed | Capital source — does it pass Stage 222 frontier? | Governance / authority risk | Fails if |
+|---|---|---|---|---|---|
+| A. Bhutan hydro→compute | Monthly royalty / quarterly treasury draw | Hydro output telemetry; DHI custody | Yes — if buffer covers prefix loss; else capped | State mandate; volatility absorbed by certificates, not budget | Oracle false; counsel does not authorise draw |
+| B. Iran energy→mining | Immediate import settlement | Metered energy delivery; counterparty solvency | Yes — energy is the collateral | Sanctions, confiscation, enforcement | Counterparty deserts or bank refuses |
+| C. Norway/Alaska dividend | Annual (POMV/legislative vote) | Fund custodian value marks | Yes — fund asset backing under board rule | Parliament can freeze / change rule | Legislature overrides the charter |
+| D. Web4 agent ledger | Seconds — streamed fees | Transaction-order / MEV / verifier witnesses | Yes — if allocation per tx conserved | DAO/validator set + liquid market | Front-runner bends the rule without breaking conservation |
+| E. Russia internal claims | Immediate internal clearance | Commodity delivery proof | Yes — internal claims only | State enforcement outside chain | Export corridor closes; no legal standing |
+| F. Islamic sukuk / riba-free | Maturity / profit share release windows | Project cash returns, KYC | Yes — asset-linked only | Sharia council / AAOIFI sign-off | Fatwa withheld; legal wrapper absent |
+| G. Afghanistan riba-ban rail | Same as (F) | Delivery proof + community verification | Yes — buffer must exist | Taliban/IMF law; monetary authority | Treasury/authority cannot license rails |
+| H. Post-wage zero-labor households | Continuous profit share | Output metering + equity registry | Yes — only if yield pool exists | Legislature; capture (who buys the compute) | Households hold certificates to empty pools |
+| 17–18 Arbitration / tahkim | Award-to-settlement window | Tribunal evidence record | Yes — escrow only when award certified | Seat court / council; merits appeal | Award set aside post-settlement |
+| 19–20 Gulf SWF / BRI bridges | Intra-day net / multi-year corridor | Cross-border asset marks, FX quotes | Yes — net-settled; no external numeraire required | Boards + host regulators | Corridor sovereign blocks transfer |
+| 21–22 SDR / CLS PvP | SDR bridge weekly; CLS cut-off daily | IMF trust / CLS member solvency | Yes — PVP atomic if reserves posted | IMF/CLS board; bank margin | Reserve shortfall; solvency failure |
+| 23–30 CBDC / Pix / rails | Real-time to T+1 | NIBSS / CBK / ECB / BCB / MAS / BIS coverage | Yes — integer clearing only | Central-bank mandate; bank consortia | Hot swap fails; dual-run divergence |
+| 31–37 Subsidies / aid / climate funds | Monthly / quarterly | Fiscal ID, impact cert | Yes — escrow + conservation proves non-dilution | Ministries + auditors; procurement law | Ghost recipients; audit mismatch |
+| 38–69 Arrears family (climate debt, reparations, pensions, healthcare, water, post-disaster, etc.) | Issue-specific monthly-to-5yr tranche | Project/site data, actuarial certs, quota/catch data | Yes — **only if** prefix buffer ≥ realised loss; otherwise certificate scales down, does not default | Regulators, treaty bodies, local councils | Underlying data fabricated; donor capacity fails |
+| **All cases** | — | **If oracle compromised, the invariant holds for bad data.** | — | — | — |
+
+**Reading guide.** `Yes (in-model)` = “for the stated class, the Lean machine-checked rules prove binding budgets, minor-unit conservation, ordered-quota distribution, escrow lifecycle, and stress-prefix bounds.” `No (out-of-scope)` = adoption, legal title, custody, Sharia ruling, geopolitics, market risk — external by theorem scoping.
+
+
+---
+*End of TECHNICAL_FIT — companion to BIGGER_PICTURE_2026-11-06.md and README top-50 framing. Verify the 90/918 manifest before quoting any global claim.*
