@@ -9,6 +9,61 @@ Each memo keeps the same honest boundary: the math closes the *settlement/alloca
 - 38–69: climate, pensions, healthcare, food, shipping, water, spectrum, housing, and related arrears family — same certificate+escrow+reserve shape, same external gaps.
 - Z: cross-memo failure matrix + honest bounds (oracle truth, timing, capital source, governance trigger) — read Z first if you have 2 minutes.
 
+## Executive tables — read these first
+
+These three tables compress the 69 memos into a checkable picture. Everything below repeats them as evidence; these tables are the claim.
+
+### Table 1 — Place mapping: real problem → does the math solve it? → still missing
+
+| Case | Their real problem | Does your math solve it? | What's still missing |
+|---|---|---|---|
+| Bhutan (DHI, hydro→crypto) | Surplus energy liquid in BTC, volatile, treasury-concentrated, no household leg | **Yes, settlement leg** — certificate/ownership-payout encodes "nation consumes from compute yield"; budget binds | Political will, custody, volatility governance, statute |
+| Iran (energy→mining, sanctions) | SWIFT cut off, no offshore asset for imports | **Partial** — internal clearing in BTC/compute credit in defined domains | Sanctions law, counterparties, confiscation/enforcement — not a cloak |
+| Norway SWF / Alaska Permanent Fund | Oil fund huge, no direct citizen dividend; AK dividend political | **Yes, mechanism** — generalises permanent-fund logic to compute/energy stack; dividend = pro-rata certificate | Constitutional/statutory fund protection + custody |
+| Web4 / agentic economies | Agents trade at machine speed, no bank loop; debt leverage loops | **Strongly** — escrow/dispatcher/integer protocol + conservation are the machine-checkable primitives | Trust, consensus, MEV, oracle, legal standing of agents — component, not constitution |
+| Russia (frozen reserves) | USD/EUR access blocked; needs alternate settlement | **Indirect** — conserved ownership clearing, no external benchmark anchor | Compliance, counterparties, trade capacity — not created by math |
+| Islamic finance | Riba ban; murabaha/tawarruq reproduce cash-flow shape, PLS marginal | **Directly (technical)** — proved escrow/payout/conservation/formation with no interest benchmark anywhere | AAOIFI/IFSB certification + counsel wrapper — not a fatwa |
+| Afghanistan (riba ban) | Ban declared; no trusted clearing rail | **In principle** — same settlement engine for no-riba | Banking access, enforcement, sanctions, ledger capacity — political |
+| "When AI does all work, who owns?" | $Y=f(K,L)$, if $L\to 0$ then wages $\to 0$; textbook breaks | **Directly (theory)** — overlapping-payoff + certificates + profit-share + clearing with zero labor input demonstrated | Legislature, sovereign-dividend design, capture mitigation |
+
+**Unified:** conserved asset-linked value; no external benchmark dependency; machine-enforceable/auditable settlement primitives. **Not:** a statute, sanctions immunity, fatwa, bank, constitution, demand-side module, or allocation/monopoly fix.
+
+### Table 2 — High-tractability fits (ranked)
+
+| Domain | Pain | Missing piece | Math fit |
+|---|---|---|---|
+| U.S. Treasury clearing T+1 | Collateral, credit-extension | Strict atomic swap | High — integer conservation |
+| Energy OTC (power/gas/carbon) | Fails, disputes, buffers | Stress reserve for shortfalls | High — built-for-this |
+| Carbon credits | Double-counting | Single-use retirement proof | High |
+| Supply-chain finance | Duplicate financing, doc fraud | Integer pledge, escrow FSM | High |
+| Reinsurance / cat | Claim disputes, solvency | Reserve adequacy proof | High |
+| Digital-asset post-trade | Exchange blow-ups, finality gaps | No state creates tokens | Med-high |
+| Municipal/SME bonds | Small-issuer cost | Atomic clearing at scale | Med-high |
+| Shariah sukuk (smart) | Council discretion, custody | Conservation + profit/loss rule | High — policy, not math |
+| Edge compute (Akash/iExec) | Trustless slot bank | Provable escrow with citizen cap | High |
+
+### Table 3 — 14 research + 6 named additional fits (one-line match)
+
+| # | Domain | Exact pain | Why the math is the piece |
+|---|---|---|---|
+| 1 | Intl. arbitration (seat) | Contestable awards, fragmented enforcement | Audit trail from award → payable claim |
+| 2 | Islamic tahkim | Tamperable evidence PDFs | Verified step certificates; kills double-claim |
+| 3 | Gulf SWF crisis transfers | Opaque cross-border pooling | Net-settled DvP certificates |
+| 4 | BRI project finance | Multi-jurisdiction reconciliation chaos | Single conserved ledger; law still external |
+| 5 | SDR-linked bonds | SDRs trapped, conversion costs | Tokenised SDR certificates; IMF consent external |
+| 6 | CLS FX (PvP) | Pre-funding haircut, liquidity strain | Atomic PvP without parallel pre-fund — research stage |
+| 7 | Nigeria e-Naira | Fragmented ledgers | Single-clearing invariant via conservation |
+| 8 | Kenya M-Pesa↔interbank | 36–48h lag vs instant mobile | Real-time dual-rail match |
+| 9 | EU wholesale digital euro | TARGET2 latency, dual-track noise | Programmable wholesale settlement state; governance external |
+| 10 | Brazil Pix cross-border | Domestic-only, FX chaos | Pix-compatible certificate bridge |
+| 11 | MAS Singapore secure bonds | Proprietary code, post-audit | Protocol-level conservation replaces post-hoc audit |
+| 12 | APAC green-bond rail | Dual-escrow netting inconsistency | Cross-border netting, same invariant |
+| 13 | mBridge (CBDC interop) | Desynchronised rails, bridge drain | Atomic multi-currency settlement; states hold keys |
+| 14 | SWIFT GPI PvP | Visibility without atomicity | Real-time PvP netting; Swift/CLS participation external |
+| 15–20 | BD HIES, Ringgit Waqf, PK IMF tranche, PK export, AFDL corridor, AFR sick-funds | Leakage/ghost, waqf misallocation, tranche leaks, hawala split, drought triggers | Conservation + escrow + stress acts — regulator/fatwa/ID/fraud-response external |
+
+**Highest-upside cluster by invariant strength:** CLS-style atomic PvP + mBridge (big dollar flow, clean invariant win) — still needs the institutions to adopt them.
+
 ## A. Bhutan (DHI, hydro→compute)
 **Case (public view).** Bhutan routes surplus monsoon hydro through Druk Holding & Investment into computing/mining contracts; public reporting shows a sovereign BTC reserve and drawdown to fund Gelephu and payroll. Volatility is real; income is concentrated in the treasury; households see no proportional claim.
 **Missing piece.** A distributive leg that binds citizen equity (or certificates) to the automated yield, with conservation and stress reserves.
