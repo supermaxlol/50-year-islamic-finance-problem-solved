@@ -14,7 +14,11 @@ Status: internal synthesis, not peer-reviewed. All proprietary claims scoped bel
 
 ## 1. The question nobody had made well-posed
 
-The textbook production function was settled for a century:
+Try to answer this before reading on:
+
+> If machines bake the loaf, who gets paid? Wages are zero. Output is not zero. Does the model collapse?
+
+The textbook production function says yes.
 
 ```
 Y = f(K, L)   K = capital, L = labor
@@ -42,7 +46,12 @@ No essay had answered that with a checkable proof. This repository is the first 
 
 ## 2. Why the usual sector story is a category error
 
-Fisher (1935) and Colin Clark divided the economy by **how value is created**, not by job titles:
+Try to sort this loaf:
+
+> Farmer grows wheat. Mill grinds flour. Baker bakes. Shop sells.
+> Which moments share a *mode of creation*?
+
+That is the Fisher test. Fisher (1935) and Colin Clark divided the economy by **how value is created**, not by job titles:
 
 | Sector | Definition | Counted how |
 |---|---|---|
@@ -66,13 +75,23 @@ Today in the US, green is 1%. Yellow is under 20%. Blue is ~80%.
 
 Jobs and value are not the same pie. That gap is the whole Fisher-Clark point.
 
-The "knowledge industry," "attention economy," "relational sector," "fourth = trade/finance, fifth = health/education" proposals that follow after 1950 all make the same move:
+Now try the sorting test back on the proposals:
 
-**split blue by job type, not by mode of creation.**
+> "Knowledge industry. Attention economy. Relational sector. Trade and finance as fourth, health and education as fifth."
+> Which step changed the *mode of creation*?
+
+None. Every one of them is still a person providing value to another person.
+
+**Split blue by job type, not by mode of creation.**
 
 The real candidate for a fourth sector is not a job at all:
 
 **Autonomous capital transformation** — output produced by machines with negligible marginal human input. Energy + compute + code replace labor as the marginal input. That is not a fifth slice of blue. It is a new slice on the pie.
+
+**Check your understanding** (answers under §3 in your own head):
+1. Sorting: whose moment in the loaf is transformation vs extraction?
+2. If yellow's jobs explode but its *value* share does not, which pie moved — jobs or value?
+3. Can autonomous transformation be "just services with robots"? What one word in the definition would break in that claim?
 
 ---
 
